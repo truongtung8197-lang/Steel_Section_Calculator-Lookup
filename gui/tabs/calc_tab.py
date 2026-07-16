@@ -120,6 +120,7 @@ class CalculatorTab(QWidget):
         main_splitter.addWidget(right_widget)
         main_splitter.setStretchFactor(0, 6)
         main_splitter.setStretchFactor(1, 4)
+        left_widget.setMinimumWidth(320)
 
         calc_layout = QVBoxLayout(self)
         calc_layout.setContentsMargins(0, 0, 0, 0)
@@ -128,6 +129,25 @@ class CalculatorTab(QWidget):
         self.type_combo.currentIndexChanged.connect(self.rebuild_inputs)
         clear_btn.clicked.connect(self.clear_inputs)
         self.rebuild_inputs()
+        self._update_input_font(self.width())
+
+    def _update_input_font(self, width: int):
+        """Scale input font so numbers stay legible when window shrinks.
+
+        The left panel gets ~60% of the width; derive a sensible pt size
+        from that, clamped to a readable range.
+        """
+        left_width = max(width * 6 // 10, 320)
+        pt = left_width / 60.0
+        pt = max(9.0, min(pt, 13.0))
+        font = self.font()
+        font.setPointSizeF(pt)
+        for edit in self.inputs:
+            edit.setFont(font)
+
+    def resizeEvent(self, event):
+        super().resizeEvent(event)
+        self._update_input_font(self.width())
 
     def current_type(self):
         key = self.type_combo.currentData()
@@ -157,18 +177,19 @@ class CalculatorTab(QWidget):
             edit.setProperty("original_unit", unit)
             edit.setPlaceholderText("0.00")
             edit.setValidator(validator)
+            edit.setMinimumWidth(70)
             edit.setToolTip(f"Enter {label} value")
 
             unit_combo = QComboBox()
             unit_combo.addItems(["mm", "cm", "m", "inch"])
             unit_combo.setCurrentText(unit if unit in ["mm", "cm", "m", "inch"] else "mm")
-            unit_combo.setMaximumWidth(80)
+            unit_combo.setMaximumWidth(70)
             unit_combo.setToolTip("Select unit of measurement")
             unit_combo.currentTextChanged.connect(
                 lambda text, lbl=label: self.on_unit_changed(lbl, text)
             )
 
-            cl.addWidget(edit)
+            cl.addWidget(edit, 1)
             cl.addWidget(unit_combo)
             self.inputs.append(edit)
             self.unit_combos[label] = unit_combo
@@ -192,17 +213,18 @@ class CalculatorTab(QWidget):
             re.setProperty("original_unit", "mm")
             re.setText("0")
             re.setValidator(validator)
+            re.setMinimumWidth(70)
             re.setToolTip("Corner radius (r1). Default 0 for sharp corners")
             re.textChanged.connect(self.calculate)
 
             ruc = QComboBox()
             ruc.addItems(["mm", "cm", "inch"])
             ruc.setCurrentText("mm")
-            ruc.setMaximumWidth(80)
+            ruc.setMaximumWidth(70)
             ruc.setToolTip("Select unit for r1")
             ruc.currentTextChanged.connect(lambda text, lbl="r1": self.on_unit_changed(lbl, text))
 
-            rcl.addWidget(re)
+            rcl.addWidget(re, 1)
             rcl.addWidget(ruc)
             self.inputs.append(re)
             self.unit_combos["r1"] = ruc
@@ -213,6 +235,7 @@ class CalculatorTab(QWidget):
         qty.setProperty("field_label", "Quantity")
         qty.setPlaceholderText("1")
         qty.setText("1")
+        qty.setMinimumWidth(70)
         qty.setValidator(validator)
         qty.setToolTip("Quantity of steel sections")
         qty.textChanged.connect(self.calculate)
@@ -223,6 +246,7 @@ class CalculatorTab(QWidget):
         img_path = os.path.join(PNG_DIR, steel.image_file)
         self.image_box.set_image(img_path)
         self.type_combo.setToolTip(steel.tooltip)
+        self._update_input_font(self.width())
         self.calculate()
 
     def on_unit_changed(self, field_label: str, new_unit: str):

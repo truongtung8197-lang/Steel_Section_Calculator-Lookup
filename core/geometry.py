@@ -21,10 +21,12 @@ def area_ishape(v):
 
 
 def check_ishape(v):
+    if v["H"] <= 0 or v["B"] <= 0 or v["Tw"] <= 0 or v["Tf"] <= 0:
+        raise ValueError()
     r = v.get("r1", 0)
     if v["Tw"] >= v["B"] or (2 * v["Tf"]) >= v["H"]:
         raise ValueError()
-    if r < 0 or r > min(v["Tw"], v["Tf"]) / 2:
+    if r < 0 or r > min((v["B"] - v["Tw"]) / 2, (v["H"] - 2 * v["Tf"]) / 2):
         raise ValueError()
 
 
@@ -37,10 +39,12 @@ def area_channel(v):
 
 
 def check_channel(v):
+    if v["H"] <= 0 or v["B"] <= 0 or v["Tw"] <= 0 or v["Tf"] <= 0:
+        raise ValueError()
     r = v.get("r1", 0)
     if v["Tw"] >= v["B"] or (2 * v["Tf"]) >= v["H"]:
         raise ValueError()
-    if r < 0 or r > min(v["Tw"], v["Tf"]) / 2:
+    if r < 0 or r > min((v["B"] - v["Tw"]) / 2, (v["H"] - 2 * v["Tf"]) / 2):
         raise ValueError()
 
 
@@ -53,10 +57,12 @@ def area_tsection(v):
 
 
 def check_tsection(v):
+    if v["H"] <= 0 or v["B"] <= 0 or v["Tw"] <= 0 or v["Tf"] <= 0:
+        raise ValueError()
     r = v.get("r1", 0)
     if v["Tw"] >= v["B"] or v["Tf"] >= v["H"]:
         raise ValueError()
-    if r < 0 or r > min(v["Tw"], v["Tf"]) / 2:
+    if r < 0 or r > min((v["B"] - v["Tw"]) / 2, (v["H"] - v["Tf"]) / 2):
         raise ValueError()
 
 
@@ -69,10 +75,12 @@ def area_angle(v):
 
 
 def check_angle(v):
+    if v["Leg A"] <= 0 or v["Leg B"] <= 0 or v["Thickness"] <= 0:
+        raise ValueError()
     r = v.get("r1", 0)
     if v["Thickness"] >= v["Leg A"] or v["Thickness"] >= v["Leg B"]:
         raise ValueError()
-    if r < 0 or r > v["Thickness"]:
+    if r < 0 or r > min(v["Leg A"], v["Leg B"]) / 2:
         raise ValueError()
 
 
@@ -89,10 +97,12 @@ def area_rhs_shs(v):
 
 
 def check_rhs_shs(v):
+    if v["Width"] <= 0 or v["Height"] <= 0 or v["Thickness"] <= 0:
+        raise ValueError()
     r = v.get("r1", 0)
     if (2 * v["Thickness"]) >= v["Width"] or (2 * v["Thickness"]) >= v["Height"]:
         raise ValueError()
-    if r < 0 or r > v["Thickness"]:
+    if r < v["Thickness"] or r > min(v["Width"], v["Height"]) / 2:
         raise ValueError()
 
 
@@ -102,6 +112,8 @@ def area_chs(v):
 
 
 def check_chs(v):
+    if v["OD"] <= 0 or v["Thickness"] <= 0:
+        raise ValueError()
     if (2 * v["Thickness"]) >= v["OD"]:
         raise ValueError()
 

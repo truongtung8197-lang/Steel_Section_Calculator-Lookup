@@ -82,7 +82,7 @@
   - Thêm trường nhập liệu r1 (Corner Radius) với giá trị mặc định 0
   - Hỗ trợ 5 loại thép: I/H Beam, U Channel, Angle, RHS/SHS, T-Section
   - Công thức tính toán diện tích mặt cắt có góc bo theo tiêu chuẩn
-  - Validation r1: 0 ≤ r1 ≤ min(Tw, Tf)/2 hoặc r1 ≤ Thickness
+  - Validation r1: I/U: 0 ≤ r1 ≤ min((B-Tw)/2, (H-2·Tf)/2); T: 0 ≤ r1 ≤ min((B-Tw)/2, (H-Tf)/2); Angle: 0 ≤ r1 ≤ min(LegA, LegB)/2; SHS/RHS: T ≤ r1 ≤ min(B, H)/2. Tất cả kích thước > 0.
   - Tự động convert đơn vị cho r1 (mm/cm/inch)
 
 ---

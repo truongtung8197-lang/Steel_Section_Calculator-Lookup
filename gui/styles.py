@@ -51,9 +51,10 @@ def apply_styles(window):
             background: #f8fafc;
             border: 1px solid #cbd5e1;
             border-radius: 8px;
-            padding: 10px 14px;
+            padding: 6px 8px;
             color: #334155;
         }
+        QLineEdit { min-height: 22px; }
         QListWidget { padding: 5px; background: #ffffff; }
         QListWidget::item {
             padding: 10px 12px;

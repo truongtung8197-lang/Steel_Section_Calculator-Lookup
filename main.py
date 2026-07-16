@@ -19,7 +19,7 @@ class MainWindow(QMainWindow):
         super().__init__()
         self.setWindowTitle("Steel Management & Calculator Pro")
         self.resize(1150, 750)
-        self.setMinimumSize(950, 650)
+        self.setMinimumSize(1000, 680)
 
         # Load data
         data_mgr = DataManager(EXCEL_PATH, JSON_PATH, logger)
