@@ -3,13 +3,14 @@
 ## 📋 Tổng quan Tool
 
 **Tên tool:** Steel Management & Calculator Pro  
-**Phiên bản:** 1.0  
+**Phiên bản:** 1.2  
 **Công nghệ:** Python 3.x, PySide6 (Qt), openpyxl  
 **Mục đích:** Công cụ tính toán khối lượng thép lý thuyết và tra cứu profile thép chuẩn từ file Excel
 
 ### Chức năng chính
 
 #### 1. Tab "Manual Calculator" (Bộ tính toán thủ công)
+
 - Tính khối lượng thép lý thuyết cho 8 loại hình cắt thép:
   - **Plate** (Tấm): Tính theo chiều dài × rộng × dày
   - **I Beam / H Beam** (Dầm I/H): Tính diện tích mặt cắt theo công thức hình học
@@ -26,9 +27,13 @@
   - Hỗ trợ nhập số lượng (Quantity) để tính tổng khối lượng
   - Nút "Copy Value" để sao chép kết quả tính toán
   - Nút "Clear" để xóa trắng các trường nhập liệu
-  - Validation đầu vào: chỉ cho phép nhập số dương
+  - Validation đầu vào với thông báo lỗi chi tiết theo từng loại thép
+  - Hỗ trợ đổi đơn vị động (mm/cm/m/inch) với tự động convert giá trị
+  - Menu Help với About dialog và User Guide chi tiết
+  - Logging system ghi lại hoạt động vào file app.log
 
 #### 2. Tab "Steel Section Lookup" (Tra cứu profile thép)
+
 - Tra cứu thông tin profile thép từ file Excel `alias.xlsx`
 - Hỗ trợ 4 thư viện thép:
   - **I Beam / H Beam** (Sheet: "I lib"): 5 cột D, E, F, N, O
@@ -42,15 +47,16 @@
   - Nút "Copy" cho từng trường thông tin để sao chép nhanh
   - Hiển thị khối lượng theo kg/m
   - Giao diện phân chia 2 panel: danh sách kết quả bên trái, chi tiết bên phải
+  - Dropdown chọn thư viện thép động (I Beam, U Channel, Shape VN, Pipe/Tube)
 
 ### Cấu trúc File
 
-```
+```bash
 APP STEEL LOOKUP/
 ├── main.py                    # File chính - Giao diện và logic
 ├── main.spec                  # File cấu hình PyInstaller (đóng gói .exe)
 ├── alias.xlsx                 # File Excel chứa database thép
-├── steel_db.json              # File JSON export từ Excel (tạo bởi xlsx_to_json.py)
+├── steel_db.json              # File JSON cache (tự động tạo bởi tool)
 ├── xlsx_to_json.py            # Script convert Excel → JSON
 ├── SVG.py                     # Module xử lý SVG (chưa sử dụng)
 ├── U.svg                      # File SVG (chưa sử dụng)
@@ -64,7 +70,7 @@ APP STEEL LOOKUP/
 │   ├── ROD.png
 │   ├── T.png
 │   └── U.png
-└── progress.md                # File documentation (đang tạo)
+└── progress.md                # File documentation
 ```
 
 ### Công thức tính toán
@@ -72,6 +78,7 @@ APP STEEL LOOKUP/
 **Mật độ thép:** 7.85e-6 kg/mm³ (7850 kg/m³)
 
 **Công thức diện tích mặt cắt:**
+
 - **Plate:** A = Length × Width × Thickness
 - **I Beam:** A = 2 × B × Tf + (H - 2 × Tf) × Tw
 - **U Channel:** A = 2 × B × Tf + (H - 2 × Tf) × Tw
@@ -92,53 +99,42 @@ APP STEEL LOOKUP/
   - `BASE_DIR`: Thư mục chứa file thực thi
   - `PNG_DIR`: Thư mục chứa hình vẽ kỹ thuật
   - `EXCEL_PATH`: Đường dẫn file alias.xlsx
+  - `JSON_PATH`: Đường dẫn file steel_db.json (cache)
 
 ---
 
 ## ⚠️ Các lỗi đã biết
 
-### 1. Validation chưa hoàn chỉnh
-- **Vị trí:** `main.py` dòng 66, 72, 78, 84, 90, 96
-- **Mô tả:** Các hàm `check_*` chỉ validate điều kiện cơ bản, chưa validate:
-  - Giá trị âm hoặc bằng 0 (trừ Length có validator riêng)
-  - Thứ tự logic giữa các kích thước (ví dụ: Tw phải nhỏ hơn B)
-- **Ảnh hưởng:** Có thể tính ra kết quả không chính xác nếu người dùng nhập sai logic
+### 1. File steel_db.json không được sử dụng
+
+- **Mô tả:** File `steel_db.json` được tạo bởi `xlsx_to_json.py` nhưng `main.py` đọc trực tiếp từ Excel
+- **Ảnh hưởng:**
+  - Tốn thời gian đọc Excel mỗi lần khởi động
+  - Có thể gây lỗi nếu Excel đang mở bởi ứng dụng khác
 
 ### 2. Xử lý lỗi Excel chưa robust
+
 - **Vị trí:** `main.py` dòng 420-470
-- **Mô tả:** 
+- **Mô tả:**
   - Chỉ catch exception chung và in ra console
   - Không thông báo rõ ràng cho người dùng nếu file Excel bị lỗi
   - Không validate cấu trúc sheet trước khi đọc
 - **Ảnh hưởng:** Người dùng không biết lỗi xảy ra nếu Excel bị hỏng
 
 ### 3. Không có unit test
+
 - **Mô tả:** Chưa có test suite để kiểm tra các công thức tính toán
 - **Ảnh hưởng:** Khó phát hiện lỗi khi sửa đổi code
 
-### 4. File steel_db.json không được sử dụng
-- **Mô tả:** File `steel_db.json` được tạo bởi `xlsx_to_json.py` nhưng `main.py` đọc trực tiếp từ Excel
-- **Ảnh hưởng:** 
-  - Tốn thời gian đọc Excel mỗi lần khởi động
-  - Có thể gây lỗi nếu Excel đang mở bởi ứng dụng khác
+### 4. Giao diện chưa responsive tốt
 
-### 5. Giao diện chưa responsive tốt
-- **Mô tả:** 
+- **Mô tả:**
   - Kích thước cửa sổ cố định (1150x750)
   - Splitter ratios cố định có thể không phù hợp với mọi màn hình
 - **Ảnh hưởng:** Trải nghiệm người dùng trên màn hình nhỏ hoặc lớn
 
-### 6. Thiếu tooltip và hướng dẫn
-- **Mô tả:** 
-  - Không có tooltip giải thích các trường nhập liệu
-  - Không có hướng dẫn sử dụng
-- **Ảnh hưởng:** Người dùng mới có thể không biết cách sử dụng
+### 5. Lỗi tiềm ẩn với QDoubleValidator
 
-### 7. Không hỗ trợ đổi đơn vị
-- **Mô tả:** Tất cả đầu vào đều dùng mm và m, không có tùy chọn đổi đơn vị
-- **Ảnh hưởng:** Người dùng phải tự convert đơn vị nếu có data ở inch hoặc feet
-
-### 8. Lỗi tiềm ẩn với QDoubleValidator
 - **Vị trí:** `main.py` dòng 267-268
 - **Mô tả:** Validator chỉ cho phép số dương từ 0.001 đến 999999.0, có thể gây lỗi nếu người dùng nhập giá trị lớn hơn
 - **Ảnh hưởng:** Không thể tính toán cho kích thước lớn (>999999 mm)
@@ -149,90 +145,106 @@ APP STEEL LOOKUP/
 
 ### Ưu tiên Cao (High Priority)
 
-#### 1. Sử dụng steel_db.json thay vì đọc Excel trực tiếp
+#### 1. Cải thiện validation và error messages
+
+- **Lý do:** Đã có validation chi tiết với thông báo lỗi thân thiện
+- **Trạng thái:** ✅ Hoàn thành
+- **Chi tiết:**
+  - Thêm hàm `get_validation_error_message()` với thông báo chi tiết cho từng loại thép
+  - Validation logic phù hợp với từng loại hình cắt
+  - Hiển thị thông báo lỗi màu đỏ trên giao diện
+
+#### 2. Thêm unit conversion system
+
+- **Lý do:** Đã hỗ trợ đổi đơn vị mm/cm/m/inch
+- **Trạng thái:** ✅ Hoàn thành
+- **Chi tiết:**
+  - Thêm dropdown đơn vị cho từng trường nhập liệu
+  - Tự động convert giá trị khi thay đổi đơn vị
+  - Hàm `on_unit_changed()` xử lý conversion logic
+  - Constants: `UNIT_CONVERSION = {"mm": 1.0, "cm": 10.0, "m": 1000.0, "inch": 25.4}`
+
+#### 3. Thêm Help system và tooltip
+
+- **Lý do:** Đã có menu Help với About và User Guide
+- **Trạng thái:** ✅ Hoàn thành
+- **Chi tiết:**
+  - Menu "Help" với "About" dialog hiển thị thông tin phiên bản
+  - "User Guide" chi tiết với hướng dẫn sử dụng từng tab
+  - Tooltip cho tất cả các trường nhập liệu và nút bấm
+  - RichText format cho User Guide
+
+#### 4. Thêm logging system
+
+- **Lý do:** Đã có logging module ghi ra file
+- **Trạng thái:** ✅ Hoàn thành
+- **Chi tiết:**
+  - Logging configuration với file `app.log`
+  - Log level: INFO
+  - Format: timestamp - level - message
+  - Log các hoạt động: khởi động, tính toán, lỗi, validation
+
+#### 5. Cải thiện error handling
+
+- **Lý do:** Đã có error handling tốt hơn
+- **Trạng thái:** ✅ Hoàn thành
+- **Chi tiết:**
+  - Try-catch blocks cho các operation chính
+  - Message boxes rõ ràng cho người dùng
+  - Logging đầy đủ cho debugging
+  - Validation trước khi tính toán
+
+#### 6. Sử dụng steel_db.json thay vì đọc Excel trực tiếp
+
 - **Lý do:** Tăng tốc độ khởi động, giảm phụ thuộc vào Excel
-- **Cách thực hiện:**
-  - Kiểm tra file JSON có tồn tại và mới hơn Excel không
-  - Nếu có, đọc từ JSON
-  - Nếu không, đọc từ Excel và tạo JSON mới
-- **Lợi ích:** 
-  - Khởi động nhanh hơn
-  - Không bị lỗi nếu Excel đang mở
-  - Có thể cache data
+- **Trạng thái:** ✅ Hoàn thành (Version 1.2)
+- **Chi tiết:**
+  - Tự động lưu data ra JSON sau khi đọc Excel
+  - Lần khởi động sau đọc từ JSON (nhanh hơn)
+  - Fallback mechanism nếu JSON bị lỗi
+  - Hàm `load_data()` và `save_to_json()`
 
-#### 2. Thêm unit test cho các công thức tính toán
-- **Lý do:** Đảm bảo tính chính xác của công thức
-- **Cách thực hiện:**
-  - Tạo file `test_calculations.py`
-  - Test các công thức với giá trị known
-  - Test các edge cases (kích thước nhỏ, lớn)
-- **Lợi ích:** Dễ dàng refactor và mở rộng mà không sợ break functionality
+#### 7. Cải thiện validation messages
 
-#### 3. Cải thiện error handling và logging
-- **Lý do:** Dễ debug và hỗ trợ người dùng tốt hơn
-- **Cách thực hiện:**
-  - Thêm logging module thay vì print
-  - Log ra file `app.log`
-  - Hiển thị message box rõ ràng khi có lỗi
-  - Validate cấu trúc Excel trước khi đọc
-
-### Ưu tiên Trung bình (Medium Priority)
-
-#### 4. Thêm tooltip và hướng dẫn sử dụng
-- **Lý do:** Cải thiện UX cho người dùng mới
-- **Cách thực hiện:**
-  - Thêm tooltip cho các trường nhập liệu
-  - Thêm menu "Help" hoặc nút "?" với hướng dẫn
-  - Thêm placeholder text rõ ràng hơn
-
-#### 5. Hỗ trợ đổi đơn vị
-- **Lý do:** Linh hoạt hơn cho người dùng quốc tế
-- **Cách thực hiện:**
-  - Thêm dropdown chọn đơn vị (mm/cm/inch)
-  - Tự động convert giá trị nhập
-  - Hiển thị đơn vị rõ ràng trên kết quả
-
-#### 6. Cải thiện validation
-- **Lý do:** Ngăn ngừa lỗi người dùng
-- **Cách thực hiện:**
-  - Thêm validation logic chi tiết hơn
-  - Hiển thị message rõ ràng khi validation fail
-  - Thêm range check phù hợp với từng loại thép
-
-#### 7. Responsive design
-- **Lý do:** Tương thích tốt hơn với các kích thước màn hình khác nhau
-- **Cách thực hiện:**
-  - Lưu và restore window size/position
-  - Điều chỉnh layout tự động theo kích thước
-  - Thêm minimum size hợp lý
+- **Lý do:** Thông báo lỗi rõ ràng, thân thiện
+- **Trạng thái:** ✅ Hoàn thành
+- **Chi tiết:**
+  - Hàm `get_validation_error_message()` với messages chi tiết
+  - Hiển thị lỗi theo từng loại thép cụ thể
+  - Màu sắc rõ ràng: đỏ cho lỗi, xanh cho kết quả
 
 ### Ưu tiên Thấp (Low Priority)
 
 #### 8. Thêm tính năng xuất báo cáo
+
 - **Lý do:** Tiện lợi cho người dùng cần lưu trữ
 - **Cách thực hiện:**
   - Export kết quả tính toán ra Excel/PDF
   - Export danh sách profile đã tra cứu
 
 #### 9. Thêm tính năng lưu lịch sử tính toán
+
 - **Lý do:** Tiện lợi cho người dùng cần tra cứu lại
 - **Cách thực hiện:**
   - Lưu các phép tính gần đây vào file
   - Hiển thị dropdown chọn lại các phép tính cũ
 
 #### 10. Dark mode support
+
 - **Lý do:** Giảm mỏi mắt khi sử dụng lâu
 - **Cách thực hiện:**
   - Thêm toggle dark/light mode
   - Tạo stylesheet riêng cho dark mode
 
 #### 11. Multi-language support
+
 - **Lý do:** Hỗ trợ người dùng quốc tế
 - **Cách thực hiện:**
   - Tách text ra file resource
   - Hỗ trợ tiếng Anh và tiếng Việt
 
 #### 12. Thêm loại thép mới
+
 - **Lý do:** Mở rộng tính năng
 - **Có thể thêm:**
   - Steel Plate với các kích thước chuẩn
@@ -244,15 +256,18 @@ APP STEEL LOOKUP/
 ## 📊 Thống kê
 
 ### Số lượng code
-- **main.py:** 741 dòng
+
+- **main.py:** 900+ dòng
 - **xlsx_to_json.py:** 258 dòng
-- **Tổng:** ~1000 dòng code
+- **Tổng:** ~1150 dòng code
 
 ### Số lượng loại thép hỗ trợ
+
 - **Tính toán:** 8 loại
 - **Tra cứu:** 4 thư viện
 
 ### Dependencies
+
 - Python 3.x
 - PySide6 (Qt for Python)
 - openpyxl
@@ -262,13 +277,34 @@ APP STEEL LOOKUP/
 
 ## 🔄 Lịch sử thay đổi
 
-### Version 1.0 (Current)
-- ✅ Hoàn thành bộ tính toán thủ công 8 loại thép
-- ✅ Hoàn thành tính năng tra cứu 4 thư viện thép
-- ✅ Giao diện Qt với stylesheet đẹp mắt
+### Version 1.0 (Initial Release)
+
+- ✅ Bộ tính toán thủ công 8 loại thép cơ bản
+- ✅ Tính năng tra cứu 4 thư viện thép từ Excel
+- ✅ Giao diện Qt cơ bản
 - ✅ Hỗ trợ đóng gói thành .exe
 - ✅ Hình vẽ kỹ thuật tham khảo
-- ✅ Chức năng copy kết quả
+
+### Version 1.1 - Updated 2024-07-16
+
+- ✅ Menu Help với About dialog và User Guide chi tiết
+- ✅ Unit conversion system (mm/cm/inch) với auto-convert
+- ✅ Validation chi tiết với error messages thân thiện theo từng loại thép
+- ✅ Logging system ghi ra file app.log
+- ✅ Tooltip và hướng dẫn sử dụng toàn diện
+- ✅ Quantity field để tính tổng khối lượng
+- ✅ Giao diện Qt với stylesheet đẹp mắt, modern design
+
+### Version 1.2 (Current) - Updated 2024-07-16
+
+- ✅ **JSON Caching System**: Tự động lưu và đọc data từ steel_db.json
+  - Tăng tốc độ khởi động (không cần đọc Excel mỗi lần)
+  - Giảm phụ thuộc vào Excel file
+  - Fallback mechanism nếu JSON bị lỗi
+- ✅ **Unit Conversion Enhancement**: Thêm đơn vị mét (m)
+  - Hỗ trợ đầy đủ: mm, cm, m, inch
+  - Tự động convert giá trị khi thay đổi đơn vị
+  - Áp dụng cho tất cả các trường nhập liệu
 
 ---
 
@@ -277,16 +313,19 @@ APP STEEL LOOKUP/
 ### Cách chạy tool
 
 **Chạy từ source code:**
+
 ```bash
 python main.py
 ```
 
 **Đóng gói thành .exe:**
+
 ```bash
 pyinstaller main.spec
 ```
 
 **Convert Excel sang JSON:**
+
 ```bash
 python xlsx_to_json.py
 ```
@@ -294,6 +333,7 @@ python xlsx_to_json.py
 ### Cấu trúc Excel (alias.xlsx)
 
 **Sheet "I lib" và "U lib":**
+
 - Cột D: Tên profile
 - Cột E: Tên section gốc
 - Cột F: Khối lượng kg/m (original)
@@ -301,23 +341,28 @@ python xlsx_to_json.py
 - Cột O: Khối lượng kg/m (substitute)
 
 **Sheet "HINH_VN" và "Ong,Hop":**
+
 - Cột A: Tên profile
 - Cột B: Khối lượng kg/m
 - Cột C: Ghi chú
 
 ### Cấu trúc JSON (steel_db.json)
+
 ```json
 {
-  "ih": [...],
-  "channel": [...],
-  "hinh_vn": [...],
-  "ong_hop": [...]
+  "profiles": [...],
+  "metadata": {
+    "total_records": 123,
+    "source": "alias.xlsx",
+    "saved_at": "2024-07-16"
+  }
 }
 ```
 
 Mỗi record có các trường:
-- **Type 1 (ih, channel):** name, original_section, weight, substitute_section, substitute_weight
-- **Type 2 (hinh_vn, ong_hop):** name, weight, note
+
+- **Type 1 (ih, channel):** type, D, E, F, N, O
+- **Type 2 (hinh_vn, ong_hop):** type, D, B, C
 
 ---
 
@@ -332,17 +377,22 @@ Mỗi record có các trường:
 ## 📌 TODO List
 
 ### Ngắn hạn (1-2 tuần)
-- [ ] Sử dụng steel_db.json thay vì đọc Excel trực tiếp
+
+- [x] ~~Sử dụng steel_db.json thay vì đọc Excel trực tiếp~~ → ✅ Hoàn thành v1.2
 - [ ] Thêm unit test cho các công thức tính toán
-- [ ] Cải thiện error handling và logging
+- [x] ~~Cải thiện error handling và logging~~ → ✅ Hoàn thành
+- [x] ~~Thêm tooltip và hướng dẫn sử dụng~~ → ✅ Hoàn thành
+- [x] ~~Hỗ trợ đổi đơn vị~~ → ✅ Hoàn thành (bao gồm m)
+- [x] ~~Cải thiện validation~~ → ✅ Hoàn thành
 
 ### Trung hạn (1-2 tháng)
-- [ ] Thêm tooltip và hướng dẫn sử dụng
-- [ ] Hỗ trợ đổi đơn vị
-- [ ] Cải thiện validation
+
+- [ ] Thêm unit test cho calculations
+- [ ] Cải thiện error handling Excel
 - [ ] Responsive design
 
 ### Dài hạn (3-6 tháng)
+
 - [ ] Thêm tính năng xuất báo cáo
 - [ ] Lưu lịch sử tính toán
 - [ ] Dark mode support
@@ -352,4 +402,5 @@ Mỗi record có các trường:
 ---
 
 **Last Updated:** 2024-07-16  
+**Version:** 1.2  
 **Maintained by:** Development Team
