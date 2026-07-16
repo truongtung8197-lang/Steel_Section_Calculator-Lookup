@@ -1,52 +1,52 @@
-# Known Issues & Lỗi đã biết
+# Known Issues & Loi da biet
 
-> Cập nhật lần cuối: Version 1.3.2
+> Cap nhat lan cuoi: Version 1.5
 
 ---
 
-## 1. File steel_db.json không được sử dụng
+## Da giai quyet (Resolved)
 
-- **Mô tả:** File `steel_db.json` được tạo bởi `xlsx_to_json.py` nhưng `main.py` đọc trực tiếp từ Excel
-- **Ảnh hưởng:**
-  - Tốn thời gian đọc Excel mỗi lần khởi động
-  - Có thể gây lỗi nếu Excel đang mở bởi ứng dụng khác
+### 1. File steel_db.json khong duoc su dung
+- **Trang thai v1.5:** ✅ Da giai quyet. `DataManager.load_data()` uu tien doc JSON, chi fallback sang Excel khi JSON loi/thieu, roi luu lai JSON.
 
-## 2. Xử lý lỗi Excel chưa robust
+### 2. Xu ly loi Excel chua robust
+- **Trang thai v1.5:** ✅ Da cai thien. `data_manager.py` validate 4 sheet bat buoc, `skip_headers()` bo qua header, `clean_weight()` xu ly `---`/rong, try/except quanh load, fallback `[]`. Lookup tab hien canh bao neu Excel chua load.
 
-- **Vị trí:** `main.py`
-- **Mô tả:**
-  - Chỉ catch exception chung và in ra console
-  - Không thông báo rõ ràng cho người dùng nếu file Excel bị lỗi
-  - Không validate cấu trúc sheet trước khi đọc
-- **Ảnh hưởng:** Người dùng không biết lỗi xảy ra nếu Excel bị hỏng
+### 3. Khong co unit test
+- **Trang thai v1.5:** ⚠ Chua co. Van nam trong TODO (ngan han).
 
-## 3. Không có unit test
+### 4. Giao dien chua responsive tot
+- **Trang thai v1.5:** ✅ Da cai thien dang ke. `calc_tab.py` co `resizeEvent` + `_update_input_font()` scale font 9-13pt; dung `QSplitter` voi `setStretchFactor`; `left_widget.setMinimumWidth(320)` tranh input qua nho. Van con: minimum size cua MainWindow la 1000x680.
 
-- **Mô tả:** Chưa có test suite để kiểm tra các công thức tính toán
-- **Ảnh hưởng:** Khó phát hiện lỗi khi sửa đổi code
+### 5. Loi tiem an voi QDoubleValidator
+- **Trang thai v1.5:** ⚠ Van con. Validator gioi han 0.001 - 999999.0, nen khong tinh duoc kich thuoc > 999999 mm. Hien tai chap nhan vi du an chua can.
 
-## 4. Giao diện chưa responsive tốt
+### 6. GUI khong responsive khi resize
+- **Trang thai v1.5:** ✅ Da giai quyet (xem muc 4). Font tu dong scale, splitter linh hoat, PNG co `resizeEvent` trong `ImageBox` render lai.
 
-- **Mô tả:**
-  - Kích thước cửa sổ cố định (1150x750)
-  - Splitter ratios cố định có thể không phù hợp với mọi màn hình
-- **Ảnh hưởng:** Trải nghiệm người dùng trên màn hình nhỏ hoặc lớn
+---
 
-## 5. Lỗi tiềm ẩn với QDoubleValidator
+## Chua giai quyet (Open)
 
-- **Vị trí:** `main.py`
-- **Mô tả:** Validator chỉ cho phép số dương từ 0.001 đến 999999.0, có thể gây lỗi nếu người dùng nhập giá trị lớn hơn
-- **Ảnh hưởng:** Không thể tính toán cho kích thước lớn (>999999 mm)
+### A. Thieu unit test
+- Chua co test suite kiem tra cong thuc tinh toan (`core/geometry.py`) va validator.
+- **Ke hoach:** Them `tests/test_geometry.py`, `tests/test_validators.py`.
 
-## 6. GUI không responsive khi resize cửa sổ
+### B. QDoubleValidator gioi han kich thuoc lon
+- Chi nhan 0.001 - 999999.0 mm. Kich thuoc rat lon se bi tu choi.
+- **Ke hoach:** Mo rong range hoac bo validator, tu validate trong `calculate()`.
 
-- **Mô tả:**
-  - Cửa sổ chỉ có thể resize về 1 mức cố định (minimum size 950x650)
-  - Khi thu nhỏ cửa sổ, các ô nhập liệu trở nên rất nhỏ và không thể đọc/nhập được
-  - Font size không tự động scale theo kích thước cửa sổ
-  - Các hình PNG tham khảo có thể gây cản trở layout khi resize
-- **Nguyên nhân:**
-  - Thiếu cơ chế responsive scaling
-  - Minimum size quá lớn so với không gian có sẵn
-  - Font size cố định (11pt) không điều chỉnh theo window size
-- **Ảnh hưởng:** Trải nghiệm người dùng kém khi làm việc với cửa sổ nhỏ hoặc màn hình có độ phân giải thấp
+### C. Chi co 1 stylesheet (light mode)
+- `gui/styles.py` chi dinh nghia light mode. Chua co dark mode.
+- **Ke hoach:** Them dark mode toggle (xem roadmap).
+
+### D. Excel phai mo khoa khi dang chay
+- Neu `alias.xlsx` dang mo boi Excel, `openpyxl` voi `data_only=True` van doc duoc (read-only), nhung neu JSON da ton tai thi khong doc Excel. Rui ro thap.
+
+### E. About dialog hien sai version
+- `gui/dialogs.py` `show_about()` hien "v1.0" (chua cap nhat len 1.5). Can sua hardcode string.
+- **Ke hoach:** Keo version tu constant chung thay vi hardcode.
+
+### F. metadata.saved_at fix cung "2024-07-16"
+- Trong `data_manager.py`, truong `saved_at` la chuoi fix cung, chua dung ngay ghi thuc te.
+- **Ke hoach:** Dung `datetime.now()` khi luu JSON.
