@@ -1,6 +1,6 @@
 # Danh sách lỗi (Known Issues) & Bài học kinh nghiệm
 
-*Cập nhật lần cuối: 16/07/2026 (Version 1.5)*
+*Cập nhật lần cuối: 16/07/2026 (Version 1.6)*
 
 File này ghi nhận các vấn đề phát sinh, trạng thái xử lý và các bài học kỹ thuật cốt lõi để AI Agent tuân thủ trong quá trình phát triển dự án.
 
@@ -46,13 +46,15 @@ File này ghi nhận các vấn đề phát sinh, trạng thái xử lý và cá
 
 ### E. Giao diện About hiển thị sai phiên bản (Ưu tiên cao)
 
-* *Hiện trạng:* Hàm `show_about()` trong `gui/dialogs.py` đang bị hardcode chuỗi `"v1.0"`, không tự động cập nhật khi ứng dụng lên v1.5.
-* *Kế hoạch:* Đưa biến `APP_VERSION` vào file `core/constants.py` để toàn bộ ứng dụng dùng chung.
+* *Hiện trạng:* Hàm `show_about()` trong `gui/dialogs.py` đang bị hardcode chuỗi `"v1.0"`, không tự động cập nhật khi ứng dụng lên v1.6.
+* *Giải pháp v1.6:* Đưa biến `APP_VERSION = "1.6"` vào `core/constants.py` và import vào `gui/dialogs.py`. Năm cũng được thay bằng `datetime.now().year`.
+* *Trạng thái:* **Resolved**
 
 ### F. Ngày cập nhật dữ liệu `saved_at` bị cố định (Ưu tiên cao)
 
 * *Hiện trạng:* File `data_manager.py` lưu siêu dữ liệu JSON với ngày ghi cố định là `"2024-07-16"`.
-* *Kế hoạch:* Sử dụng thư viện `datetime` để tự động ghi nhận thời gian thực khi xuất cache JSON.
+* *Giải pháp v1.6:* Sử dụng thư viện `datetime` để tự động ghi nhận thời gian thực khi xuất cache JSON: `datetime.now().strftime("%Y-%m-%d")`.
+* *Trạng thái:* **Resolved**
 
 ---
 

@@ -48,13 +48,13 @@ class CalculatorTab(QWidget):
         for s in STEEL_TYPES:
             self.type_combo.addItem(s.name, s.key)
 
-        clear_btn = QPushButton("Clear")
-        clear_btn.setObjectName("ClearButton")
-        clear_btn.setToolTip("Clear all input fields and reset to default values")
+        self.clear_btn = QPushButton("Clear")
+        self.clear_btn.setObjectName("ClearButton")
+        self.clear_btn.setToolTip("Clear all input fields and reset to default values")
 
         type_header = QHBoxLayout()
         type_header.addWidget(self.type_combo)
-        type_header.addWidget(clear_btn)
+        type_header.addWidget(self.clear_btn)
 
         type_box = QGroupBox("1. Select Steel Type")
         type_vbox = QVBoxLayout(type_box)
@@ -127,7 +127,7 @@ class CalculatorTab(QWidget):
         calc_layout.addWidget(main_splitter)
 
         self.type_combo.currentIndexChanged.connect(self.rebuild_inputs)
-        clear_btn.clicked.connect(self.clear_inputs)
+        self.clear_btn.clicked.connect(self.clear_inputs)
         self.rebuild_inputs()
         self._update_input_font(self.width())
 
@@ -135,7 +135,8 @@ class CalculatorTab(QWidget):
         """Scale input font so numbers stay legible when window shrinks.
 
         The left panel gets ~60% of the width; derive a sensible pt size
-        from that, clamped to a readable range.
+        from that, clamped to a readable range. Applies to line edits,
+        unit combos, and action buttons so nothing gets clipped.
         """
         left_width = max(width * 6 // 10, 320)
         pt = left_width / 60.0
@@ -144,6 +145,14 @@ class CalculatorTab(QWidget):
         font.setPointSizeF(pt)
         for edit in self.inputs:
             edit.setFont(font)
+        for combo in self.unit_combos.values():
+            combo.setFont(font)
+        if hasattr(self, "type_combo"):
+            self.type_combo.setFont(font)
+        if hasattr(self, "clear_btn"):
+            self.clear_btn.setFont(font)
+        if hasattr(self, "calc_copy_btn"):
+            self.calc_copy_btn.setFont(font)
 
     def resizeEvent(self, event):
         super().resizeEvent(event)

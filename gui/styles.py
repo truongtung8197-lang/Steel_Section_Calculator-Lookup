@@ -55,6 +55,7 @@ def apply_styles(window):
             color: #334155;
         }
         QLineEdit { min-height: 22px; }
+        QComboBox { min-height: 22px; }
         QListWidget { padding: 5px; background: #ffffff; }
         QListWidget::item {
             padding: 10px 12px;

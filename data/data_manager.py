@@ -2,6 +2,7 @@
 
 import json
 import os
+from datetime import datetime
 
 import openpyxl
 
@@ -42,7 +43,7 @@ class DataManager:
                 "metadata": {
                     "total_records": len(profiles),
                     "source": self.excel_path,
-                    "saved_at": "2024-07-16",
+                    "saved_at": datetime.now().strftime("%Y-%m-%d"),
                 },
             }
             with open(self.json_path, "w", encoding="utf-8") as f:

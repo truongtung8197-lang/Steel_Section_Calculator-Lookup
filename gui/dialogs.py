@@ -1,18 +1,22 @@
 """Dialog About và User Guide."""
 
+from datetime import datetime
+
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QMessageBox
+
+from core.constants import APP_VERSION
 
 
 def show_about(parent):
     QMessageBox.about(
         parent,
         "About Steel Management & Calculator Pro",
-        "Steel Management & Calculator Pro v1.0\n\n"
+        f"Steel Management & Calculator Pro v{APP_VERSION}\n\n"
         "A tool for calculating steel weight and looking up standard steel sections.\n\n"
         "Technology: Python 3.x, PySide6, openpyxl\n"
         "Developer: Development Team\n"
-        "Year: 2024",
+        f"Year: {datetime.now().year}",
     )
 
 

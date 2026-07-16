@@ -29,3 +29,5 @@ logger = logging.getLogger(__name__)
 PNG_DIR = os.path.join(BASE_DIR, "STEEL TYPE png")
 EXCEL_PATH = os.path.join(BASE_DIR, "alias.xlsx")
 JSON_PATH = os.path.join(BASE_DIR, "steel_db.json")
+
+APP_VERSION = "1.6"

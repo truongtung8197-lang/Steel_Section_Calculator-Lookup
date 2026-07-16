@@ -1,6 +1,6 @@
 # Steel Management & Calculator Pro - Tong quan
 
-**Phien ban:** 1.5  
+**Phien ban:** 1.6  
 **Cong nghe:** Python 3.14.x, PySide6 6.11.1 (Qt), openpyxl 3.1.5  
 **Muc dich:** Cong cu tinh toan khoi luong thep ly thuyet va tra cuu profile thep chuan tu file Excel
 
@@ -21,7 +21,7 @@ Tinh khoi luong thep ly thuyet cho 8 loai hinh cat thep (dinh nghia trong `core/
 - **Rod / Round Bar** (Thep tron)
 - **T Section** (Thep chu T)
 
-**Dac diem (thuc te code v1.5):**
+**Dac diem (thuc te code v1.6):**
 
 - Chon loai thep tu dropdown; form input duoc build dong (`rebuild_inputs` trong `calc_tab.py`)
 - Tu dong hien thi hinh ve ky thuat tu `STEEL TYPE png/` qua `ImageBox` widget
@@ -57,7 +57,7 @@ Ho tro 4 thu vien (dinh nghia trong `data/data_manager.py`):
 
 ---
 
-## Cau truc thu muc (v1.5)
+## Cau truc thu muc (v1.6)
 
 ```
 Steel_Section_Calculator-Lookup/
