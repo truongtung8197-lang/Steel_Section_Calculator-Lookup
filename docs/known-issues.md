@@ -1,52 +1,67 @@
-# Known Issues & Loi da biet
+# Danh sách lỗi (Known Issues) & Bài học kinh nghiệm
 
-> Cap nhat lan cuoi: Version 1.5
+*Cập nhật lần cuối: 16/07/2026 (Version 1.5)*
 
----
-
-## Da giai quyet (Resolved)
-
-### 1. File steel_db.json khong duoc su dung
-- **Trang thai v1.5:** ✅ Da giai quyet. `DataManager.load_data()` uu tien doc JSON, chi fallback sang Excel khi JSON loi/thieu, roi luu lai JSON.
-
-### 2. Xu ly loi Excel chua robust
-- **Trang thai v1.5:** ✅ Da cai thien. `data_manager.py` validate 4 sheet bat buoc, `skip_headers()` bo qua header, `clean_weight()` xu ly `---`/rong, try/except quanh load, fallback `[]`. Lookup tab hien canh bao neu Excel chua load.
-
-### 3. Khong co unit test
-- **Trang thai v1.5:** ⚠ Chua co. Van nam trong TODO (ngan han).
-
-### 4. Giao dien chua responsive tot
-- **Trang thai v1.5:** ✅ Da cai thien dang ke. `calc_tab.py` co `resizeEvent` + `_update_input_font()` scale font 9-13pt; dung `QSplitter` voi `setStretchFactor`; `left_widget.setMinimumWidth(320)` tranh input qua nho. Van con: minimum size cua MainWindow la 1000x680.
-
-### 5. Loi tiem an voi QDoubleValidator
-- **Trang thai v1.5:** ⚠ Van con. Validator gioi han 0.001 - 999999.0, nen khong tinh duoc kich thuoc > 999999 mm. Hien tai chap nhan vi du an chua can.
-
-### 6. GUI khong responsive khi resize
-- **Trang thai v1.5:** ✅ Da giai quyet (xem muc 4). Font tu dong scale, splitter linh hoat, PNG co `resizeEvent` trong `ImageBox` render lai.
+File này ghi nhận các vấn đề phát sinh, trạng thái xử lý và các bài học kỹ thuật cốt lõi để AI Agent tuân thủ trong quá trình phát triển dự án.
 
 ---
 
-## Chua giai quyet (Open)
+## ✅ Các lỗi đã giải quyết (Resolved)
 
-### A. Thieu unit test
-- Chua co test suite kiem tra cong thuc tinh toan (`core/geometry.py`) va validator.
-- **Ke hoach:** Them `tests/test_geometry.py`, `tests/test_validators.py`.
+1. **File `steel_db.json` không được sử dụng hiệu quả**
+   * *Mô tả:* Ứng dụng luôn đọc file Excel trực tiếp gây chậm.
+   * *Giải pháp v1.5:* `DataManager.load_data()` ưu tiên đọc JSON cache, chỉ fallback sang Excel khi JSON lỗi/thiếu, sau đó tự cập nhật lại JSON.
 
-### B. QDoubleValidator gioi han kich thuoc lon
-- Chi nhan 0.001 - 999999.0 mm. Kich thuoc rat lon se bi tu choi.
-- **Ke hoach:** Mo rong range hoac bo validator, tu validate trong `calculate()`.
+2. **Xử lý lỗi Excel thiếu an toàn (Robustness)**
+   * *Mô tả:* Lỗi cấu trúc file Excel dễ gây crash ứng dụng.
+   * *Giải pháp v1.5:* `data_manager.py` tự động kiểm tra 5 sheet bắt buộc, dùng `skip_headers()` bỏ qua dòng tiêu đề, `clean_weight()` xử lý các ký tự lạ (`---`, ô trống), bọc khối lệnh trong `try/except` và fallback về danh sách rỗng `[]` kèm cảnh báo trên giao diện.
 
-### C. Chi co 1 stylesheet (light mode)
-- `gui/styles.py` chi dinh nghia light mode. Chua co dark mode.
-- **Ke hoach:** Them dark mode toggle (xem roadmap).
+3. **Giao diện co giãn (Responsive) chưa tốt**
+   * *Mô tả:* Font chữ và khung nhập liệu bị vỡ, tràn viền hoặc quá nhỏ khi thay đổi kích thước cửa sổ.
+   * *Giải pháp v1.5:* Sử dụng `QSplitter` với tỷ lệ giãn nở `setStretchFactor`, đặt chiều rộng tối thiểu cho khung nhập liệu `left_widget.setMinimumWidth(320)`. Viết đè `resizeEvent()` để gọi `_update_input_font()` tự động scale font chữ động từ 9pt đến 13pt. Khung vẽ kỹ thuật `ImageBox` tự động render lại hình ảnh theo kích thước mới.
 
-### D. Excel phai mo khoa khi dang chay
-- Neu `alias.xlsx` dang mo boi Excel, `openpyxl` voi `data_only=True` van doc duoc (read-only), nhung neu JSON da ton tai thi khong doc Excel. Rui ro thap.
+---
 
-### E. About dialog hien sai version
-- `gui/dialogs.py` `show_about()` hien "v1.0" (chua cap nhat len 1.5). Can sua hardcode string.
-- **Ke hoach:** Keo version tu constant chung thay vi hardcode.
+## ❌ Các lỗi chưa giải quyết (Open Issues)
 
-### F. metadata.saved_at fix cung "2024-07-16"
-- Trong `data_manager.py`, truong `saved_at` la chuoi fix cung, chua dung ngay ghi thuc te.
-- **Ke hoach:** Dung `datetime.now()` khi luu JSON.
+### A. Thiếu hệ thống Unit Test (Ưu tiên cao)
+
+* *Hiện trạng:* Chưa có test suite tự động kiểm tra tính chính xác của các công thức hình học (`core/geometry.py`) và các hàm kiểm tra dữ liệu đầu vào.
+* *Kế hoạch:* Tạo thư mục `tests/` chứa `test_geometry.py` và `test_validators.py` chạy bằng `pytest`.
+
+### B. Giới hạn nhập liệu của QDoubleValidator (Ưu tiên trung bình)
+
+* *Hiện trạng:* Validator giới hạn nhập liệu từ `0.001` đến `999999.0` mm, khiến ứng dụng không xử lý được kích thước lớn hơn hoặc bằng $1000$ m.
+* *Kế hoạch:* Mở rộng dải kiểm tra hoặc chuyển sang tự viết hàm kiểm tra giá trị (custom validation) trong sự kiện tính toán thay vì phụ thuộc hoàn toàn vào validator của Qt.
+
+### C. Giao diện chỉ hỗ trợ Light Mode (Ưu tiên thấp)
+
+* *Hiện trạng:* File `gui/styles.py` chỉ định nghĩa duy nhất một bảng mã màu sáng.
+* *Kế hoạch:* Phát triển thêm giao diện tối (Dark Mode) và cơ chế chuyển đổi trực tiếp trên menu bar.
+
+### D. Xung đột chiếm dụng file Excel (Ưu tiên thấp)
+
+* *Hiện trạng:* Nếu người dùng đang mở file `alias.xlsx` bằng Microsoft Excel, thư viện `openpyxl` có thể bị lỗi quyền truy cập (Permission Error) khi cố đọc ghi.
+* *Kế hoạch:* Tối ưu hóa cơ chế mở file ở chế độ chỉ đọc (read-only) khi load dữ liệu thô.
+
+### E. Giao diện About hiển thị sai phiên bản (Ưu tiên cao)
+
+* *Hiện trạng:* Hàm `show_about()` trong `gui/dialogs.py` đang bị hardcode chuỗi `"v1.0"`, không tự động cập nhật khi ứng dụng lên v1.5.
+* *Kế hoạch:* Đưa biến `APP_VERSION` vào file `core/constants.py` để toàn bộ ứng dụng dùng chung.
+
+### F. Ngày cập nhật dữ liệu `saved_at` bị cố định (Ưu tiên cao)
+
+* *Hiện trạng:* File `data_manager.py` lưu siêu dữ liệu JSON với ngày ghi cố định là `"2024-07-16"`.
+* *Kế hoạch:* Sử dụng thư viện `datetime` để tự động ghi nhận thời gian thực khi xuất cache JSON.
+
+---
+
+## 🧠 Bài học kinh nghiệm cho AI Agent (Lessons Learned)
+
+> **⚠️ NGUYÊN TẮC BẮT BUỘC ĐỐI VỚI AI AGENT KHI ĐỌC/GHI CODE DỰ ÁN NÀY:**
+
+* **LL-1 (Cấu trúc Module):** Tuyệt đối không gộp code ngược trở lại thành một file duy nhất. Giữ vững kiến trúc module độc lập (`core/` xử lý toán học, `data/` xử lý IO, `gui/` xử lý hiển thị). Khi cập nhật tính năng mới, chỉ tác động đúng file chịu trách nhiệm.
+* **LL-2 (An toàn dữ liệu - Fallback IO):** Mọi thao tác đọc/ghi file bên ngoài (JSON, Excel, hình ảnh) **bắt buộc** phải nằm trong khối lệnh `try-except`. Phải luôn có phương án fallback (trả về danh sách rỗng, sử dụng dữ liệu mặc định) để tránh ứng dụng bị crash đột ngột.
+* **LL-3 (Xử lý dữ liệu đầu vào sớm):** Các hàm kiểm tra tính hợp lệ (`check_*`) phải được đặt ngay tại layer tính toán toán học (`geometry.py`), thực hiện trước khi tính diện tích để cô lập lỗi logic (ví dụ: bề dày bụng thép không được lớn hơn chiều rộng cánh).
+* **LL-4 (Không hardcode thông tin cấu hình):** Không hardcode các chuỗi phiên bản, ngày tháng, đường dẫn file hoặc hằng số toán học ở các file giao diện. Toàn bộ phải được quản lý tập trung tại `core/constants.py`.
+* **LL-5 (Thiết kế giao diện linh hoạt):** Tránh sử dụng kích thước cố định (fixed size) cho widget. Luôn ưu tiên dùng `QSplitter`, `QLayout` và lắng nghe sự kiện `resizeEvent` để tính

@@ -1,112 +1,48 @@
-{
-  // === General behavior ===
-  "rules": [
-    "Always respond in English for code and comments, but explanations can be in Vietnamese if the user writes in Vietnamese.",
-    "Never assume a library, function, or API exists — verify by checking the actual codebase or installed package version before using it.",
-    "If unsure about something, explicitly say 'I am not sure' instead of guessing or hallucinating an answer.",
-    "Prefer small, incremental changes over large rewrites. Explain the change before applying it.",
-    "Always show the final code block in full when editing a file, unless the user asks for a diff only."
-  ],
+# 🤖 Chỉ dẫn & Nguyên tắc hoạt động của AI Agent (Agent Rules)
+*Cập nhật lần cuối: 16/07/2026*
 
-  // === Python specific ===
-  "pythonRules": [
-    "Follow PEP8 style. Use type hints for function signatures.",
-    "Always add docstrings for public functions and classes.",
-    "Use f-strings instead of .format() or % formatting.",
-    "Prefer standard library solutions before suggesting third-party packages.",
-    "When suggesting a new package, mention the exact pip install command and check compatibility with the current Python version.",
-    "Write testable, modular code — avoid putting everything in one giant script.",
-    "When writing CLI tools, use argparse or click, and always include a --help description."
-  ],
+Bạn là một AI Agent chuyên nghiệp hỗ trợ phát triển phần mềm tính toán và tra cứu kỹ thuật thép. Hãy tuân thủ nghiêm ngặt các quy tắc dưới đây để đảm bảo chất lượng code và tính chính xác của dữ liệu.
 
-  // === Working with free/weak models ===
-  "modelBehaviorRules": [
-    "Think step-by-step before writing code, and outline the plan first in a short list.",
-    "Keep responses concise — avoid unnecessary repetition to save context length.",
-    "Do not fabricate file paths, function names, or outputs. If a file wasn't shown, ask to see it first.",
-    "Before claiming a task is complete, mentally re-check the code for syntax errors and logical mistakes.",
-    "If the task is ambiguous, ask ONE clarifying question instead of guessing multiple assumptions."
-  ],
+---
 
-  // === Project/tool-building context ===
-  "projectRules": [
-    "This project is a Python tool built with the help of AI coding assistants in VSCode via Kilo Code.",
-    "Keep functions short and single-purpose to make it easier for weaker models to edit them safely.",
-    "Add comments explaining non-obvious logic, since future edits may be done by different AI models.",
-    "Maintain a requirements.txt or pyproject.toml updated with every new dependency added."
-  ]
-}{
-  // === General behavior ===
-  "rules": [
-    "Always respond in English for code and comments, but explanations can be in Vietnamese if the user writes in Vietnamese.",
-    "Never assume a library, function, or API exists — verify by checking the actual codebase or installed package version before using it.",
-    "If unsure about something, explicitly say 'I am not sure' instead of guessing or hallucinating an answer.",
-    "Prefer small, incremental changes over large rewrites. Explain the change before applying it.",
-    "Always show the final code block in full when editing a file, unless the user asks for a diff only."
-  ],
+## 🎯 1. Nguyên tắc cốt lõi (Core Principles)
 
-  // === Python specific ===
-  "pythonRules": [
-    "Follow PEP8 style. Use type hints for function signatures.",
-    "Always add docstrings for public functions and classes.",
-    "Use f-strings instead of .format() or % formatting.",
-    "Prefer standard library solutions before suggesting third-party packages.",
-    "When suggesting a new package, mention the exact pip install command and check compatibility with the current Python version.",
-    "Write testable, modular code — avoid putting everything in one giant script.",
-    "When writing CLI tools, use argparse or click, and always include a --help description."
-  ],
+1. **Không tự bịa ra câu trả lời:** Nếu thiếu thông tin về dữ liệu Excel hoặc công thức, hãy hỏi lại người dùng ngay lập tức.
+2. **Ngắn gọn & Đúng trọng tâm:** Trả lời trực diện vào vấn đề, không giải thích dông dài, không viết sớ.
+3. **Double-check Code:** Trước khi xuất code hoặc ghi đè file, bạn bắt buộc phải tự kiểm tra lỗi cú pháp (syntax) và logic toán học tối thiểu 2 lần.
+4. **Không tự ý thay đổi cấu thức thư mục:** Giữ nguyên cấu trúc module hóa hiện tại:
+   * `core/`: Chứa hằng số (`constants.py`) và công thức toán học (`geometry.py`, `steel_types.py`).
+   * `data/`: Chứa trình quản lý dữ liệu (`data_manager.py`).
+   * `gui/`: Chứa giao diện người dùng (tabs, widgets, styles, dialogs).
+   * `docs/`: Chứa tài liệu tiến độ và danh sách lỗi.
 
-  // === Working with free/weak models ===
-  "modelBehaviorRules": [
-    "Think step-by-step before writing code, and outline the plan first in a short list.",
-    "Keep responses concise — avoid unnecessary repetition to save context length.",
-    "Do not fabricate file paths, function names, or outputs. If a file wasn't shown, ask to see it first.",
-    "Before claiming a task is complete, mentally re-check the code for syntax errors and logical mistakes.",
-    "If the task is ambiguous, ask ONE clarifying question instead of guessing multiple assumptions."
-  ],
+---
 
-  // === Project/tool-building context ===
-  "projectRules": [
-    "This project is a Python tool built with the help of AI coding assistants in VSCode via Kilo Code.",
-    "Keep functions short and single-purpose to make it easier for weaker models to edit them safely.",
-    "Add comments explaining non-obvious logic, since future edits may be done by different AI models.",
-    "Maintain a requirements.txt or pyproject.toml updated with every new dependency added."
-  ]
-}{
-  // === General behavior ===
-  "rules": [
-    "Always respond in English for code and comments, but explanations can be in Vietnamese if the user writes in Vietnamese.",
-    "Never assume a library, function, or API exists — verify by checking the actual codebase or installed package version before using it.",
-    "If unsure about something, explicitly say 'I am not sure' instead of guessing or hallucinating an answer.",
-    "Prefer small, incremental changes over large rewrites. Explain the change before applying it.",
-    "Always show the final code block in full when editing a file, unless the user asks for a diff only."
-  ],
+## 📐 2. Quy tắc toán học & Công thức tính thép (BẮT BUỘC)
 
-  // === Python specific ===
-  "pythonRules": [
-    "Follow PEP8 style. Use type hints for function signatures.",
-    "Always add docstrings for public functions and classes.",
-    "Use f-strings instead of .format() or % formatting.",
-    "Prefer standard library solutions before suggesting third-party packages.",
-    "When suggesting a new package, mention the exact pip install command and check compatibility with the current Python version.",
-    "Write testable, modular code — avoid putting everything in one giant script.",
-    "When writing CLI tools, use argparse or click, and always include a --help description."
-  ],
+* **Mật độ thép:** Luôn sử dụng hằng số $7.85 \times 10^{-6} \text{ kg/mm}^3$ (hoặc $7850 \text{ kg/m}^3$).
+* **Đơn vị đầu vào:** Chiều dài nhập từ GUI là mét (m), nhưng khi tính toán diện tích và khối lượng phải quy đổi sang milimet (mm) (nhân với 1000).
+* **Đặc tính góc bo ($r_1$):**
+  * Với thép **RHS/SHS (Thép hộp)**, giá trị $r_1$ được quy ước là **Bán kính trong ($R_i$)**. Bán kính ngoài phải tính bằng $R_o = r_1 + t$.
+  * Tuyệt đối không thay đổi các công thức bù trừ diện tích góc bo trong `core/geometry.py` trừ khi được người dùng yêu cầu trực tiếp bằng văn bản.
 
-  // === Working with free/weak models ===
-  "modelBehaviorRules": [
-    "Think step-by-step before writing code, and outline the plan first in a short list.",
-    "Keep responses concise — avoid unnecessary repetition to save context length.",
-    "Do not fabricate file paths, function names, or outputs. If a file wasn't shown, ask to see it first.",
-    "Before claiming a task is complete, mentally re-check the code for syntax errors and logical mistakes.",
-    "If the task is ambiguous, ask ONE clarifying question instead of guessing multiple assumptions."
-  ],
+---
 
-  // === Project/tool-building context ===
-  "projectRules": [
-    "This project is a Python tool built with the help of AI coding assistants in VSCode via Kilo Code.",
-    "Keep functions short and single-purpose to make it easier for weaker models to edit them safely.",
-    "Add comments explaining non-obvious logic, since future edits may be done by different AI models.",
-    "Maintain a requirements.txt or pyproject.toml updated with every new dependency added."
-  ]
-}
+## 🛠️ 3. Quy trình làm việc với File & Dữ liệu
+
+1. **Đọc tài liệu trước khi code:** Trước khi thực hiện bất kỳ task nào, hãy đọc trước:
+   * `docs/progress.md` để nắm được lộ trình và các đầu việc cần ưu tiên.
+   * `docs/known-issues.md` để tránh lặp lại các bug cũ đã được giải quyết.
+2. **Cập nhật Tiến độ & Lỗi:**
+   * Khi giải quyết xong một lỗi, hãy cập nhật trạng thái từ `Open` sang `Resolved` trong `docs/known-issues.md` và bổ sung bài học rút ra vào mục `Lessons Learned`.
+   * Khi hoàn thành một tính năng trong Roadmap, hãy đánh dấu `[x]` vào file `docs/progress.md`.
+3. **An toàn IO:** Mọi thao tác đọc ghi file (`steel_db.json`, `alias.xlsx`) bắt buộc phải bọc trong khối `try-except` và luôn có dữ liệu fallback rỗng `[]` để ứng dụng không bao giờ bị crash.
+
+---
+
+## 🐍 4. Quy chuẩn viết Code (Coding Standards)
+
+* **Framework:** PySide6 (Qt for Python), không dùng PyQt5 hay PyQt6 để tránh xung đột thư viện.
+* **Responsive GUI:** Tránh hardcode kích thước widget. Hãy sử dụng `QLayout`, `QSplitter` và xử lý font chữ động qua `resizeEvent` tương tự như cách calc_tab.py đang hoạt động.
+* **Không hardcode cấu hình:** Mọi chuỗi ký tự hiển thị phiên bản (version), tên file, hoặc ngày tháng cập nhật phải được gọi từ hằng số trong `core/constants.py` hoặc sử dụng thư viện động (như `datetime.now()`).
+* **Chú thích code (Comments):** Khi viết code xử lý logic hoặc toán học phức tạp, phải ghi chú thích giải thích **TẠI SAO (Why)** lại viết như vậy, không chỉ giải thích code đang làm gì (What).

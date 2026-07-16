@@ -77,46 +77,50 @@ Steel_Section_Calculator-Lookup/
 |   |-- widgets/
 |   |   |-- image_box.py       # ImageBox widget (QLabel + QPixmap)
 |   |-- tabs/
-|   |   |-- calc_tab.py        # CalculatorTab (366 dong)
-|   |   |-- lookup_tab.py      # LookupTab (197 dong)
+|   |   |-- calc_tab.py        # CalculatorTab (315 dong)
+|   |   |-- lookup_tab.py      # LookupTab (162 dong)
 |-- docs/                      # Tai lieu
-|   |-- changelog.md
+|   |-- progress.md
 |   |-- context.md
 |   |-- known-issues.md
-|   |-- roadmap.md
 |-- STEEL TYPE png/            # Hinh ve ky thuat (8 file PNG)
 ```
 
 ---
 
-## Cong thuc tinh toan
+## 📐 Công thức tính toán chuẩn hóa
 
-**Mat do thep:** 7.85e-6 kg/mm3 (7850 kg/m3)
+* **Mật độ khối lượng của thép:** $7.85 \times 10^{-6} \text{ kg/mm}^3$ (tương đương $7850 \text{ kg/m}^3$).
+* **Công thức tính khối lượng tổng quát:**
+  $$\text{Weight (kg)} = \text{Area (mm}^2\text{)} \times \text{Length (m)} \times 0.00785$$
+  *(Trong đó: chiều dài nhập vào bằng mét được nhân với 1000 để quy đổi sang mm trước khi tính toán)*
 
-### Cong thuc dien tich mat cat (khong goc bo)
+---
 
-| Loai thep | Cong thuc |
-|-----------|------------|
-| Plate | A = Length x Width x Thickness |
-| I Beam | A = 2 x B x Tf + (H - 2 x Tf) x Tw |
-| U Channel | A = 2 x B x Tf + (H - 2 x Tf) x Tw |
-| Angle | A = t x (a + b - t) |
-| RHS/SHS | A = W x H - (W - 2t) x (H - 2t) |
-| CHS | A = pi/4 x (OD2 - (OD - 2t)2) |
-| Rod | A = pi x D2 / 4 |
-| T Section | A = B x Tf + (H - Tf) x Tw |
+### 1. Công thức diện tích mặt cắt $A \text{ (mm}^2\text{)}$ - KHÔNG CÓ GÓC BO
 
-### Cong thuc dien tich mat cat (co goc bo r1)
+| Loại thép | Công thức diện tích mặt cắt ($A$) | Ghi chú biến số |
+| :--- | :--- | :--- |
+| **Plate** (Thép tấm) | $A = \text{Width} \times \text{Thickness}$ | Chiều rộng (Width), Độ dày (Thickness) |
+| **I Beam** (Thép I/H) | $A = 2B \cdot T_f + (H - 2T_f)T_w$ | Chiều cao ($H$), Rộng cánh ($B$), Dày bụng ($T_w$), Dày cánh ($T_f$) |
+| **U Channel** (Thép U/C) | $A = 2B \cdot T_f + (H - 2T_f)T_w$ | Chiều cao ($H$), Rộng cánh ($B$), Dày bụng ($T_w$), Dày cánh ($T_f$) |
+| **Angle** (Thép góc V/L) | $A = t(a + b - t)$ | Chiều dài 2 cánh ($a, b$), Độ dày ($t$) |
+| **RHS/SHS** (Thép hộp) | $A = W \cdot H - (W - 2t)(H - 2t)$ | Chiều rộng ($W$), Chiều cao ($H$), Độ dày ($t$) |
+| **CHS** (Thép ống tròn) | $A = \frac{\pi}{4} [OD^2 - (OD - 2t)^2]$ | Đường kính ngoài ($OD$), Độ dày ($t$) |
+| **Rod** (Thép tròn đặc) | $A = \frac{\pi \cdot D^2}{4}$ | Đường kính ($D$) |
+| **T Section** (Thép chữ T) | $A = B \cdot T_f + (H - T_f)T_w$ | Rộng cánh ($B$), Chiều cao ($H$), Dày cánh ($T_f$), Dày bụng ($T_w$) |
 
-| Loai thep | Cong thuc |
-|-----------|------------|
-| I Beam | A = 2BTf + (H-2Tf)Tw + (pi-2)r1^2 |
-| U Channel | A = 2BTf + (H-2Tf)Tw + 2(pi-2)r1^2 |
-| Angle | A = t(a+b-t) + (pi/4-1/2)r1^2 |
-| RHS/SHS | A = WH - (W-2t)(H-2t) - (4-pi)(Ro^2-Ri^2) |
-| T Section | A = BTf + (H-Tf)Tw + 2(pi-2)r1^2 |
+---
 
-**Khoi luong:** Weight = Area x Length x Density (Length tinh bang mm: x1000)
+### 2. Công thức diện tích mặt cắt $A \text{ (mm}^2\text{)}$ - CÓ GÓC BO ($r_1$)
+
+| Loại thép | Công thức diện tích mặt cắt ($A$) | Giải thích hiệu chỉnh góc bo |
+| :--- | :--- | :--- |
+| **I Beam** (Thép I/H) | $A = 2B \cdot T_f + (H - 2T_f)T_w + (4 - \pi)r_1^2$ | Cộng thêm diện tích của 4 góc bo nội |
+| **U Channel** (Thép U/C) | $A = 2B \cdot T_f + (H - 2T_f)T_w + (2 - \frac{\pi}{2})r_1^2$ | Cộng thêm diện tích của 2 góc bo nội |
+| **Angle** (Thép góc V/L) | $A = t(a + b - t) + (1 - \frac{\pi}{4})r_1^2$ | Cộng thêm diện tích của 1 góc bo nội |
+| **RHS/SHS** (Thép hộp)* | $A = W \cdot H - (W - 2t)(H - 2t) - (4 - \pi)(R_o^2 - R_i^2)$ | Trừ bớt diện tích hao hụt do bo tròn 4 góc bên ngoài và bên trong. Quy ước: Bán kính trong $R_i = r_1$; Bán kính ngoài $R_o = r_1 + t$. |
+| **T Section** (Thép chữ T) | $A = B \cdot T_f + (H - T_f)T_w + (2 - \frac{\pi}{2})r_1^2$ | Cộng thêm diện tích của 2 góc bo nội |
 
 ---
 
@@ -158,6 +162,7 @@ Steel_Section_Calculator-Lookup/
   "metadata": { "total_records": 964, "source": "alias.xlsx", "saved_at": "2024-07-16" }
 }
 ```
+
 Moi record:
 
 - **Type 1 (ih, channel):** type, D, E, F, N, O
