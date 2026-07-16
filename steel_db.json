@@ -1,0 +1,5660 @@
+{
+  "ih": [
+    {
+      "name": "1200WB455",
+      "original_section": "I - 1200 x 500 x 16 x 40",
+      "weight": 455.0,
+      "substitute_section": "I - 1200 x 500 x 16 x 40",
+      "substitute_weight": 454.672
+    },
+    {
+      "name": "1200WB423",
+      "original_section": "I - 1192 x 500 x 16 x 36",
+      "weight": 423.0,
+      "substitute_section": "I - 1192 x 500 x 16 x 40",
+      "substitute_weight": 453.667
+    },
+    {
+      "name": "1200WB392",
+      "original_section": "I - 1184 x 500 x 16 x 32",
+      "weight": 392.0,
+      "substitute_section": "I - 1184 x 500 x 16 x 32",
+      "substitute_weight": 391.872
+    },
+    {
+      "name": "1200WB342",
+      "original_section": "I - 1184 x 400 x 16 x 32",
+      "weight": 342.0,
+      "substitute_section": "I - 1184 x 400 x 16 x 32",
+      "substitute_weight": 341.632
+    },
+    {
+      "name": "1200WB317",
+      "original_section": "I - 1176 x 400 x 16 x 28",
+      "weight": 317.0,
+      "substitute_section": "I - 1176 x 400 x 16 x 28",
+      "substitute_weight": 316.512
+    },
+    {
+      "name": "1200WB278",
+      "original_section": "I - 1170 x 350 x 16 x 25",
+      "weight": 278.0,
+      "substitute_section": "I - 1170 x 350 x 16 x 25",
+      "substitute_weight": 278.047
+    },
+    {
+      "name": "1200WB249",
+      "original_section": "I - 1170 x 275 x 16 x 25",
+      "weight": 249.0,
+      "substitute_section": "I - 1170 x 275 x 16 x 25",
+      "substitute_weight": 248.609
+    },
+    {
+      "name": "1000WB322",
+      "original_section": "I - 1024 x 400 x 16 x 32",
+      "weight": 322.0,
+      "substitute_section": "I - 1024 x 400 x 16 x 32",
+      "substitute_weight": 321.536
+    },
+    {
+      "name": "1000WB296",
+      "original_section": "I - 1016 x 400 x 16 x 28",
+      "weight": 296.0,
+      "substitute_section": "I - 1016 x 400 x 16 x 28",
+      "substitute_weight": 296.416
+    },
+    {
+      "name": "1000WB258",
+      "original_section": "I - 1010 x 350 x 16 x 25",
+      "weight": 258.0,
+      "substitute_section": "I - 1010 x 350 x 16 x 25",
+      "substitute_weight": 257.951
+    },
+    {
+      "name": "1000WB215",
+      "original_section": "I - 1000 x 300 x 16 x 20",
+      "weight": 215.0,
+      "substitute_section": "I - 1000 x 300 x 16 x 20",
+      "substitute_weight": 214.776
+    },
+    {
+      "name": "900WB282",
+      "original_section": "I - 924 x 400 x 12 x 32",
+      "weight": 282.0,
+      "substitute_section": "I - 924 x 400 x 12 x 32",
+      "substitute_weight": 281.972
+    },
+    {
+      "name": "900WB257",
+      "original_section": "I - 916 x 400 x 12 x 28",
+      "weight": 257.0,
+      "substitute_section": "I - 916 x 400 x 12 x 28",
+      "substitute_weight": 256.852
+    },
+    {
+      "name": "900WB218",
+      "original_section": "I - 910 x 350 x 12 x 25",
+      "weight": 218.0,
+      "substitute_section": "I - 910 x 350 x 12 x 25",
+      "substitute_weight": 218.387
+    },
+    {
+      "name": "900WB175",
+      "original_section": "I - 900 x 300 x 12 x 20",
+      "weight": 175.0,
+      "substitute_section": "I - 900 x 300 x 12 x 20",
+      "substitute_weight": 175.212
+    },
+    {
+      "name": "800WB192",
+      "original_section": "I - 816 x 300 x 10 x 28",
+      "weight": 192.0,
+      "substitute_section": "I - 816 x 300 x 10 x 28",
+      "substitute_weight": 191.54
+    },
+    {
+      "name": "800WB168",
+      "original_section": "I - 810 x 275 x 10 x 25",
+      "weight": 168.0,
+      "substitute_section": "I - 810 x 275 x 10 x 25",
+      "substitute_weight": 167.597
+    },
+    {
+      "name": "800WB146",
+      "original_section": "I - 800 x 275 x 10 x 20",
+      "weight": 146.0,
+      "substitute_section": "I - 800 x 275 x 10 x 20",
+      "substitute_weight": 146.01
+    },
+    {
+      "name": "800WB122",
+      "original_section": "I - 792 x 250 x 10 x 16",
+      "weight": 122.0,
+      "substitute_section": "I - 792 x 250 x 10 x 16",
+      "substitute_weight": 122.46
+    },
+    {
+      "name": "700WB173",
+      "original_section": "I - 716 x 275 x 10 x 28",
+      "weight": 173.0,
+      "substitute_section": "I - 716 x 275 x 10 x 28",
+      "substitute_weight": 172.7
+    },
+    {
+      "name": "700WB150",
+      "original_section": "I - 710 x 250 x 10 x 25",
+      "weight": 150.0,
+      "substitute_section": "I - 710 x 250 x 10 x 25",
+      "substitute_weight": 149.935
+    },
+    {
+      "name": "700WB130",
+      "original_section": "I - 700 x 250 x 10 x 20",
+      "weight": 130.0,
+      "substitute_section": "I - 700 x 250 x 10 x 20",
+      "substitute_weight": 130.31
+    },
+    {
+      "name": "700WB115",
+      "original_section": "I - 692 x 250 x 10 x 16",
+      "weight": 115.0,
+      "substitute_section": "I - 692 x 250 x 10 x 16",
+      "substitute_weight": 114.61
+    },
+    {
+      "name": "500WC440",
+      "original_section": "H - 480 x 500 x 40 x 40",
+      "weight": 440.0,
+      "substitute_section": "H - 480 x 500 x 40 x 40",
+      "substitute_weight": 439.6
+    },
+    {
+      "name": "500WC414",
+      "original_section": "H - 480 x 500 x 32 x 40",
+      "weight": 414.0,
+      "substitute_section": "H - 480 x 500 x 32 x 40",
+      "substitute_weight": 414.48
+    },
+    {
+      "name": "500WC383",
+      "original_section": "H - 472 x 500 x 32 x 36",
+      "weight": 383.0,
+      "substitute_section": "H - 472 x 500 x 32 x 40",
+      "substitute_weight": 412.47
+    },
+    {
+      "name": "500WC340",
+      "original_section": "H - 514 x 500 x 25 x 32",
+      "weight": 340.0,
+      "substitute_section": "H - 514 x 500 x 25 x 32",
+      "substitute_weight": 339.512
+    },
+    {
+      "name": "500WC290",
+      "original_section": "H - 506 x 500 x 20 x 28",
+      "weight": 290.0,
+      "substitute_section": "H - 506 x 500 x 20 x 28",
+      "substitute_weight": 290.45
+    },
+    {
+      "name": "500WC267",
+      "original_section": "H - 500 x 500 x 20 x 25",
+      "weight": 267.0,
+      "substitute_section": "H - 500 x 500 x 20 x 25",
+      "substitute_weight": 266.9
+    },
+    {
+      "name": "500WC228",
+      "original_section": "H - 490 x 500 x 20 x 20",
+      "weight": 228.0,
+      "substitute_section": "H - 490 x 500 x 20 x 20",
+      "substitute_weight": 227.65
+    },
+    {
+      "name": "400WC361",
+      "original_section": "H - 430 x 400 x 40 x 40",
+      "weight": 361.0,
+      "substitute_section": "H - 430 x 400 x 40 x 40",
+      "substitute_weight": 361.1
+    },
+    {
+      "name": "400WC328",
+      "original_section": "H - 430 x 400 x 28 x 40",
+      "weight": 328.0,
+      "substitute_section": "H - 430 x 400 x 28 x 40",
+      "substitute_weight": 328.13
+    },
+    {
+      "name": "400WC303",
+      "original_section": "H - 422 x 400 x 28 x 36",
+      "weight": 303.0,
+      "substitute_section": "H - 422 x 400 x 28 x 40",
+      "substitute_weight": 326.372
+    },
+    {
+      "name": "400WC270",
+      "original_section": "H - 414 x 400 x 25 x 32",
+      "weight": 270.0,
+      "substitute_section": "H - 414 x 400 x 25 x 32",
+      "substitute_weight": 269.647
+    },
+    {
+      "name": "400WC212",
+      "original_section": "H - 400 x 400 x 20 x 25",
+      "weight": 212.0,
+      "substitute_section": "H - 400 x 400 x 20 x 25",
+      "substitute_weight": 211.95
+    },
+    {
+      "name": "400WC181",
+      "original_section": "H - 390 x 400 x 20 x 20",
+      "weight": 181.0,
+      "substitute_section": "H - 390 x 400 x 20 x 20",
+      "substitute_weight": 180.55
+    },
+    {
+      "name": "400WC144",
+      "original_section": "H - 382 x 400 x 16 x 16",
+      "weight": 144.0,
+      "substitute_section": "H - 382 x 400 x 16 x 16",
+      "substitute_weight": 144.44
+    },
+    {
+      "name": "350WC280",
+      "original_section": "H - 355 x 350 x 28 x 40",
+      "weight": 280.0,
+      "substitute_section": "H - 355 x 350 x 28 x 40",
+      "substitute_weight": 280.245
+    },
+    {
+      "name": "350WC258",
+      "original_section": "H - 347 x 350 x 28 x 36",
+      "weight": 258.0,
+      "substitute_section": "H - 347 x 350 x 28 x 40",
+      "substitute_weight": 278.487
+    },
+    {
+      "name": "350WC230",
+      "original_section": "H - 339 x 350 x 25 x 32",
+      "weight": 230.0,
+      "substitute_section": "H - 339 x 350 x 25 x 32",
+      "substitute_weight": 229.809
+    },
+    {
+      "name": "350WC197",
+      "original_section": "H - 331 x 350 x 20 x 28",
+      "weight": 197.0,
+      "substitute_section": "H - 331 x 350 x 20 x 28",
+      "substitute_weight": 197.035
+    },
+    {
+      "name": "610UB125",
+      "original_section": "I - 611.6 x 229 x 11.9 x 19.6",
+      "weight": 125.0,
+      "substitute_section": "I - 612 x 229 x 12 x 20",
+      "substitute_weight": 125.788
+    },
+    {
+      "name": "610UB113",
+      "original_section": "I - 607 x 228 x 11.2 x 17.3",
+      "weight": 113.0,
+      "substitute_section": "I - 607 x 228 x 12 x 18",
+      "substitute_weight": 118.221
+    },
+    {
+      "name": "610UB101",
+      "original_section": "I - 602 x 228 x 10.6 x 14.8",
+      "weight": 101.0,
+      "substitute_section": "I - 602 x 228 x 12 x 16",
+      "substitute_weight": 110.968
+    },
+    {
+      "name": "530UB92.4",
+      "original_section": "I - 533 x 209 x 10.2 x 15.6",
+      "weight": 92.4,
+      "substitute_section": "I - 533 x 209 x 12 x 16",
+      "substitute_weight": 99.695
+    },
+    {
+      "name": "530UB82.0",
+      "original_section": "I - 528.2 x 209 x 9.6 x 13.2",
+      "weight": 82.0,
+      "substitute_section": "I - 528 x 209 x 10 x 14",
+      "substitute_weight": 85.188
+    },
+    {
+      "name": "460UB82.1",
+      "original_section": "I - 460.4 x 191 x 9.9 x 16",
+      "weight": 82.1,
+      "substitute_section": "I - 460 x 191 x 10 x 16",
+      "substitute_weight": 81.577
+    },
+    {
+      "name": "460UB74.6",
+      "original_section": "I - 457.4 x 190 x 9.1 x 14.5",
+      "weight": 74.6,
+      "substitute_section": "I - 457 x 190 x 10 x 16",
+      "substitute_weight": 81.091
+    },
+    {
+      "name": "460UB67.1",
+      "original_section": "I - 453.8 x 190 x 8.5 x 12.7",
+      "weight": 67.1,
+      "substitute_section": "I - 454 x 190 x 10 x 14",
+      "substitute_weight": 75.203
+    },
+    {
+      "name": "410UB59.7",
+      "original_section": "I - 406.4 x 178 x 7.8 x 12.8",
+      "weight": 59.7,
+      "substitute_section": "I - 406 x 178 x 8 x 14",
+      "substitute_weight": 62.863
+    },
+    {
+      "name": "410UB53.7",
+      "original_section": "I - 402.6 x 178 x 7.6 x 10.9",
+      "weight": 53.7,
+      "substitute_section": "I - 403 x 178 x 8 x 12",
+      "substitute_weight": 57.336
+    },
+    {
+      "name": "360UB56.7",
+      "original_section": "I - 358.6 x 172 x 8 x 13",
+      "weight": 56.7,
+      "substitute_section": "I - 359 x 172 x 8 x 14",
+      "substitute_weight": 58.592
+    },
+    {
+      "name": "360UB50.7",
+      "original_section": "I - 355.6 x 171 x 7.3 x 11.5",
+      "weight": 50.7,
+      "substitute_section": "I - 356 x 171 x 8 x 12",
+      "substitute_weight": 53.066
+    },
+    {
+      "name": "360UB44.7",
+      "original_section": "I - 352 x 171 x 6.9 x 9.7",
+      "weight": 44.7,
+      "substitute_section": "I - 352 x 171 x 8 x 10",
+      "substitute_weight": 47.697
+    },
+    {
+      "name": "310UB46.2",
+      "original_section": "H - 307.2 x 166 x 6.7 x 11.8",
+      "weight": 46.2,
+      "substitute_section": "H - 307 x 166 x 8 x 12",
+      "substitute_weight": 49.047
+    },
+    {
+      "name": "310UB40.4",
+      "original_section": "H - 304 x 165 x 6.1 x 10.2",
+      "weight": 40.4,
+      "substitute_section": "H - 304 x 165 x 6 x 12",
+      "substitute_weight": 44.274
+    },
+    {
+      "name": "310UB32.0",
+      "original_section": "I - 298 x 149 x 5.5 x 8",
+      "weight": 32.0,
+      "substitute_section": "I - 298 x 149 x 6 x 8",
+      "substitute_weight": 31.997
+    },
+    {
+      "name": "250UB37.3",
+      "original_section": "H - 256.2 x 146 x 6.4 x 10.9",
+      "weight": 37.3,
+      "substitute_section": "H - 256 x 146 x 8 x 12",
+      "substitute_weight": 42.076
+    },
+    {
+      "name": "250UB31.4",
+      "original_section": "H - 251.6 x 146 x 6.1 x 8.6",
+      "weight": 31.4,
+      "substitute_section": "H - 252 x 146 x 6 x 10",
+      "substitute_weight": 33.849
+    },
+    {
+      "name": "250UB25.7",
+      "original_section": "I - 248 x 124 x 5 x 8",
+      "weight": 25.7,
+      "substitute_section": "I - 248 x 124 x 6 x 8",
+      "substitute_weight": 26.502
+    },
+    {
+      "name": "200UB29.8",
+      "original_section": "H - 207 x 134 x 6.3 x 9.6",
+      "weight": 29.8,
+      "substitute_section": "H - 207 x 134 x 8 x 10",
+      "substitute_weight": 32.782
+    },
+    {
+      "name": "200UB25.4",
+      "original_section": "H - 203.2 x 133 x 5.8 x 7.8",
+      "weight": 25.4,
+      "substitute_section": "H - 203 x 133 x 6 x 8",
+      "substitute_weight": 25.512
+    },
+    {
+      "name": "200UB22.3",
+      "original_section": "H - 201.6 x 133 x 5 x 7",
+      "weight": 22.3,
+      "substitute_section": "H - 202 x 133 x 6 x 8",
+      "substitute_weight": 25.465
+    },
+    {
+      "name": "200UB18.2",
+      "original_section": "I - 198 x 99 x 4.5 x 7",
+      "weight": 18.2,
+      "substitute_section": "I - 198 x 99 x 6 x 8",
+      "substitute_weight": 21.007
+    },
+    {
+      "name": "180UB22.2",
+      "original_section": "H - 179 x 90 x 6 x 10",
+      "weight": 22.2,
+      "substitute_section": "H - 179 x 90 x 6 x 10",
+      "substitute_weight": 21.619
+    },
+    {
+      "name": "180UB18.1",
+      "original_section": "H - 175 x 90 x 5 x 8",
+      "weight": 18.1,
+      "substitute_section": "H - 175 x 90 x 6 x 8",
+      "substitute_weight": 18.793
+    },
+    {
+      "name": "180UB16.1",
+      "original_section": "H - 173 x 90 x 4.5 x 7",
+      "weight": 16.1,
+      "substitute_section": "H - 173 x 90 x 6 x 8",
+      "substitute_weight": 18.699
+    },
+    {
+      "name": "150UB18.0",
+      "original_section": "I - 155 x 75 x 6 x 9.5",
+      "weight": 18.0,
+      "substitute_section": "I - 155 x 75 x 6 x 10",
+      "substitute_weight": 18.134
+    },
+    {
+      "name": "150UB14.0",
+      "original_section": "I - 150 x 75 x 5 x 7",
+      "weight": 14.0,
+      "substitute_section": "I - 150 x 75 x 6 x 8",
+      "substitute_weight": 15.731
+    },
+    {
+      "name": "310UC158",
+      "original_section": "H - 327.2 x 311 x 15.7 x 25",
+      "weight": 158.0,
+      "substitute_section": "H - 327 x 311 x 16 x 25",
+      "substitute_weight": 156.859
+    },
+    {
+      "name": "310UC137",
+      "original_section": "H - 320.6 x 309 x 13.8 x 21.7",
+      "weight": 137.0,
+      "substitute_section": "H - 321 x 309 x 14 x 22",
+      "substitute_weight": 137.171
+    },
+    {
+      "name": "310UC118",
+      "original_section": "H - 314.6 x 307 x 11.9 x 18.7",
+      "weight": 118.0,
+      "substitute_section": "H - 315 x 307 x 12 x 20",
+      "substitute_weight": 122.303
+    },
+    {
+      "name": "310UC96.8",
+      "original_section": "H - 308 x 305 x 9.9 x 15.4",
+      "weight": 96.8,
+      "substitute_section": "H - 308 x 305 x 10 x 16",
+      "substitute_weight": 98.282
+    },
+    {
+      "name": "250UC89.5",
+      "original_section": "H - 260 x 256 x 10.5 x 17.3",
+      "weight": 89.5,
+      "substitute_section": "H - 260 x 256 x 12 x 18",
+      "substitute_weight": 93.446
+    },
+    {
+      "name": "250UC72.9",
+      "original_section": "H - 253.8 x 254 x 8.6 x 14.2",
+      "weight": 72.9,
+      "substitute_section": "H - 254 x 254 x 10 x 16",
+      "substitute_weight": 81.232
+    },
+    {
+      "name": "200UC59.5",
+      "original_section": "H - 209.8 x 205 x 9.3 x 14.2",
+      "weight": 59.5,
+      "substitute_section": "H - 210 x 205 x 10 x 16",
+      "substitute_weight": 65.469
+    },
+    {
+      "name": "200UC52.2",
+      "original_section": "H - 206.4 x 204 x 8 x 12.5",
+      "weight": 52.2,
+      "substitute_section": "H - 206 x 204 x 8 x 14",
+      "substitute_weight": 56.018
+    },
+    {
+      "name": "200UC46.2",
+      "original_section": "H - 203.4 x 203 x 7.3 x 11",
+      "weight": 46.2,
+      "substitute_section": "H - 203 x 203 x 8 x 12",
+      "substitute_weight": 49.486
+    },
+    {
+      "name": "150UC37.2",
+      "original_section": "H - 161.8 x 154 x 8.1 x 11.5",
+      "weight": 37.2,
+      "substitute_section": "H - 162 x 154 x 8 x 12",
+      "substitute_weight": 37.68
+    },
+    {
+      "name": "150UC30.0",
+      "original_section": "H - 157.6 x 153 x 6.6 x 9.4",
+      "weight": 30.0,
+      "substitute_section": "H - 158 x 153 x 8 x 10",
+      "substitute_weight": 32.687
+    },
+    {
+      "name": "150UC23.4",
+      "original_section": "H - 152.4 x 152 x 6.1 x 6.8",
+      "weight": 23.4,
+      "substitute_section": "H - 152 x 152 x 6 x 8",
+      "substitute_weight": 25.497
+    },
+    {
+      "name": "100UC14.8",
+      "original_section": "H - 97 x 99 x 5 x 7",
+      "weight": 14.8,
+      "substitute_section": "H - 97 x 99 x 6 x 8",
+      "substitute_weight": 16.25
+    },
+    {
+      "name": "W44X335",
+      "original_section": "I - 1118 x 404 x 26.17 x 44.96",
+      "weight": 498.534,
+      "substitute_section": "I - 1118 x 404 x 28 x 45",
+      "substitute_weight": 511.38
+    },
+    {
+      "name": "W44X290",
+      "original_section": "I - 1108 x 402 x 21.98 x 40.14",
+      "weight": 431.566,
+      "substitute_section": "I - 1108 x 402 x 22 x 45",
+      "substitute_weight": 459.822
+    },
+    {
+      "name": "W44X262",
+      "original_section": "I - 1100 x 402 x 19.94 x 36.07",
+      "weight": 389.898,
+      "substitute_section": "I - 1100 x 402 x 20 x 40",
+      "substitute_weight": 412.596
+    },
+    {
+      "name": "W44X230",
+      "original_section": "I - 1090 x 402 x 18.04 x 30.99",
+      "weight": 342.277,
+      "substitute_section": "I - 1090 x 402 x 18 x 32",
+      "substitute_weight": 346.939
+    },
+    {
+      "name": "W40X655",
+      "original_section": "I - 1108 x 430 x 50.04 x 89.92",
+      "weight": 974.745,
+      "substitute_section": "I - 1108 x 430 x 50 x 90",
+      "substitute_weight": 971.83
+    },
+    {
+      "name": "W40X593",
+      "original_section": "I - 1093 x 425 x 45.47 x 82.05",
+      "weight": 882.479,
+      "substitute_section": "I - 1093 x 425 x 50 x 90",
+      "substitute_weight": 958.878
+    },
+    {
+      "name": "W40X503",
+      "original_section": "I - 1070 x 417 x 39.12 x 70.11",
+      "weight": 748.544,
+      "substitute_section": "I - 1070 x 417 x 40 x 80",
+      "substitute_weight": 809.492
+    },
+    {
+      "name": "W40X431",
+      "original_section": "I - 1050 x 412 x 34.04 x 59.95",
+      "weight": 641.397,
+      "substitute_section": "I - 1050 x 412 x 35 x 60",
+      "substitute_weight": 643.621
+    },
+    {
+      "name": "W40X397",
+      "original_section": "I - 1042 x 409 x 30.99 x 55.88",
+      "weight": 590.8,
+      "substitute_section": "I - 1042 x 409 x 32 x 60",
+      "substitute_weight": 616.884
+    },
+    {
+      "name": "W40X372",
+      "original_section": "I - 1032 x 409 x 29.47 x 52.07",
+      "weight": 553.596,
+      "substitute_section": "I - 1032 x 409 x 30 x 60",
+      "substitute_weight": 600.054
+    },
+    {
+      "name": "W40X362",
+      "original_section": "I - 1032 x 407 x 28.45 x 51.06",
+      "weight": 538.714,
+      "substitute_section": "I - 1032 x 407 x 30 x 60",
+      "substitute_weight": 598.17
+    },
+    {
+      "name": "W40X324",
+      "original_section": "I - 1022 x 404 x 25.4 x 45.98",
+      "weight": 482.164,
+      "substitute_section": "I - 1022 x 404 x 28 x 50",
+      "substitute_weight": 519.796
+    },
+    {
+      "name": "W40X297",
+      "original_section": "I - 1011 x 402 x 23.63 x 41.91",
+      "weight": 441.984,
+      "substitute_section": "I - 1011 x 402 x 25 x 45",
+      "substitute_weight": 464.759
+    },
+    {
+      "name": "W40X277",
+      "original_section": "I - 1009 x 402 x 21.09 x 40.14",
+      "weight": 412.22,
+      "substitute_section": "I - 1009 x 402 x 22 x 45",
+      "substitute_weight": 442.724
+    },
+    {
+      "name": "W40X249",
+      "original_section": "I - 1001 x 402 x 19.05 x 36.07",
+      "weight": 370.552,
+      "substitute_section": "I - 1001 x 402 x 20 x 40",
+      "substitute_weight": 397.053
+    },
+    {
+      "name": "W40X215",
+      "original_section": "I - 991 x 402 x 16.51 x 30.99",
+      "weight": 319.954,
+      "substitute_section": "I - 991 x 402 x 18 x 32",
+      "substitute_weight": 332.95
+    },
+    {
+      "name": "W40X199",
+      "original_section": "I - 983 x 402 x 16.51 x 27.18",
+      "weight": 296.144,
+      "substitute_section": "I - 983 x 402 x 18 x 28",
+      "substitute_weight": 307.704
+    },
+    {
+      "name": "W40X392",
+      "original_section": "I - 1057 x 315 x 36.07 x 64.01",
+      "weight": 583.359,
+      "substitute_section": "I - 1057 x 315 x 40 x 70",
+      "substitute_weight": 634.123
+    },
+    {
+      "name": "W40X331",
+      "original_section": "I - 1037 x 310 x 30.99 x 54.11",
+      "weight": 492.581,
+      "substitute_section": "I - 1037 x 310 x 32 x 60",
+      "substitute_weight": 522.37
+    },
+    {
+      "name": "W40X327",
+      "original_section": "I - 1037 x 308 x 29.98 x 54.11",
+      "weight": 486.628,
+      "substitute_section": "I - 1037 x 308 x 30 x 60",
+      "substitute_weight": 506.089
+    },
+    {
+      "name": "W40X294",
+      "original_section": "I - 1027 x 305 x 26.93 x 49.03",
+      "weight": 437.519,
+      "substitute_section": "I - 1027 x 305 x 28 x 50",
+      "substitute_weight": 443.18
+    },
+    {
+      "name": "W40X278",
+      "original_section": "I - 1022 x 305 x 26.17 x 45.98",
+      "weight": 413.708,
+      "substitute_section": "I - 1022 x 305 x 28 x 50",
+      "substitute_weight": 442.081
+    },
+    {
+      "name": "W40X264",
+      "original_section": "I - 1016 x 303 x 24.39 x 43.95",
+      "weight": 392.874,
+      "substitute_section": "I - 1016 x 303 x 25 x 45",
+      "substitute_weight": 395.797
+    },
+    {
+      "name": "W40X235",
+      "original_section": "I - 1009 x 303 x 21.09 x 40.14",
+      "weight": 349.718,
+      "substitute_section": "I - 1009 x 303 x 22 x 45",
+      "substitute_weight": 372.781
+    },
+    {
+      "name": "W40X211",
+      "original_section": "I - 1001 x 300 x 19.05 x 36.07",
+      "weight": 314.002,
+      "substitute_section": "I - 1001 x 300 x 20 x 40",
+      "substitute_weight": 332.997
+    },
+    {
+      "name": "W40X183",
+      "original_section": "I - 991 x 300 x 16.51 x 30.48",
+      "weight": 272.333,
+      "substitute_section": "I - 991 x 300 x 18 x 32",
+      "substitute_weight": 281.705
+    },
+    {
+      "name": "W40X167",
+      "original_section": "I - 981 x 300 x 16.51 x 26.17",
+      "weight": 248.523,
+      "substitute_section": "I - 981 x 300 x 18 x 28",
+      "substitute_weight": 262.582
+    },
+    {
+      "name": "W40X149",
+      "original_section": "I - 971 x 300 x 16.01 x 21.09",
+      "weight": 221.736,
+      "substitute_section": "I - 971 x 300 x 16 x 22",
+      "substitute_weight": 220.051
+    },
+    {
+      "name": "W36X925",
+      "original_section": "I - 1095 x 473 x 76.71 x 115.07",
+      "weight": 1376.548,
+      "substitute_section": "#VALUE!",
+      "substitute_weight": null
+    },
+    {
+      "name": "W36X853",
+      "original_section": "I - 1095 x 463 x 64.01 x 115.07",
+      "weight": 1269.4,
+      "substitute_section": "#VALUE!",
+      "substitute_weight": null
+    },
+    {
+      "name": "W36X802",
+      "original_section": "I - 1083 x 458 x 60.46 x 108.97",
+      "weight": 1193.504,
+      "substitute_section": "#VALUE!",
+      "substitute_weight": null
+    },
+    {
+      "name": "W36X723",
+      "original_section": "I - 1062 x 453 x 55.12 x 99.06",
+      "weight": 1075.94,
+      "substitute_section": "#VALUE!",
+      "substitute_weight": null
+    },
+    {
+      "name": "W36X652",
+      "original_section": "I - 1044 x 448 x 50.04 x 89.92",
+      "weight": 970.28,
+      "substitute_section": "I - 1044 x 448 x 50 x 90",
+      "substitute_weight": 972.144
+    },
+    {
+      "name": "W36X529",
+      "original_section": "I - 1011 x 437 x 40.9 x 73.92",
+      "weight": 787.237,
+      "substitute_section": "I - 1011 x 437 x 45 x 80",
+      "substitute_weight": 849.488
+    },
+    {
+      "name": "W36X487",
+      "original_section": "I - 999 x 435 x 38.1 x 68.08",
+      "weight": 724.734,
+      "substitute_section": "I - 999 x 435 x 40 x 70",
+      "substitute_weight": 747.791
+    },
+    {
+      "name": "W36X441",
+      "original_section": "I - 989 x 432 x 34.55 x 61.98",
+      "weight": 656.279,
+      "substitute_section": "I - 989 x 432 x 35 x 70",
+      "substitute_weight": 708.031
+    },
+    {
+      "name": "W36X395",
+      "original_section": "I - 976 x 427 x 30.99 x 55.88",
+      "weight": 587.823,
+      "substitute_section": "I - 976 x 427 x 32 x 60",
+      "substitute_weight": 617.261
+    },
+    {
+      "name": "W36X361",
+      "original_section": "I - 966 x 425 x 28.45 x 51.06",
+      "weight": 537.226,
+      "substitute_section": "I - 966 x 425 x 30 x 60",
+      "substitute_weight": 599.583
+    },
+    {
+      "name": "W36X330",
+      "original_section": "I - 958 x 422 x 25.91 x 46.99",
+      "weight": 491.093,
+      "substitute_section": "I - 958 x 422 x 28 x 50",
+      "substitute_weight": 519.858
+    },
+    {
+      "name": "W36X302",
+      "original_section": "I - 948 x 425 x 24.01 x 42.68",
+      "weight": 449.424,
+      "substitute_section": "I - 948 x 425 x 25 x 45",
+      "substitute_weight": 468.645
+    },
+    {
+      "name": "W36X282",
+      "original_section": "I - 943 x 422 x 22.48 x 39.88",
+      "weight": 419.661,
+      "substitute_section": "I - 943 x 422 x 25 x 40",
+      "substitute_weight": 434.38
+    },
+    {
+      "name": "W36X262",
+      "original_section": "I - 938 x 422 x 21.34 x 36.58",
+      "weight": 389.898,
+      "substitute_section": "I - 938 x 422 x 22 x 40",
+      "substitute_weight": 413.193
+    },
+    {
+      "name": "W36X247",
+      "original_section": "I - 933 x 420 x 20.32 x 34.29",
+      "weight": 367.576,
+      "substitute_section": "I - 933 x 420 x 22 x 35",
+      "substitute_weight": 379.83
+    },
+    {
+      "name": "W36X231",
+      "original_section": "I - 928 x 420 x 19.31 x 32.01",
+      "weight": 343.765,
+      "substitute_section": "I - 928 x 420 x 20 x 32",
+      "substitute_weight": 346.656
+    },
+    {
+      "name": "W36X256",
+      "original_section": "I - 950 x 310 x 24.39 x 43.95",
+      "weight": 380.969,
+      "substitute_section": "I - 950 x 310 x 25 x 45",
+      "substitute_weight": 387.79
+    },
+    {
+      "name": "W36X232",
+      "original_section": "I - 943 x 308 x 22.1 x 39.88",
+      "weight": 345.253,
+      "substitute_section": "I - 943 x 308 x 25 x 40",
+      "substitute_weight": 362.788
+    },
+    {
+      "name": "W36X210",
+      "original_section": "I - 933 x 310 x 21.09 x 34.55",
+      "weight": 312.514,
+      "substitute_section": "I - 933 x 310 x 22 x 35",
+      "substitute_weight": 319.385
+    },
+    {
+      "name": "W36X194",
+      "original_section": "I - 928 x 308 x 19.44 x 32.01",
+      "weight": 288.703,
+      "substitute_section": "I - 928 x 308 x 20 x 32",
+      "substitute_weight": 290.387
+    },
+    {
+      "name": "W36X182",
+      "original_section": "I - 923 x 308 x 18.42 x 29.98",
+      "weight": 270.845,
+      "substitute_section": "I - 923 x 308 x 20 x 30",
+      "substitute_weight": 280.559
+    },
+    {
+      "name": "W36X170",
+      "original_section": "I - 920 x 305 x 17.28 x 27.94",
+      "weight": 252.987,
+      "substitute_section": "I - 920 x 305 x 18 x 28",
+      "substitute_weight": 256.161
+    },
+    {
+      "name": "W36X160",
+      "original_section": "I - 915 x 305 x 16.51 x 25.91",
+      "weight": 238.106,
+      "substitute_section": "I - 915 x 305 x 18 x 28",
+      "substitute_weight": 255.455
+    },
+    {
+      "name": "W36X150",
+      "original_section": "I - 912 x 305 x 15.88 x 23.88",
+      "weight": 223.224,
+      "substitute_section": "I - 912 x 305 x 16 x 25",
+      "substitute_weight": 227.98
+    },
+    {
+      "name": "W36X135",
+      "original_section": "I - 905 x 305 x 15.24 x 20.07",
+      "weight": 200.902,
+      "substitute_section": "I - 905 x 305 x 16 x 20",
+      "substitute_weight": 204.414
+    },
+    {
+      "name": "W33X387",
+      "original_section": "I - 915 x 412 x 32.01 x 57.92",
+      "weight": 575.918,
+      "substitute_section": "I - 915 x 412 x 32 x 60",
+      "substitute_weight": 587.808
+    },
+    {
+      "name": "W33X354",
+      "original_section": "I - 905 x 409 x 29.47 x 53.09",
+      "weight": 526.809,
+      "substitute_section": "I - 905 x 409 x 30 x 60",
+      "substitute_weight": 570.145
+    },
+    {
+      "name": "W33X318",
+      "original_section": "I - 895 x 407 x 26.42 x 48.01",
+      "weight": 473.235,
+      "substitute_section": "I - 895 x 407 x 28 x 50",
+      "substitute_weight": 494.236
+    },
+    {
+      "name": "W33X291",
+      "original_section": "I - 884 x 404 x 24.39 x 43.95",
+      "weight": 433.055,
+      "substitute_section": "I - 884 x 404 x 25 x 45",
+      "substitute_weight": 441.248
+    },
+    {
+      "name": "W33X263",
+      "original_section": "I - 877 x 402 x 22.1 x 39.88",
+      "weight": 391.386,
+      "substitute_section": "I - 877 x 402 x 25 x 40",
+      "substitute_weight": 408.867
+    },
+    {
+      "name": "W33X241",
+      "original_section": "I - 869 x 404 x 21.09 x 35.56",
+      "weight": 358.647,
+      "substitute_section": "I - 869 x 404 x 22 x 40",
+      "substitute_weight": 389.972
+    },
+    {
+      "name": "W33X221",
+      "original_section": "I - 862 x 402 x 19.69 x 32.52",
+      "weight": 328.883,
+      "substitute_section": "I - 862 x 402 x 20 x 35",
+      "substitute_weight": 345.243
+    },
+    {
+      "name": "W33X201",
+      "original_section": "I - 856 x 399 x 18.17 x 29.21",
+      "weight": 299.12,
+      "substitute_section": "I - 856 x 399 x 20 x 30",
+      "substitute_weight": 312.901
+    },
+    {
+      "name": "W33X169",
+      "original_section": "I - 859 x 293 x 17.02 x 30.99",
+      "weight": 251.499,
+      "substitute_section": "I - 859 x 293 x 18 x 32",
+      "substitute_weight": 259.537
+    },
+    {
+      "name": "W33X152",
+      "original_section": "I - 851 x 295 x 16.13 x 26.93",
+      "weight": 226.2,
+      "substitute_section": "I - 851 x 295 x 18 x 28",
+      "substitute_weight": 242.016
+    },
+    {
+      "name": "W33X141",
+      "original_section": "I - 846 x 293 x 15.37 x 24.39",
+      "weight": 209.831,
+      "substitute_section": "I - 846 x 293 x 16 x 25",
+      "substitute_weight": 214.98
+    },
+    {
+      "name": "W33X130",
+      "original_section": "I - 841 x 293 x 14.74 x 21.72",
+      "weight": 193.461,
+      "substitute_section": "I - 841 x 293 x 16 x 22",
+      "substitute_weight": 201.305
+    },
+    {
+      "name": "W33X118",
+      "original_section": "I - 836 x 293 x 13.97 x 18.8",
+      "weight": 175.603,
+      "substitute_section": "I - 836 x 293 x 14 x 20",
+      "substitute_weight": 179.482
+    },
+    {
+      "name": "W30X391",
+      "original_section": "I - 844 x 397 x 34.55 x 61.98",
+      "weight": 581.871,
+      "substitute_section": "I - 844 x 397 x 35 x 70",
+      "substitute_weight": 629.727
+    },
+    {
+      "name": "W30X357",
+      "original_section": "I - 834 x 394 x 31.5 x 56.9",
+      "weight": 531.273,
+      "substitute_section": "I - 834 x 394 x 32 x 60",
+      "substitute_weight": 550.505
+    },
+    {
+      "name": "W30X326",
+      "original_section": "I - 823 x 392 x 28.96 x 52.07",
+      "weight": 485.14,
+      "substitute_section": "I - 823 x 392 x 30 x 60",
+      "substitute_weight": 534.821
+    },
+    {
+      "name": "W30X292",
+      "original_section": "I - 813 x 389 x 25.91 x 46.99",
+      "weight": 434.543,
+      "substitute_section": "I - 813 x 389 x 28 x 50",
+      "substitute_weight": 462.082
+    },
+    {
+      "name": "W30X261",
+      "original_section": "I - 803 x 387 x 23.63 x 41.91",
+      "weight": 388.41,
+      "substitute_section": "I - 803 x 387 x 25 x 45",
+      "substitute_weight": 413.342
+    },
+    {
+      "name": "W30X235",
+      "original_section": "I - 796 x 384 x 21.09 x 38.1",
+      "weight": 349.718,
+      "substitute_section": "I - 796 x 384 x 22 x 40",
+      "substitute_weight": 364.805
+    },
+    {
+      "name": "W30X211",
+      "original_section": "I - 785 x 384 x 19.69 x 33.53",
+      "weight": 314.002,
+      "substitute_section": "I - 785 x 384 x 20 x 35",
+      "substitute_weight": 323.263
+    },
+    {
+      "name": "W30X191",
+      "original_section": "I - 780 x 381 x 18.04 x 30.23",
+      "weight": 284.239,
+      "substitute_section": "I - 780 x 381 x 18 x 32",
+      "substitute_weight": 292.585
+    },
+    {
+      "name": "W30X173",
+      "original_section": "I - 773 x 381 x 16.64 x 27.18",
+      "weight": 257.452,
+      "substitute_section": "I - 773 x 381 x 18 x 28",
+      "substitute_weight": 268.8
+    },
+    {
+      "name": "W30X148",
+      "original_section": "I - 780 x 267 x 16.51 x 29.98",
+      "weight": 220.248,
+      "substitute_section": "I - 780 x 267 x 18 x 30",
+      "substitute_weight": 227.493
+    },
+    {
+      "name": "W30X132",
+      "original_section": "I - 770 x 267 x 15.63 x 25.4",
+      "weight": 196.437,
+      "substitute_section": "I - 770 x 267 x 16 x 28",
+      "substitute_weight": 207.052
+    },
+    {
+      "name": "W30X124",
+      "original_section": "I - 768 x 267 x 14.86 x 23.63",
+      "weight": 184.532,
+      "substitute_section": "I - 768 x 267 x 16 x 25",
+      "substitute_weight": 194.978
+    },
+    {
+      "name": "W30X116",
+      "original_section": "I - 762 x 267 x 14.36 x 21.59",
+      "weight": 172.627,
+      "substitute_section": "I - 762 x 267 x 16 x 22",
+      "substitute_weight": 182.403
+    },
+    {
+      "name": "W30X108",
+      "original_section": "I - 757 x 267 x 13.85 x 19.31",
+      "weight": 160.721,
+      "substitute_section": "I - 757 x 267 x 14 x 20",
+      "substitute_weight": 162.636
+    },
+    {
+      "name": "W30X99",
+      "original_section": "I - 755 x 267 x 13.21 x 17.02",
+      "weight": 147.328,
+      "substitute_section": "I - 755 x 267 x 14 x 18",
+      "substitute_weight": 154.472
+    },
+    {
+      "name": "W30X90",
+      "original_section": "I - 750 x 265 x 11.94 x 15.5",
+      "weight": 133.934,
+      "substitute_section": "I - 750 x 265 x 12 x 16",
+      "substitute_weight": 134.204
+    },
+    {
+      "name": "W27X539",
+      "original_section": "I - 826 x 389 x 50.04 x 89.92",
+      "weight": 802.118,
+      "substitute_section": "I - 826 x 389 x 50 x 90",
+      "substitute_weight": 803.212
+    },
+    {
+      "name": "W27X368",
+      "original_section": "I - 773 x 374 x 35.06 x 63",
+      "weight": 547.643,
+      "substitute_section": "I - 773 x 374 x 35 x 70",
+      "substitute_weight": 584.943
+    },
+    {
+      "name": "W27X336",
+      "original_section": "I - 762 x 371 x 32.01 x 57.92",
+      "weight": 500.022,
+      "substitute_section": "I - 762 x 371 x 32 x 60",
+      "substitute_weight": 510.752
+    },
+    {
+      "name": "W27X307",
+      "original_section": "I - 752 x 366 x 29.47 x 53.09",
+      "weight": 456.865,
+      "substitute_section": "I - 752 x 366 x 30 x 60",
+      "substitute_weight": 493.608
+    },
+    {
+      "name": "W27X281",
+      "original_section": "I - 745 x 366 x 26.93 x 49.03",
+      "weight": 418.173,
+      "substitute_section": "I - 745 x 366 x 28 x 50",
+      "substitute_weight": 429.081
+    },
+    {
+      "name": "W27X258",
+      "original_section": "I - 737 x 364 x 24.9 x 44.96",
+      "weight": 383.945,
+      "substitute_section": "I - 737 x 364 x 25 x 45",
+      "substitute_weight": 384.14
+    },
+    {
+      "name": "W27X235",
+      "original_section": "I - 729 x 361 x 23.12 x 40.9",
+      "weight": 349.718,
+      "substitute_section": "I - 729 x 361 x 25 x 45",
+      "substitute_weight": 380.45
+    },
+    {
+      "name": "W27X217",
+      "original_section": "I - 722 x 359 x 21.09 x 38.1",
+      "weight": 322.931,
+      "substitute_section": "I - 722 x 359 x 22 x 40",
+      "substitute_weight": 336.325
+    },
+    {
+      "name": "W27X194",
+      "original_section": "I - 714 x 356 x 19.05 x 34.04",
+      "weight": 288.703,
+      "substitute_section": "I - 714 x 356 x 20 x 35",
+      "substitute_weight": 296.73
+    },
+    {
+      "name": "W27X178",
+      "original_section": "H - 707 x 359 x 18.42 x 30.23",
+      "weight": 264.892,
+      "substitute_section": "H - 707 x 359 x 20 x 32",
+      "substitute_weight": 281.313
+    },
+    {
+      "name": "W27X161",
+      "original_section": "H - 702 x 356 x 16.77 x 27.44",
+      "weight": 239.594,
+      "substitute_section": "H - 702 x 356 x 18 x 28",
+      "substitute_weight": 247.777
+    },
+    {
+      "name": "W27X146",
+      "original_section": "H - 696 x 356 x 15.37 x 24.77",
+      "weight": 217.271,
+      "substitute_section": "H - 696 x 356 x 16 x 25",
+      "substitute_weight": 220.868
+    },
+    {
+      "name": "W27X129",
+      "original_section": "I - 702 x 254 x 15.5 x 27.94",
+      "weight": 191.973,
+      "substitute_section": "I - 702 x 254 x 16 x 28",
+      "substitute_weight": 192.796
+    },
+    {
+      "name": "W27X114",
+      "original_section": "I - 694 x 257 x 14.48 x 23.63",
+      "weight": 169.65,
+      "substitute_section": "I - 694 x 257 x 16 x 25",
+      "substitute_weight": 181.759
+    },
+    {
+      "name": "W27X102",
+      "original_section": "I - 689 x 254 x 13.09 x 21.09",
+      "weight": 151.792,
+      "substitute_section": "I - 689 x 254 x 14 x 22",
+      "substitute_weight": 158.617
+    },
+    {
+      "name": "W27X94",
+      "original_section": "I - 684 x 254 x 12.45 x 18.93",
+      "weight": 139.887,
+      "substitute_section": "I - 684 x 254 x 14 x 20",
+      "substitute_weight": 150.532
+    },
+    {
+      "name": "W27X84",
+      "original_section": "I - 679 x 254 x 11.69 x 16.26",
+      "weight": 125.005,
+      "substitute_section": "I - 679 x 254 x 12 x 18",
+      "substitute_weight": 132.351
+    },
+    {
+      "name": "W24X370",
+      "original_section": "I - 712 x 348 x 38.61 x 69.09",
+      "weight": 550.619,
+      "substitute_section": "I - 712 x 348 x 40 x 70",
+      "substitute_weight": 562.06
+    },
+    {
+      "name": "W24X335",
+      "original_section": "I - 699 x 343 x 35.06 x 63",
+      "weight": 498.534,
+      "substitute_section": "I - 699 x 343 x 35 x 70",
+      "substitute_weight": 530.542
+    },
+    {
+      "name": "W24X306",
+      "original_section": "I - 689 x 341 x 32.01 x 57.92",
+      "weight": 455.377,
+      "substitute_section": "I - 689 x 341 x 32 x 60",
+      "substitute_weight": 464.155
+    },
+    {
+      "name": "W24X279",
+      "original_section": "I - 679 x 338 x 29.47 x 53.09",
+      "weight": 415.197,
+      "substitute_section": "I - 679 x 338 x 30 x 60",
+      "substitute_weight": 450.041
+    },
+    {
+      "name": "W24X250",
+      "original_section": "H - 669 x 336 x 26.42 x 48.01",
+      "weight": 372.04,
+      "substitute_section": "H - 669 x 336 x 28 x 50",
+      "substitute_weight": 388.826
+    },
+    {
+      "name": "W24X229",
+      "original_section": "H - 661 x 333 x 24.39 x 43.95",
+      "weight": 340.789,
+      "substitute_section": "H - 661 x 333 x 25 x 45",
+      "substitute_weight": 347.323
+    },
+    {
+      "name": "W24X207",
+      "original_section": "H - 653 x 331 x 22.1 x 39.88",
+      "weight": 308.049,
+      "substitute_section": "H - 653 x 331 x 25 x 40",
+      "substitute_weight": 320.319
+    },
+    {
+      "name": "W24X192",
+      "original_section": "H - 648 x 331 x 20.58 x 37.09",
+      "weight": 285.727,
+      "substitute_section": "H - 648 x 331 x 22 x 40",
+      "substitute_weight": 305.962
+    },
+    {
+      "name": "W24X176",
+      "original_section": "H - 641 x 328 x 19.05 x 34.04",
+      "weight": 261.916,
+      "substitute_section": "H - 641 x 328 x 20 x 35",
+      "substitute_weight": 269.883
+    },
+    {
+      "name": "W24X162",
+      "original_section": "H - 635 x 331 x 17.91 x 30.99",
+      "weight": 241.082,
+      "substitute_section": "H - 635 x 331 x 18 x 32",
+      "substitute_weight": 246.977
+    },
+    {
+      "name": "W24X146",
+      "original_section": "H - 628 x 328 x 16.51 x 27.69",
+      "weight": 217.271,
+      "substitute_section": "H - 628 x 328 x 18 x 28",
+      "substitute_weight": 225.012
+    },
+    {
+      "name": "W24X131",
+      "original_section": "H - 623 x 328 x 15.37 x 24.39",
+      "weight": 194.949,
+      "substitute_section": "H - 623 x 328 x 16 x 25",
+      "substitute_weight": 200.709
+    },
+    {
+      "name": "W24X117",
+      "original_section": "H - 618 x 326 x 13.97 x 21.59",
+      "weight": 174.115,
+      "substitute_section": "H - 618 x 326 x 14 x 22",
+      "substitute_weight": 175.683
+    },
+    {
+      "name": "W24X104",
+      "original_section": "H - 613 x 326 x 12.7 x 19.05",
+      "weight": 154.769,
+      "substitute_section": "H - 613 x 326 x 14 x 20",
+      "substitute_weight": 165.337
+    },
+    {
+      "name": "W24X103",
+      "original_section": "I - 623 x 229 x 13.97 x 24.9",
+      "weight": 153.28,
+      "substitute_section": "I - 623 x 229 x 14 x 25",
+      "substitute_weight": 152.855
+    },
+    {
+      "name": "W24X94",
+      "original_section": "I - 618 x 231 x 13.09 x 22.23",
+      "weight": 139.887,
+      "substitute_section": "I - 618 x 231 x 14 x 25",
+      "substitute_weight": 153.091
+    },
+    {
+      "name": "W24X84",
+      "original_section": "I - 613 x 230 x 11.94 x 19.56",
+      "weight": 125.005,
+      "substitute_section": "I - 613 x 230 x 12 x 20",
+      "substitute_weight": 126.197
+    },
+    {
+      "name": "W24X76",
+      "original_section": "I - 608 x 229 x 11.18 x 17.28",
+      "weight": 113.1,
+      "substitute_section": "I - 608 x 229 x 12 x 18",
+      "substitute_weight": 118.598
+    },
+    {
+      "name": "W24X68",
+      "original_section": "I - 602 x 228 x 10.55 x 14.86",
+      "weight": 101.195,
+      "substitute_section": "I - 602 x 228 x 12 x 16",
+      "substitute_weight": 110.968
+    },
+    {
+      "name": "W24X62",
+      "original_section": "I - 602 x 179 x 10.93 x 14.99",
+      "weight": 92.266,
+      "substitute_section": "I - 602 x 179 x 12 x 16",
+      "substitute_weight": 98.659
+    },
+    {
+      "name": "W24X55",
+      "original_section": "I - 600 x 179 x 10.04 x 12.83",
+      "weight": 81.849,
+      "substitute_section": "I - 600 x 179 x 10 x 14",
+      "substitute_weight": 84.246
+    },
+    {
+      "name": "W21X275",
+      "original_section": "H - 613 x 328 x 30.99 x 55.63",
+      "weight": 409.244,
+      "substitute_section": "H - 613 x 328 x 32 x 60",
+      "substitute_weight": 432.818
+    },
+    {
+      "name": "W21X248",
+      "original_section": "H - 602 x 326 x 27.94 x 50.55",
+      "weight": 369.064,
+      "substitute_section": "H - 602 x 326 x 28 x 60",
+      "substitute_weight": 413.036
+    },
+    {
+      "name": "W21X223",
+      "original_section": "H - 595 x 323 x 25.4 x 45.47",
+      "weight": 331.86,
+      "substitute_section": "H - 595 x 323 x 28 x 50",
+      "substitute_weight": 362.356
+    },
+    {
+      "name": "W21X201",
+      "original_section": "H - 585 x 321 x 23.12 x 41.41",
+      "weight": 299.12,
+      "substitute_section": "H - 585 x 321 x 25 x 45",
+      "substitute_weight": 323.93
+    },
+    {
+      "name": "W21X182",
+      "original_section": "H - 577 x 318 x 21.09 x 37.6",
+      "weight": 270.845,
+      "substitute_section": "H - 577 x 318 x 22 x 40",
+      "substitute_weight": 285.536
+    },
+    {
+      "name": "W21X166",
+      "original_section": "H - 572 x 315 x 19.05 x 34.55",
+      "weight": 247.035,
+      "substitute_section": "H - 572 x 315 x 20 x 35",
+      "substitute_weight": 251.906
+    },
+    {
+      "name": "W21X147",
+      "original_section": "H - 562 x 318 x 18.29 x 29.21",
+      "weight": 218.76,
+      "substitute_section": "H - 562 x 318 x 20 x 30",
+      "substitute_weight": 228.592
+    },
+    {
+      "name": "W21X132",
+      "original_section": "H - 554 x 315 x 16.51 x 26.42",
+      "weight": 196.437,
+      "substitute_section": "H - 554 x 315 x 18 x 28",
+      "substitute_weight": 208.841
+    },
+    {
+      "name": "W21X122",
+      "original_section": "H - 552 x 315 x 15.24 x 24.39",
+      "weight": 181.556,
+      "substitute_section": "H - 552 x 315 x 16 x 25",
+      "substitute_weight": 186.689
+    },
+    {
+      "name": "W21X111",
+      "original_section": "H - 547 x 313 x 13.97 x 22.23",
+      "weight": 165.186,
+      "substitute_section": "H - 547 x 313 x 14 x 25",
+      "substitute_weight": 177.473
+    },
+    {
+      "name": "W21X101",
+      "original_section": "H - 544 x 313 x 12.7 x 20.32",
+      "weight": 150.304,
+      "substitute_section": "H - 544 x 313 x 14 x 22",
+      "substitute_weight": 163.06
+    },
+    {
+      "name": "W21X93",
+      "original_section": "I - 549 x 214 x 14.74 x 23.63",
+      "weight": 138.399,
+      "substitute_section": "I - 549 x 214 x 16 x 25",
+      "substitute_weight": 146.669
+    },
+    {
+      "name": "W21X83",
+      "original_section": "I - 544 x 213 x 13.09 x 21.21",
+      "weight": 123.517,
+      "substitute_section": "I - 544 x 213 x 14 x 22",
+      "substitute_weight": 128.52
+    },
+    {
+      "name": "W21X73",
+      "original_section": "I - 539 x 211 x 11.56 x 18.8",
+      "weight": 108.636,
+      "substitute_section": "I - 539 x 211 x 12 x 20",
+      "substitute_weight": 113.26
+    },
+    {
+      "name": "W21X68",
+      "original_section": "I - 536 x 211 x 10.93 x 17.4",
+      "weight": 101.195,
+      "substitute_section": "I - 536 x 211 x 12 x 18",
+      "substitute_weight": 106.729
+    },
+    {
+      "name": "W21X62",
+      "original_section": "I - 534 x 210 x 10.16 x 15.63",
+      "weight": 92.266,
+      "substitute_section": "I - 534 x 210 x 12 x 16",
+      "substitute_weight": 100.04
+    },
+    {
+      "name": "W21X55",
+      "original_section": "I - 529 x 209 x 9.53 x 13.26",
+      "weight": 81.849,
+      "substitute_section": "I - 529 x 209 x 10 x 14",
+      "substitute_weight": 85.267
+    },
+    {
+      "name": "W21X48",
+      "original_section": "I - 524 x 207 x 8.89 x 10.93",
+      "weight": 71.432,
+      "substitute_section": "I - 524 x 207 x 10 x 12",
+      "substitute_weight": 78.249
+    },
+    {
+      "name": "W21X57",
+      "original_section": "I - 536 x 167 x 10.29 x 16.51",
+      "weight": 84.825,
+      "substitute_section": "I - 536 x 167 x 12 x 18",
+      "substitute_weight": 94.294
+    },
+    {
+      "name": "W21X50",
+      "original_section": "I - 529 x 166 x 9.66 x 13.59",
+      "weight": 74.408,
+      "substitute_section": "I - 529 x 166 x 10 x 14",
+      "substitute_weight": 75.815
+    },
+    {
+      "name": "W21X44",
+      "original_section": "I - 526 x 166 x 8.89 x 11.43",
+      "weight": 65.479,
+      "substitute_section": "I - 526 x 166 x 10 x 12",
+      "substitute_weight": 70.681
+    },
+    {
+      "name": "W18X311",
+      "original_section": "H - 567 x 305 x 38.61 x 69.6",
+      "weight": 462.818,
+      "substitute_section": "H - 567 x 305 x 40 x 70",
+      "substitute_weight": 469.273
+    },
+    {
+      "name": "W18X283",
+      "original_section": "H - 557 x 303 x 35.56 x 63.5",
+      "weight": 421.149,
+      "substitute_section": "H - 557 x 303 x 40 x 70",
+      "substitute_weight": 463.935
+    },
+    {
+      "name": "W18X258",
+      "original_section": "H - 547 x 300 x 32.52 x 58.42",
+      "weight": 383.945,
+      "substitute_section": "H - 547 x 300 x 35 x 60",
+      "substitute_weight": 399.918
+    },
+    {
+      "name": "W18X234",
+      "original_section": "H - 536 x 298 x 29.47 x 53.6",
+      "weight": 348.229,
+      "substitute_section": "H - 536 x 298 x 30 x 60",
+      "substitute_weight": 378.684
+    },
+    {
+      "name": "W18X211",
+      "original_section": "H - 526 x 295 x 26.93 x 48.52",
+      "weight": 314.002,
+      "substitute_section": "H - 526 x 295 x 28 x 50",
+      "substitute_weight": 325.21
+    },
+    {
+      "name": "W18X192",
+      "original_section": "H - 519 x 293 x 24.39 x 44.45",
+      "weight": 285.727,
+      "substitute_section": "H - 519 x 293 x 25 x 45",
+      "substitute_weight": 291.196
+    },
+    {
+      "name": "W18X175",
+      "original_section": "H - 508 x 290 x 22.61 x 40.39",
+      "weight": 260.428,
+      "substitute_section": "H - 508 x 290 x 25 x 45",
+      "substitute_weight": 286.918
+    },
+    {
+      "name": "W18X158",
+      "original_section": "H - 501 x 288 x 20.58 x 36.58",
+      "weight": 235.129,
+      "substitute_section": "H - 501 x 288 x 22 x 40",
+      "substitute_weight": 253.571
+    },
+    {
+      "name": "W18X143",
+      "original_section": "H - 496 x 285 x 18.55 x 33.53",
+      "weight": 212.807,
+      "substitute_section": "H - 496 x 285 x 20 x 35",
+      "substitute_weight": 223.489
+    },
+    {
+      "name": "W18X130",
+      "original_section": "H - 491 x 285 x 17.02 x 30.48",
+      "weight": 193.461,
+      "substitute_section": "H - 491 x 285 x 18 x 32",
+      "substitute_weight": 203.519
+    },
+    {
+      "name": "W18X119",
+      "original_section": "H - 483 x 288 x 16.64 x 26.93",
+      "weight": 177.091,
+      "substitute_section": "H - 483 x 288 x 18 x 28",
+      "substitute_weight": 186.94
+    },
+    {
+      "name": "W18X106",
+      "original_section": "H - 475 x 285 x 14.99 x 23.88",
+      "weight": 157.745,
+      "substitute_section": "H - 475 x 285 x 16 x 25",
+      "substitute_weight": 165.243
+    },
+    {
+      "name": "W18X97",
+      "original_section": "H - 473 x 282 x 13.59 x 22.1",
+      "weight": 144.352,
+      "substitute_section": "H - 473 x 282 x 14 x 25",
+      "substitute_weight": 157.173
+    },
+    {
+      "name": "W18X86",
+      "original_section": "H - 468 x 282 x 12.2 x 19.56",
+      "weight": 127.982,
+      "substitute_section": "H - 468 x 282 x 14 x 20",
+      "substitute_weight": 135.585
+    },
+    {
+      "name": "W18X76",
+      "original_section": "H - 463 x 280 x 10.8 x 17.28",
+      "weight": 113.1,
+      "substitute_section": "H - 463 x 280 x 12 x 18",
+      "substitute_weight": 119.351
+    },
+    {
+      "name": "W18X71",
+      "original_section": "I - 470 x 195 x 12.58 x 20.58",
+      "weight": 105.659,
+      "substitute_section": "I - 470 x 195 x 14 x 22",
+      "substitute_weight": 114.17
+    },
+    {
+      "name": "W18X65",
+      "original_section": "I - 468 x 193 x 11.43 x 19.05",
+      "weight": 96.73,
+      "substitute_section": "I - 468 x 193 x 12 x 20",
+      "substitute_weight": 100.92
+    },
+    {
+      "name": "W18X60",
+      "original_section": "I - 463 x 193 x 10.55 x 17.66",
+      "weight": 89.29,
+      "substitute_section": "I - 463 x 193 x 12 x 18",
+      "substitute_weight": 94.765
+    },
+    {
+      "name": "W18X55",
+      "original_section": "I - 460 x 192 x 9.91 x 16.01",
+      "weight": 81.849,
+      "substitute_section": "I - 460 x 192 x 10 x 16",
+      "substitute_weight": 81.828
+    },
+    {
+      "name": "W18X50",
+      "original_section": "I - 458 x 191 x 9.02 x 14.48",
+      "weight": 74.408,
+      "substitute_section": "I - 458 x 191 x 10 x 16",
+      "substitute_weight": 81.42
+    },
+    {
+      "name": "W18X46",
+      "original_section": "I - 460 x 154 x 9.15 x 15.37",
+      "weight": 68.455,
+      "substitute_section": "I - 460 x 154 x 10 x 16",
+      "substitute_weight": 72.283
+    },
+    {
+      "name": "W18X40",
+      "original_section": "I - 455 x 153 x 8.01 x 13.34",
+      "weight": 59.526,
+      "substitute_section": "I - 455 x 153 x 8 x 14",
+      "substitute_weight": 60.445
+    },
+    {
+      "name": "W18X35",
+      "original_section": "I - 450 x 153 x 7.62 x 10.8",
+      "weight": 52.086,
+      "substitute_section": "I - 450 x 153 x 8 x 12",
+      "substitute_weight": 55.578
+    },
+    {
+      "name": "W16X100",
+      "original_section": "H - 432 x 265 x 14.86 x 25.02",
+      "weight": 148.816,
+      "substitute_section": "H - 432 x 265 x 16 x 25",
+      "substitute_weight": 151.992
+    },
+    {
+      "name": "W16X89",
+      "original_section": "H - 427 x 265 x 13.34 x 22.23",
+      "weight": 132.446,
+      "substitute_section": "H - 427 x 265 x 14 x 25",
+      "substitute_weight": 145.445
+    },
+    {
+      "name": "W16X77",
+      "original_section": "H - 420 x 262 x 11.56 x 19.31",
+      "weight": 114.588,
+      "substitute_section": "H - 420 x 262 x 12 x 20",
+      "substitute_weight": 118.064
+    },
+    {
+      "name": "W16X67",
+      "original_section": "H - 415 x 260 x 10.04 x 16.9",
+      "weight": 99.707,
+      "substitute_section": "H - 415 x 260 x 10 x 18",
+      "substitute_weight": 103.228
+    },
+    {
+      "name": "W16X57",
+      "original_section": "I - 417 x 181 x 10.93 x 18.17",
+      "weight": 84.825,
+      "substitute_section": "I - 417 x 181 x 12 x 20",
+      "substitute_weight": 92.347
+    },
+    {
+      "name": "W16X50",
+      "original_section": "I - 415 x 180 x 9.66 x 16.01",
+      "weight": 74.408,
+      "substitute_section": "I - 415 x 180 x 10 x 16",
+      "substitute_weight": 75.281
+    },
+    {
+      "name": "W16X45",
+      "original_section": "I - 409 x 179 x 8.77 x 14.36",
+      "weight": 66.967,
+      "substitute_section": "I - 409 x 179 x 10 x 16",
+      "substitute_weight": 74.559
+    },
+    {
+      "name": "W16X40",
+      "original_section": "I - 407 x 178 x 7.75 x 12.83",
+      "weight": 59.526,
+      "substitute_section": "I - 407 x 178 x 8 x 14",
+      "substitute_weight": 62.926
+    },
+    {
+      "name": "W16X36",
+      "original_section": "I - 404 x 178 x 7.5 x 10.93",
+      "weight": 53.574,
+      "substitute_section": "I - 404 x 178 x 8 x 12",
+      "substitute_weight": 57.399
+    },
+    {
+      "name": "W16X31",
+      "original_section": "I - 404 x 141 x 6.99 x 11.18",
+      "weight": 46.133,
+      "substitute_section": "I - 404 x 141 x 8 x 12",
+      "substitute_weight": 50.428
+    },
+    {
+      "name": "W16X26",
+      "original_section": "I - 399 x 140 x 6.35 x 8.77",
+      "weight": 38.692,
+      "substitute_section": "I - 399 x 140 x 8 x 10",
+      "substitute_weight": 45.781
+    },
+    {
+      "name": "W14X873",
+      "original_section": "H - 600 x 478 x 100.08 x 139.96",
+      "weight": 1299.164,
+      "substitute_section": "#VALUE!",
+      "substitute_weight": null
+    },
+    {
+      "name": "W14X808",
+      "original_section": "H - 580 x 473 x 95 x 130.05",
+      "weight": 1202.433,
+      "substitute_section": "#VALUE!",
+      "substitute_weight": null
+    },
+    {
+      "name": "W14X730",
+      "original_section": "H - 569 x 455 x 77.98 x 124.72",
+      "weight": 1086.357,
+      "substitute_section": "#VALUE!",
+      "substitute_weight": null
+    },
+    {
+      "name": "W14X665",
+      "original_section": "H - 549 x 450 x 71.89 x 114.81",
+      "weight": 989.626,
+      "substitute_section": "#VALUE!",
+      "substitute_weight": null
+    },
+    {
+      "name": "W14X605",
+      "original_section": "H - 531 x 442 x 66.04 x 105.67",
+      "weight": 900.337,
+      "substitute_section": "#VALUE!",
+      "substitute_weight": null
+    },
+    {
+      "name": "W14X550",
+      "original_section": "H - 514 x 437 x 60.46 x 97.03",
+      "weight": 818.488,
+      "substitute_section": "#VALUE!",
+      "substitute_weight": null
+    },
+    {
+      "name": "W14X500",
+      "original_section": "H - 498 x 432 x 55.63 x 88.9",
+      "weight": 744.08,
+      "substitute_section": "H - 498 x 432 x 60 x 90",
+      "substitute_weight": 760.194
+    },
+    {
+      "name": "W14X455",
+      "original_section": "H - 483 x 427 x 51.31 x 81.54",
+      "weight": 677.113,
+      "substitute_section": "H - 483 x 427 x 60 x 90",
+      "substitute_weight": 746.064
+    },
+    {
+      "name": "W14X426",
+      "original_section": "H - 475 x 425 x 47.76 x 77.22",
+      "weight": 633.956,
+      "substitute_section": "H - 475 x 425 x 50 x 80",
+      "substitute_weight": 657.438
+    },
+    {
+      "name": "W14X398",
+      "original_section": "H - 465 x 422 x 44.96 x 72.39",
+      "weight": 592.288,
+      "substitute_section": "H - 465 x 422 x 45 x 80",
+      "substitute_weight": 637.773
+    },
+    {
+      "name": "W14X370",
+      "original_section": "H - 455 x 420 x 42.17 x 67.57",
+      "weight": 550.619,
+      "substitute_section": "H - 455 x 420 x 45 x 70",
+      "substitute_weight": 572.854
+    },
+    {
+      "name": "W14X342",
+      "original_section": "H - 445 x 417 x 39.12 x 62.74",
+      "weight": 508.951,
+      "substitute_section": "H - 445 x 417 x 40 x 70",
+      "substitute_weight": 554.053
+    },
+    {
+      "name": "W14X311",
+      "original_section": "H - 435 x 412 x 35.82 x 57.41",
+      "weight": 462.818,
+      "substitute_section": "H - 435 x 412 x 40 x 60",
+      "substitute_weight": 487.014
+    },
+    {
+      "name": "W14X283",
+      "original_section": "H - 425 x 409 x 32.77 x 52.58",
+      "weight": 421.149,
+      "substitute_section": "H - 425 x 409 x 35 x 60",
+      "substitute_weight": 469.077
+    },
+    {
+      "name": "W14X257",
+      "original_section": "H - 417 x 407 x 29.98 x 48.01",
+      "weight": 382.457,
+      "substitute_section": "H - 417 x 407 x 30 x 50",
+      "substitute_weight": 394.149
+    },
+    {
+      "name": "W14X233",
+      "original_section": "H - 407 x 404 x 27.18 x 43.69",
+      "weight": 346.741,
+      "substitute_section": "H - 407 x 404 x 28 x 45",
+      "substitute_weight": 355.103
+    },
+    {
+      "name": "W14X211",
+      "original_section": "H - 399 x 402 x 24.9 x 39.63",
+      "weight": 314.002,
+      "substitute_section": "H - 399 x 402 x 25 x 40",
+      "substitute_weight": 315.06
+    },
+    {
+      "name": "W14X193",
+      "original_section": "H - 394 x 399 x 22.61 x 36.58",
+      "weight": 287.215,
+      "substitute_section": "H - 394 x 399 x 25 x 40",
+      "substitute_weight": 312.195
+    },
+    {
+      "name": "W14X176",
+      "original_section": "H - 387 x 399 x 21.09 x 33.28",
+      "weight": 261.916,
+      "substitute_section": "H - 387 x 399 x 22 x 35",
+      "substitute_weight": 273.996
+    },
+    {
+      "name": "W14X159",
+      "original_section": "H - 381 x 397 x 18.93 x 30.23",
+      "weight": 236.617,
+      "substitute_section": "H - 381 x 397 x 20 x 32",
+      "substitute_weight": 249.222
+    },
+    {
+      "name": "W14X145",
+      "original_section": "H - 376 x 394 x 17.28 x 27.69",
+      "weight": 215.783,
+      "substitute_section": "H - 376 x 394 x 18 x 28",
+      "substitute_weight": 218.418
+    },
+    {
+      "name": "W14X132",
+      "original_section": "H - 374 x 374 x 16.39 x 26.17",
+      "weight": 196.437,
+      "substitute_section": "H - 374 x 374 x 18 x 28",
+      "substitute_weight": 209.344
+    },
+    {
+      "name": "W14X120",
+      "original_section": "H - 369 x 374 x 14.99 x 23.88",
+      "weight": 178.579,
+      "substitute_section": "H - 369 x 374 x 16 x 25",
+      "substitute_weight": 186.861
+    },
+    {
+      "name": "W14X109",
+      "original_section": "H - 364 x 371 x 13.34 x 21.85",
+      "weight": 162.209,
+      "substitute_section": "H - 364 x 371 x 14 x 22",
+      "substitute_weight": 163.311
+    },
+    {
+      "name": "W14X99",
+      "original_section": "H - 361 x 371 x 12.32 x 19.82",
+      "weight": 147.328,
+      "substitute_section": "H - 361 x 371 x 14 x 20",
+      "substitute_weight": 151.772
+    },
+    {
+      "name": "W14X90",
+      "original_section": "H - 356 x 369 x 11.18 x 18.04",
+      "weight": 133.934,
+      "substitute_section": "H - 356 x 369 x 12 x 18",
+      "substitute_weight": 134.423
+    },
+    {
+      "name": "W14X82",
+      "original_section": "H - 364 x 257 x 12.96 x 21.72",
+      "weight": 122.029,
+      "substitute_section": "H - 364 x 257 x 14 x 22",
+      "substitute_weight": 123.936
+    },
+    {
+      "name": "W14X74",
+      "original_section": "H - 361 x 257 x 11.43 x 19.94",
+      "weight": 110.124,
+      "substitute_section": "H - 361 x 257 x 12 x 20",
+      "substitute_weight": 110.936
+    },
+    {
+      "name": "W14X68",
+      "original_section": "H - 356 x 254 x 10.55 x 18.29",
+      "weight": 101.195,
+      "substitute_section": "H - 356 x 254 x 12 x 20",
+      "substitute_weight": 109.523
+    },
+    {
+      "name": "W14X61",
+      "original_section": "H - 354 x 254 x 9.53 x 16.39",
+      "weight": 90.778,
+      "substitute_section": "H - 354 x 254 x 10 x 18",
+      "substitute_weight": 96.743
+    },
+    {
+      "name": "W14X53",
+      "original_section": "H - 354 x 205 x 9.4 x 16.77",
+      "weight": 78.872,
+      "substitute_section": "H - 354 x 205 x 10 x 18",
+      "substitute_weight": 82.896
+    },
+    {
+      "name": "W14X48",
+      "original_section": "H - 351 x 204 x 8.64 x 15.12",
+      "weight": 71.432,
+      "substitute_section": "H - 351 x 204 x 10 x 16",
+      "substitute_weight": 76.286
+    },
+    {
+      "name": "W14X43",
+      "original_section": "H - 348 x 204 x 7.75 x 13.47",
+      "weight": 63.991,
+      "substitute_section": "H - 348 x 204 x 8 x 14",
+      "substitute_weight": 64.935
+    },
+    {
+      "name": "W14X38",
+      "original_section": "I - 359 x 172 x 7.88 x 13.09",
+      "weight": 56.55,
+      "substitute_section": "I - 359 x 172 x 8 x 14",
+      "substitute_weight": 58.592
+    },
+    {
+      "name": "W14X34",
+      "original_section": "I - 356 x 172 x 7.24 x 11.56",
+      "weight": 50.597,
+      "substitute_section": "I - 356 x 172 x 8 x 12",
+      "substitute_weight": 53.254
+    },
+    {
+      "name": "W14X30",
+      "original_section": "I - 351 x 171 x 6.86 x 9.78",
+      "weight": 44.645,
+      "substitute_section": "I - 351 x 171 x 8 x 10",
+      "substitute_weight": 47.634
+    },
+    {
+      "name": "W14X26",
+      "original_section": "I - 354 x 128 x 6.48 x 10.67",
+      "weight": 38.692,
+      "substitute_section": "I - 354 x 128 x 8 x 12",
+      "substitute_weight": 44.839
+    },
+    {
+      "name": "W14X22",
+      "original_section": "I - 348 x 127 x 5.85 x 8.51",
+      "weight": 32.74,
+      "substitute_section": "I - 348 x 127 x 6 x 10",
+      "substitute_weight": 35.388
+    },
+    {
+      "name": "W12X336",
+      "original_section": "H - 427 x 341 x 45.22 x 75.19",
+      "weight": 500.022,
+      "substitute_section": "H - 427 x 341 x 50 x 80",
+      "substitute_weight": 533.093
+    },
+    {
+      "name": "W12X305",
+      "original_section": "H - 415 x 336 x 41.41 x 68.84",
+      "weight": 453.889,
+      "substitute_section": "H - 415 x 336 x 45 x 70",
+      "substitute_weight": 466.408
+    },
+    {
+      "name": "W12X279",
+      "original_section": "H - 404 x 333 x 38.87 x 62.74",
+      "weight": 415.197,
+      "substitute_section": "H - 404 x 333 x 40 x 70",
+      "substitute_weight": 448.863
+    },
+    {
+      "name": "W12X252",
+      "original_section": "H - 392 x 331 x 35.56 x 57.15",
+      "weight": 375.016,
+      "substitute_section": "H - 392 x 331 x 40 x 60",
+      "substitute_weight": 397.21
+    },
+    {
+      "name": "W12X230",
+      "original_section": "H - 384 x 328 x 32.77 x 52.58",
+      "weight": 342.277,
+      "substitute_section": "H - 384 x 328 x 35 x 60",
+      "substitute_weight": 381.51
+    },
+    {
+      "name": "W12X210",
+      "original_section": "H - 374 x 326 x 29.98 x 48.26",
+      "weight": 312.514,
+      "substitute_section": "H - 374 x 326 x 30 x 50",
+      "substitute_weight": 320.437
+    },
+    {
+      "name": "W12X190",
+      "original_section": "H - 366 x 323 x 26.93 x 44.2",
+      "weight": 282.75,
+      "substitute_section": "H - 366 x 323 x 28 x 45",
+      "substitute_weight": 288.864
+    },
+    {
+      "name": "W12X170",
+      "original_section": "H - 356 x 321 x 24.39 x 39.63",
+      "weight": 252.987,
+      "substitute_section": "H - 356 x 321 x 25 x 40",
+      "substitute_weight": 255.753
+    },
+    {
+      "name": "W12X152",
+      "original_section": "H - 348 x 318 x 22.1 x 35.56",
+      "weight": 226.2,
+      "substitute_section": "H - 348 x 318 x 25 x 40",
+      "substitute_weight": 252.299
+    },
+    {
+      "name": "W12X136",
+      "original_section": "H - 341 x 315 x 20.07 x 31.75",
+      "weight": 202.39,
+      "substitute_section": "H - 341 x 315 x 20 x 32",
+      "substitute_weight": 201.745
+    },
+    {
+      "name": "W12X120",
+      "original_section": "H - 333 x 313 x 18.04 x 28.2",
+      "weight": 178.579,
+      "substitute_section": "H - 333 x 313 x 18 x 30",
+      "substitute_weight": 185.998
+    },
+    {
+      "name": "W12X106",
+      "original_section": "H - 328 x 310 x 15.5 x 25.15",
+      "weight": 157.745,
+      "substitute_section": "H - 328 x 310 x 16 x 28",
+      "substitute_weight": 170.439
+    },
+    {
+      "name": "W12X96",
+      "original_section": "H - 323 x 310 x 13.97 x 22.86",
+      "weight": 142.863,
+      "substitute_section": "H - 323 x 310 x 14 x 25",
+      "substitute_weight": 151.678
+    },
+    {
+      "name": "W12X87",
+      "original_section": "H - 318 x 308 x 13.09 x 20.58",
+      "weight": 129.47,
+      "substitute_section": "H - 318 x 308 x 14 x 22",
+      "substitute_weight": 136.496
+    },
+    {
+      "name": "W12X79",
+      "original_section": "H - 315 x 308 x 11.94 x 18.67",
+      "weight": 117.565,
+      "substitute_section": "H - 315 x 308 x 12 x 20",
+      "substitute_weight": 122.617
+    },
+    {
+      "name": "W12X72",
+      "original_section": "H - 313 x 305 x 10.93 x 17.02",
+      "weight": 107.148,
+      "substitute_section": "H - 313 x 305 x 12 x 18",
+      "substitute_weight": 112.286
+    },
+    {
+      "name": "W12X65",
+      "original_section": "H - 308 x 305 x 9.91 x 15.37",
+      "weight": 96.73,
+      "substitute_section": "H - 308 x 305 x 10 x 16",
+      "substitute_weight": 98.282
+    },
+    {
+      "name": "W12X58",
+      "original_section": "H - 310 x 254 x 9.15 x 16.26",
+      "weight": 86.313,
+      "substitute_section": "H - 310 x 254 x 10 x 18",
+      "substitute_weight": 93.289
+    },
+    {
+      "name": "W12X53",
+      "original_section": "H - 308 x 254 x 8.77 x 14.61",
+      "weight": 78.872,
+      "substitute_section": "H - 308 x 254 x 10 x 16",
+      "substitute_weight": 85.471
+    },
+    {
+      "name": "W12X50",
+      "original_section": "H - 310 x 206 x 9.4 x 16.26",
+      "weight": 74.408,
+      "substitute_section": "H - 310 x 206 x 10 x 18",
+      "substitute_weight": 79.725
+    },
+    {
+      "name": "W12X45",
+      "original_section": "H - 308 x 205 x 8.51 x 14.61",
+      "weight": 66.967,
+      "substitute_section": "H - 308 x 205 x 10 x 16",
+      "substitute_weight": 73.162
+    },
+    {
+      "name": "W12X40",
+      "original_section": "H - 303 x 204 x 7.5 x 13.09",
+      "weight": 59.526,
+      "substitute_section": "H - 303 x 204 x 8 x 14",
+      "substitute_weight": 62.109
+    },
+    {
+      "name": "W12X35",
+      "original_section": "H - 318 x 167 x 7.62 x 13.21",
+      "weight": 52.086,
+      "substitute_section": "H - 318 x 167 x 8 x 14",
+      "substitute_weight": 54.919
+    },
+    {
+      "name": "W12X30",
+      "original_section": "H - 313 x 166 x 6.61 x 11.18",
+      "weight": 44.645,
+      "substitute_section": "H - 313 x 166 x 8 x 12",
+      "substitute_weight": 49.424
+    },
+    {
+      "name": "W12X26",
+      "original_section": "H - 310 x 165 x 5.85 x 9.66",
+      "weight": 38.692,
+      "substitute_section": "H - 310 x 165 x 6 x 10",
+      "substitute_weight": 39.564
+    },
+    {
+      "name": "W12X22",
+      "original_section": "I - 313 x 103 x 6.61 x 10.8",
+      "weight": 32.74,
+      "substitute_section": "I - 313 x 103 x 8 x 12",
+      "substitute_weight": 37.554
+    },
+    {
+      "name": "W12X19",
+      "original_section": "I - 310 x 102 x 5.97 x 8.89",
+      "weight": 28.275,
+      "substitute_section": "I - 310 x 102 x 6 x 10",
+      "substitute_weight": 29.673
+    },
+    {
+      "name": "W12X16",
+      "original_section": "I - 305 x 102 x 5.59 x 6.74",
+      "weight": 23.811,
+      "substitute_section": "I - 305 x 102 x 6 x 8",
+      "substitute_weight": 26.423
+    },
+    {
+      "name": "W12X14",
+      "original_section": "I - 303 x 101 x 5.08 x 5.72",
+      "weight": 20.834,
+      "substitute_section": "I - 303 x 101 x 6 x 6",
+      "substitute_weight": 23.22
+    },
+    {
+      "name": "W10X112",
+      "original_section": "H - 290 x 265 x 19.18 x 31.75",
+      "weight": 166.674,
+      "substitute_section": "H - 290 x 265 x 20 x 32",
+      "substitute_weight": 168.618
+    },
+    {
+      "name": "W10X100",
+      "original_section": "H - 282 x 262 x 17.28 x 28.45",
+      "weight": 148.816,
+      "substitute_section": "H - 282 x 262 x 18 x 30",
+      "substitute_weight": 154.771
+    },
+    {
+      "name": "W10X88",
+      "original_section": "H - 275 x 262 x 15.37 x 25.15",
+      "weight": 130.958,
+      "substitute_section": "H - 275 x 262 x 16 x 28",
+      "substitute_weight": 142.682
+    },
+    {
+      "name": "W10X77",
+      "original_section": "H - 270 x 260 x 13.47 x 22.1",
+      "weight": 114.588,
+      "substitute_section": "H - 270 x 260 x 14 x 25",
+      "substitute_weight": 126.228
+    },
+    {
+      "name": "W10X68",
+      "original_section": "H - 265 x 257 x 11.94 x 19.56",
+      "weight": 101.195,
+      "substitute_section": "H - 265 x 257 x 12 x 20",
+      "substitute_weight": 101.893
+    },
+    {
+      "name": "W10X60",
+      "original_section": "H - 260 x 257 x 10.67 x 17.28",
+      "weight": 89.29,
+      "substitute_section": "H - 260 x 257 x 12 x 18",
+      "substitute_weight": 93.729
+    },
+    {
+      "name": "W10X54",
+      "original_section": "H - 257 x 254 x 9.4 x 15.63",
+      "weight": 80.361,
+      "substitute_section": "H - 257 x 254 x 10 x 16",
+      "substitute_weight": 81.467
+    },
+    {
+      "name": "W10X49",
+      "original_section": "H - 254 x 254 x 8.64 x 14.23",
+      "weight": 72.92,
+      "substitute_section": "H - 254 x 254 x 10 x 16",
+      "substitute_weight": 81.232
+    },
+    {
+      "name": "W10X45",
+      "original_section": "H - 257 x 204 x 8.89 x 15.75",
+      "weight": 66.967,
+      "substitute_section": "H - 257 x 204 x 10 x 16",
+      "substitute_weight": 68.907
+    },
+    {
+      "name": "W10X39",
+      "original_section": "H - 252 x 203 x 8.01 x 13.47",
+      "weight": 58.038,
+      "substitute_section": "H - 252 x 203 x 8 x 14",
+      "substitute_weight": 58.687
+    },
+    {
+      "name": "W10X33",
+      "original_section": "H - 248 x 203 x 7.37 x 11.05",
+      "weight": 49.109,
+      "substitute_section": "H - 248 x 203 x 8 x 12",
+      "substitute_weight": 52.312
+    },
+    {
+      "name": "W10X30",
+      "original_section": "H - 267 x 148 x 7.62 x 12.96",
+      "weight": 44.645,
+      "substitute_section": "H - 267 x 148 x 8 x 14",
+      "substitute_weight": 47.54
+    },
+    {
+      "name": "W10X26",
+      "original_section": "H - 262 x 147 x 6.61 x 11.18",
+      "weight": 38.692,
+      "substitute_section": "H - 262 x 147 x 8 x 12",
+      "substitute_weight": 42.641
+    },
+    {
+      "name": "W10X22",
+      "original_section": "H - 260 x 147 x 6.1 x 9.15",
+      "weight": 32.74,
+      "substitute_section": "H - 260 x 147 x 6 x 10",
+      "substitute_weight": 34.383
+    },
+    {
+      "name": "W10X19",
+      "original_section": "I - 260 x 103 x 6.35 x 10.04",
+      "weight": 28.275,
+      "substitute_section": "I - 260 x 103 x 8 x 10",
+      "substitute_weight": 31.243
+    },
+    {
+      "name": "W10X17",
+      "original_section": "I - 257 x 102 x 6.1 x 8.39",
+      "weight": 25.299,
+      "substitute_section": "I - 257 x 102 x 6 x 10",
+      "substitute_weight": 27.177
+    },
+    {
+      "name": "W10X15",
+      "original_section": "I - 254 x 102 x 5.85 x 6.86",
+      "weight": 22.322,
+      "substitute_section": "I - 254 x 102 x 6 x 8",
+      "substitute_weight": 24.021
+    },
+    {
+      "name": "W10X12",
+      "original_section": "I - 251 x 101 x 4.83 x 5.34",
+      "weight": 17.858,
+      "substitute_section": "I - 251 x 101 x 6 x 6",
+      "substitute_weight": 20.771
+    },
+    {
+      "name": "W8X67",
+      "original_section": "H - 229 x 211 x 14.48 x 23.75",
+      "weight": 99.707,
+      "substitute_section": "H - 229 x 211 x 16 x 25",
+      "substitute_weight": 105.3
+    },
+    {
+      "name": "W8X58",
+      "original_section": "H - 223 x 209 x 12.96 x 20.58",
+      "weight": 86.313,
+      "substitute_section": "H - 223 x 209 x 14 x 22",
+      "substitute_weight": 91.861
+    },
+    {
+      "name": "W8X48",
+      "original_section": "H - 216 x 206 x 10.16 x 17.4",
+      "weight": 71.432,
+      "substitute_section": "H - 216 x 206 x 12 x 18",
+      "substitute_weight": 75.172
+    },
+    {
+      "name": "W8X40",
+      "original_section": "H - 210 x 205 x 9.15 x 14.23",
+      "weight": 59.526,
+      "substitute_section": "H - 210 x 205 x 10 x 16",
+      "substitute_weight": 65.469
+    },
+    {
+      "name": "W8X35",
+      "original_section": "H - 207 x 204 x 7.88 x 12.58",
+      "weight": 52.086,
+      "substitute_section": "H - 207 x 204 x 8 x 14",
+      "substitute_weight": 56.08
+    },
+    {
+      "name": "W8X31",
+      "original_section": "H - 204 x 204 x 7.24 x 11.05",
+      "weight": 46.133,
+      "substitute_section": "H - 204 x 204 x 8 x 12",
+      "substitute_weight": 49.738
+    },
+    {
+      "name": "W8X28",
+      "original_section": "H - 205 x 167 x 7.24 x 11.82",
+      "weight": 41.668,
+      "substitute_section": "H - 205 x 167 x 8 x 12",
+      "substitute_weight": 42.83
+    },
+    {
+      "name": "W8X24",
+      "original_section": "H - 202 x 166 x 6.23 x 10.16",
+      "weight": 35.716,
+      "substitute_section": "H - 202 x 166 x 8 x 12",
+      "substitute_weight": 42.453
+    },
+    {
+      "name": "W8X21",
+      "original_section": "H - 211 x 134 x 6.35 x 10.16",
+      "weight": 31.251,
+      "substitute_section": "H - 211 x 134 x 8 x 12",
+      "substitute_weight": 36.989
+    },
+    {
+      "name": "W8X18",
+      "original_section": "H - 207 x 134 x 5.85 x 8.39",
+      "weight": 26.787,
+      "substitute_section": "H - 207 x 134 x 6 x 10",
+      "substitute_weight": 29.846
+    },
+    {
+      "name": "W8X15",
+      "original_section": "I - 206 x 103 x 6.23 x 8.01",
+      "weight": 22.322,
+      "substitute_section": "I - 206 x 103 x 8 x 8",
+      "substitute_weight": 24.869
+    },
+    {
+      "name": "W8X13",
+      "original_section": "H - 203 x 102 x 5.85 x 6.48",
+      "weight": 19.346,
+      "substitute_section": "H - 203 x 102 x 6 x 8",
+      "substitute_weight": 21.619
+    },
+    {
+      "name": "W8X10",
+      "original_section": "H - 201 x 101 x 4.32 x 5.21",
+      "weight": 14.882,
+      "substitute_section": "H - 201 x 101 x 6 x 6",
+      "substitute_weight": 18.416
+    },
+    {
+      "name": "W6X25",
+      "original_section": "H - 163 x 155 x 8.13 x 11.56",
+      "weight": 37.204,
+      "substitute_section": "H - 163 x 155 x 10 x 12",
+      "substitute_weight": 40.114
+    },
+    {
+      "name": "W6X20",
+      "original_section": "H - 158 x 153 x 6.61 x 9.28",
+      "weight": 29.763,
+      "substitute_section": "H - 158 x 153 x 8 x 10",
+      "substitute_weight": 32.687
+    },
+    {
+      "name": "W6X15",
+      "original_section": "H - 153 x 153 x 5.85 x 6.61",
+      "weight": 22.322,
+      "substitute_section": "H - 153 x 153 x 6 x 8",
+      "substitute_weight": 25.669
+    },
+    {
+      "name": "W6X16",
+      "original_section": "H - 160 x 103 x 6.61 x 10.29",
+      "weight": 23.811,
+      "substitute_section": "H - 160 x 103 x 8 x 12",
+      "substitute_weight": 27.946
+    },
+    {
+      "name": "W6X12",
+      "original_section": "H - 154 x 102 x 5.85 x 7.12",
+      "weight": 17.858,
+      "substitute_section": "H - 154 x 102 x 6 x 8",
+      "substitute_weight": 19.311
+    },
+    {
+      "name": "W6X9",
+      "original_section": "H - 150 x 101 x 4.32 x 5.47",
+      "weight": 13.393,
+      "substitute_section": "H - 150 x 101 x 6 x 6",
+      "substitute_weight": 16.014
+    },
+    {
+      "name": "W6X8.5",
+      "original_section": "H - 149 x 101 x 4.32 x 4.96",
+      "weight": 12.649,
+      "substitute_section": "H - 149 x 101 x 6 x 6",
+      "substitute_weight": 15.967
+    },
+    {
+      "name": "W5X19",
+      "original_section": "H - 131 x 128 x 6.86 x 10.93",
+      "weight": 28.275,
+      "substitute_section": "H - 131 x 128 x 8 x 12",
+      "substitute_weight": 30.835
+    },
+    {
+      "name": "W5X16",
+      "original_section": "H - 128 x 127 x 6.1 x 9.15",
+      "weight": 23.811,
+      "substitute_section": "H - 128 x 127 x 6 x 10",
+      "substitute_weight": 25.026
+    },
+    {
+      "name": "W4X13",
+      "original_section": "H - 106 x 104 x 7.12 x 8.77",
+      "weight": 19.346,
+      "substitute_section": "H - 106 x 104 x 8 x 10",
+      "substitute_weight": 21.729
+    },
+    {
+      "name": "HEA 100",
+      "original_section": "H - 96 x 100 x 5 x 8",
+      "weight": 16.7,
+      "substitute_section": "H - 96 x 100 x 6 x 8",
+      "substitute_weight": 16.328
+    },
+    {
+      "name": "HEA 120",
+      "original_section": "H - 114 x 120 x 5 x 8",
+      "weight": 19.9,
+      "substitute_section": "H - 114 x 120 x 6 x 8",
+      "substitute_weight": 19.688
+    },
+    {
+      "name": "HEA 140",
+      "original_section": "H - 133 x 140 x 5.5 x 8.5",
+      "weight": 24.7,
+      "substitute_section": "H - 133 x 140 x 6 x 10",
+      "substitute_weight": 27.302
+    },
+    {
+      "name": "HEA 160",
+      "original_section": "H - 152 x 160 x 6 x 9",
+      "weight": 30.4,
+      "substitute_section": "H - 152 x 160 x 6 x 10",
+      "substitute_weight": 31.337
+    },
+    {
+      "name": "HEA 180",
+      "original_section": "H - 171 x 180 x 6 x 9.5",
+      "weight": 35.5,
+      "substitute_section": "H - 171 x 180 x 6 x 10",
+      "substitute_weight": 35.372
+    },
+    {
+      "name": "HEA 200",
+      "original_section": "H - 190 x 200 x 6.5 x 10",
+      "weight": 42.3,
+      "substitute_section": "H - 190 x 200 x 8 x 10",
+      "substitute_weight": 42.076
+    },
+    {
+      "name": "HEA 220",
+      "original_section": "H - 210 x 220 x 7 x 11",
+      "weight": 50.5,
+      "substitute_section": "H - 210 x 220 x 8 x 12",
+      "substitute_weight": 53.129
+    },
+    {
+      "name": "HEA 240",
+      "original_section": "H - 230 x 240 x 7.5 x 12",
+      "weight": 60.3,
+      "substitute_section": "H - 230 x 240 x 8 x 12",
+      "substitute_weight": 58.153
+    },
+    {
+      "name": "HEA 260",
+      "original_section": "H - 250 x 260 x 7.5 x 12.5",
+      "weight": 68.2,
+      "substitute_section": "H - 250 x 260 x 8 x 14",
+      "substitute_weight": 71.09
+    },
+    {
+      "name": "HEA 280",
+      "original_section": "H - 270 x 280 x 8 x 13",
+      "weight": 76.4,
+      "substitute_section": "H - 270 x 280 x 8 x 14",
+      "substitute_weight": 76.742
+    },
+    {
+      "name": "HEA 300",
+      "original_section": "H - 290 x 300 x 8.5 x 14",
+      "weight": 88.3,
+      "substitute_section": "H - 290 x 300 x 10 x 14",
+      "substitute_weight": 86.507
+    },
+    {
+      "name": "HEA 400",
+      "original_section": "H - 390 x 300 x 11 x 19",
+      "weight": 125.0,
+      "substitute_section": "H - 390 x 300 x 12 x 20",
+      "substitute_weight": 127.17
+    },
+    {
+      "name": "HEA 500",
+      "original_section": "H - 490 x 300 x 12 x 23",
+      "weight": 155.0,
+      "substitute_section": "H - 490 x 300 x 12 x 25",
+      "substitute_weight": 159.198
+    },
+    {
+      "name": "HEB 100",
+      "original_section": "H - 100 x 100 x 6 x 10",
+      "weight": 20.4,
+      "substitute_section": "H - 100 x 100 x 6 x 10",
+      "substitute_weight": 19.468
+    },
+    {
+      "name": "HEB 120",
+      "original_section": "H - 120 x 120 x 6.5 x 11",
+      "weight": 26.7,
+      "substitute_section": "H - 120 x 120 x 8 x 12",
+      "substitute_weight": 28.637
+    },
+    {
+      "name": "HEB 140",
+      "original_section": "H - 140 x 140 x 7 x 12",
+      "weight": 33.7,
+      "substitute_section": "H - 140 x 140 x 8 x 12",
+      "substitute_weight": 33.661
+    },
+    {
+      "name": "HEB 160",
+      "original_section": "H - 160 x 160 x 8 x 13",
+      "weight": 42.6,
+      "substitute_section": "H - 160 x 160 x 8 x 14",
+      "substitute_weight": 43.458
+    },
+    {
+      "name": "HEB 180",
+      "original_section": "H - 180 x 180 x 8.5 x 14",
+      "weight": 51.2,
+      "substitute_section": "H - 180 x 180 x 10 x 14",
+      "substitute_weight": 51.496
+    },
+    {
+      "name": "HEB 200",
+      "original_section": "H - 200 x 200 x 9 x 15",
+      "weight": 61.3,
+      "substitute_section": "H - 200 x 200 x 10 x 16",
+      "substitute_weight": 63.428
+    },
+    {
+      "name": "HEB 220",
+      "original_section": "H - 220 x 220 x 9.5 x 16",
+      "weight": 71.5,
+      "substitute_section": "H - 220 x 220 x 10 x 16",
+      "substitute_weight": 70.022
+    },
+    {
+      "name": "HEB 240",
+      "original_section": "H - 240 x 240 x 10 x 17",
+      "weight": 83.2,
+      "substitute_section": "H - 240 x 240 x 10 x 18",
+      "substitute_weight": 83.838
+    },
+    {
+      "name": "HEB 260",
+      "original_section": "H - 260 x 260 x 10 x 17.5",
+      "weight": 93.0,
+      "substitute_section": "H - 260 x 260 x 10 x 18",
+      "substitute_weight": 91.06
+    },
+    {
+      "name": "HEB 280",
+      "original_section": "H - 280 x 280 x 10.5 x 18",
+      "weight": 103.0,
+      "substitute_section": "H - 280 x 280 x 12 x 18",
+      "substitute_weight": 102.113
+    },
+    {
+      "name": "HEB 300",
+      "original_section": "H - 300 x 300 x 11 x 19",
+      "weight": 117.0,
+      "substitute_section": "H - 300 x 300 x 12 x 20",
+      "substitute_weight": 118.692
+    },
+    {
+      "name": "HEB 400",
+      "original_section": "H - 400 x 300 x 13.5 x 24",
+      "weight": 155.0,
+      "substitute_section": "H - 400 x 300 x 14 x 25",
+      "substitute_weight": 156.215
+    },
+    {
+      "name": "HEB 500",
+      "original_section": "H - 500 x 300 x 14.5 x 28",
+      "weight": 187.0,
+      "substitute_section": "H - 500 x 300 x 16 x 28",
+      "substitute_weight": 187.646
+    },
+    {
+      "name": "HEM 100",
+      "original_section": "H - 120 x 106 x 12 x 20",
+      "weight": 41.8,
+      "substitute_section": "H - 120 x 106 x 12 x 20",
+      "substitute_weight": 40.82
+    },
+    {
+      "name": "HEM 120",
+      "original_section": "H - 140 x 126 x 12.5 x 21",
+      "weight": 52.1,
+      "substitute_section": "H - 140 x 126 x 14 x 22",
+      "substitute_weight": 54.071
+    },
+    {
+      "name": "HEM 140",
+      "original_section": "H - 160 x 146 x 13 x 22",
+      "weight": 63.2,
+      "substitute_section": "H - 160 x 146 x 14 x 22",
+      "substitute_weight": 63.177
+    },
+    {
+      "name": "HEM 160",
+      "original_section": "H - 180 x 166 x 14 x 23",
+      "weight": 76.2,
+      "substitute_section": "H - 180 x 166 x 14 x 25",
+      "substitute_weight": 79.442
+    },
+    {
+      "name": "HEM 180",
+      "original_section": "H - 200 x 186 x 14.5 x 24",
+      "weight": 88.9,
+      "substitute_section": "H - 200 x 186 x 16 x 25",
+      "substitute_weight": 91.845
+    },
+    {
+      "name": "HEM 200",
+      "original_section": "H - 220 x 206 x 15 x 25",
+      "weight": 103.0,
+      "substitute_section": "H - 220 x 206 x 16 x 25",
+      "substitute_weight": 102.207
+    },
+    {
+      "name": "HEM 220",
+      "original_section": "H - 240 x 226 x 15.5 x 26",
+      "weight": 117.0,
+      "substitute_section": "H - 240 x 226 x 16 x 28",
+      "substitute_weight": 122.46
+    },
+    {
+      "name": "HEM 240",
+      "original_section": "H - 270 x 248 x 18 x 32",
+      "weight": 157.0,
+      "substitute_section": "H - 270 x 248 x 18 x 32",
+      "substitute_weight": 153.703
+    },
+    {
+      "name": "HEM 260",
+      "original_section": "H - 290 x 268 x 18 x 32.5",
+      "weight": 172.0,
+      "substitute_section": "H - 290 x 268 x 18 x 35",
+      "substitute_weight": 178.352
+    },
+    {
+      "name": "HEM 280",
+      "original_section": "H - 310 x 288 x 18.5 x 33",
+      "weight": 189.0,
+      "substitute_section": "H - 310 x 288 x 20 x 35",
+      "substitute_weight": 195.936
+    },
+    {
+      "name": "HEM 300",
+      "original_section": "H - 340 x 310 x 21 x 39",
+      "weight": 238.0,
+      "substitute_section": "H - 340 x 310 x 22 x 40",
+      "substitute_weight": 239.582
+    },
+    {
+      "name": "HP 200x53",
+      "original_section": "H - 204 x 207 x 10 x 10",
+      "weight": 53.0,
+      "substitute_section": "H - 204 x 207 x 10 x 10",
+      "substitute_weight": 46.943
+    },
+    {
+      "name": "HP 220x57",
+      "original_section": "H - 222 x 224 x 10 x 10",
+      "weight": 57.2,
+      "substitute_section": "H - 222 x 224 x 10 x 10",
+      "substitute_weight": 51.025
+    },
+    {
+      "name": "HP 260x75",
+      "original_section": "H - 258 x 262 x 12 x 12",
+      "weight": 75.0,
+      "substitute_section": "H - 258 x 262 x 12 x 12",
+      "substitute_weight": 71.404
+    },
+    {
+      "name": "HP 300x88",
+      "original_section": "H - 299 x 303 x 12 x 12",
+      "weight": 88.0,
+      "substitute_section": "H - 299 x 303 x 12 x 12",
+      "substitute_weight": 82.99
+    },
+    {
+      "name": "HP 320x117",
+      "original_section": "H - 319 x 325 x 15.5 x 15.5",
+      "weight": 117.0,
+      "substitute_section": "H - 319 x 325 x 16 x 16",
+      "substitute_weight": 117.687
+    },
+    {
+      "name": "HP 360x133",
+      "original_section": "H - 352 x 373 x 15.5 x 15.5",
+      "weight": 133.0,
+      "substitute_section": "H - 352 x 373 x 16 x 16",
+      "substitute_weight": 133.89
+    },
+    {
+      "name": "HP 400x176",
+      "original_section": "H - 392 x 403 x 19 x 19",
+      "weight": 176.0,
+      "substitute_section": "H - 392 x 403 x 20 x 20",
+      "substitute_weight": 181.806
+    }
+  ],
+  "channel": [
+    {
+      "name": "Member",
+      "original_section": "",
+      "weight": null,
+      "substitute_section": "",
+      "substitute_weight": null
+    },
+    {
+      "name": "380PFC",
+      "original_section": "C-380x100x10x17.5",
+      "weight": 55.2,
+      "substitute_section": "C-380x100x10x18",
+      "substitute_weight": 66.568
+    },
+    {
+      "name": "300PFC",
+      "original_section": "C-300x90x8x16",
+      "weight": 40.1,
+      "substitute_section": "C-300x90x8x16",
+      "substitute_weight": 46.974
+    },
+    {
+      "name": "250PFC",
+      "original_section": "C-250x90x8x15",
+      "weight": 35.5,
+      "substitute_section": "C-250x90x8x16",
+      "substitute_weight": 40.694
+    },
+    {
+      "name": "230PFC",
+      "original_section": "C-230x75x6.5x12",
+      "weight": 25.1,
+      "substitute_section": "C-230x75x8x12",
+      "substitute_weight": 29.579
+    },
+    {
+      "name": "200PFC",
+      "original_section": "C-200x75x6x12",
+      "weight": 22.9,
+      "substitute_section": "C-200x75x6x12",
+      "substitute_weight": 24.775
+    },
+    {
+      "name": "180PFC",
+      "original_section": "C-180x75x6x11",
+      "weight": 20.9,
+      "substitute_section": "C-180x75x6x12",
+      "substitute_weight": 22.891
+    },
+    {
+      "name": "150PFC",
+      "original_section": "C-150x75x6x9.5",
+      "weight": 17.7,
+      "substitute_section": "C-150x75x6x10",
+      "substitute_weight": 17.898
+    },
+    {
+      "name": "125PFC",
+      "original_section": "C-125x65x4.7x7.5",
+      "weight": 11.9,
+      "substitute_section": "C-125x65x6x8",
+      "substitute_weight": 13.219
+    },
+    {
+      "name": "100PFC",
+      "original_section": "C-100x50x4.2x6.7",
+      "weight": 8.33,
+      "substitute_section": "C-100x50x6x8",
+      "substitute_weight": 10.236
+    },
+    {
+      "name": "75PFC",
+      "original_section": "C-75x40x3.8x6.1",
+      "weight": 5.92,
+      "substitute_section": "C-75x40x4x6",
+      "substitute_weight": 5.668
+    }
+  ],
+  "hinh_vn": [
+    {
+      "name": "I 100 x 55 x 3.6 x 4.4 x 6m",
+      "weight": 6.72,
+      "note": "Có hàng"
+    },
+    {
+      "name": "I 120 x 64 x .3.8 x 4.8 x 6m",
+      "weight": 8.36,
+      "note": "Có hàng"
+    },
+    {
+      "name": "I 150 x 75 x 5 x 7 x 6m/12m-M",
+      "weight": 14.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "I 150 x 75 x 5 x 7 x 6m/12m- D",
+      "weight": 14.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "I 198 x 99 x 4.5 x 7 x 6m/12m",
+      "weight": 18.2,
+      "note": "Có hàng"
+    },
+    {
+      "name": "I 198 x 99 x 4.5 x 7 x 6m/12M",
+      "weight": 18.2,
+      "note": "Có hàng"
+    },
+    {
+      "name": "I 200 x 100 x 5.5 x 8 x 6m/12m",
+      "weight": 21.3,
+      "note": "Có hàng"
+    },
+    {
+      "name": "I 200 x 100 x 5.5 x 8 x 6m/12m",
+      "weight": 21.3,
+      "note": "Có hàng"
+    },
+    {
+      "name": "I 248 x 124 x 5 x 8 x 6m/12m",
+      "weight": 25.7,
+      "note": "Có hàng"
+    },
+    {
+      "name": "I 248 x 124 x 5 x 8 x 6m/12m",
+      "weight": 25.7,
+      "note": "Có hàng"
+    },
+    {
+      "name": "I 250 x 125 x 6 x 9 x 6m/12m",
+      "weight": 29.6,
+      "note": "Có hàng"
+    },
+    {
+      "name": "I 298 x 149 x 5.5 x 8 x 6m/12m",
+      "weight": 32.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "I 300 x 150 x 6.5 x 9 x 6m/12m",
+      "weight": 36.7,
+      "note": "Có hàng"
+    },
+    {
+      "name": "I 346 x 174 x 6 x 9 x 6m/12m",
+      "weight": 41.4,
+      "note": "Có hàng"
+    },
+    {
+      "name": "I 350 x 175 x 7 x 11 x 6m/12m",
+      "weight": 49.6,
+      "note": "Có hàng"
+    },
+    {
+      "name": "I 396 x 199 x 7 x 11 x 6m/12m",
+      "weight": 56.6,
+      "note": "Có hàng"
+    },
+    {
+      "name": "I 400 x 200 x 8 x 13 x 6m/12m",
+      "weight": 66.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "I 446 x 199 x 8 x 12 x 6m/12m",
+      "weight": 66.2,
+      "note": "Có hàng"
+    },
+    {
+      "name": "I 450 x 200 x 9 x 14 x 6m/12m",
+      "weight": 76.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "I 482 x 300 x 11 x 15 x 12m",
+      "weight": 128.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "I 496 x 199 x 9 x 14 x 12m",
+      "weight": 79.5,
+      "note": "Có hàng"
+    },
+    {
+      "name": "I 500 x 200 x 10 x 16 x 6m/12m",
+      "weight": 89.6,
+      "note": "Có hàng"
+    },
+    {
+      "name": "I 582 x 300 x 12 x 17 x 12m",
+      "weight": 137.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "I 588 x 300 x 12 x 20 x 12m",
+      "weight": 151.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "I 596 x 199 x 10 x 15 x 6m/12m",
+      "weight": 94.6,
+      "note": "Có hàng"
+    },
+    {
+      "name": "I 600 x 200 x 11 x 17 x 6m/12m",
+      "weight": 106.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "I 692 x 300 x 13 x 20 x 12m",
+      "weight": 163.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "I 700 x 300 x 13 x 24 x 6m/12m",
+      "weight": 185.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "I 800 x 300 x 14 x 26 x 12m",
+      "weight": 210.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "I 900 x 300 x 16 x 28 x 12m",
+      "weight": 240.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 40 x 3ly x 6m_ 1.67 kg/m",
+      "weight": 10.02,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 40 x 4ly x 6m_ 2.17 kg/m",
+      "weight": 13.02,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 40 x 4ly x 6m_ 2.42 kg/m",
+      "weight": 14.52,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 50 x 4ly x 6m_3.06 kg/m",
+      "weight": 18.36,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 50 x 5ly x 6m_ 3,43 kg/m",
+      "weight": 20.58,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 50 x 5ly x 6m_ 3.77 kg/m",
+      "weight": 22.62,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 50 x 6ly x 6m_ 3.97 kg/m",
+      "weight": 23.82,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 50 x 6ly x 6m_ 4,43 kg/m",
+      "weight": 26.58,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 63 x 5ly x 6m_ 4.82 kg/m",
+      "weight": 28.92,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 63 x 6ly x 6m_ 5,72 kg/m",
+      "weight": 34.32,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 63 x 6ly x 6m_ 5,5 kg/m",
+      "weight": 33.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 65 x 4ly x 6m_ 3.7 kg/m",
+      "weight": 22.2,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 65 x 5ly x 6m_ 4.55 kg/m",
+      "weight": 27.3,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 65 x 6ly x 6m_5,38 kg/m",
+      "weight": 32.28,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 65 x 6ly x 6m_5,91 kg/m",
+      "weight": 35.46,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 70 x 5ly x 6m_ 4.97 kg/m",
+      "weight": 29.82,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 70 x 5ly x 6m_ 5,37 kg/m",
+      "weight": 32.22,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 70 x 6ly x 6m_ 5,92 kg/m",
+      "weight": 35.52,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 70 x 6ly x 6m_ 5,81 kg/m",
+      "weight": 34.86,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 70 x 6ly x 6m_ 6,38 kg/m",
+      "weight": 38.28,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 70 x 6ly x 12m_ 6,38 kg/m",
+      "weight": 76.56,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 70 x 7ly x 6m_ 6,8 kg/m",
+      "weight": 40.8,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 70 x 7ly x 6m_ 6,8 kg/m",
+      "weight": 81.6,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 70 x 7ly x 6m_ 7,38 kg/m",
+      "weight": 44.28,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 70 x 7ly x 12m_ 7,38 kg/m",
+      "weight": 88.56,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 75 x 5ly x 6m_ 5.82 kg/m",
+      "weight": 34.92,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 75 x 5ly x 6m_ 5.22 kg/m",
+      "weight": 31.32,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 75 x 6ly x 6m_ 6.25 kg/m",
+      "weight": 37.5,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 75 x 6ly x 12m_ 6.25 kg/m",
+      "weight": 75.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 75 x 6ly x 6m_ 6.78 kg/m",
+      "weight": 40.68,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 75 x 6ly x 12m_ 6.78 kg/m",
+      "weight": 81.36,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 75 x 6ly x 6m_ 6.85 kg/m",
+      "weight": 41.1,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 75 x 6ly x 12m_ 6.85 kg/m",
+      "weight": 82.2,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 75 x 7ly x 6m_ 7,3 kg/m",
+      "weight": 43.8,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 75 x 7ly x 12m_ 7,3 kg/m",
+      "weight": 87.6,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 75 x 7ly x 6m_ 7,81 kg/m",
+      "weight": 46.86,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 75 x 7ly x 6m_ 7,9 kg/m",
+      "weight": 47.4,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 75 x 7ly x 12m_ 7,81 kg/m",
+      "weight": 93.72,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 75 x 8ly x 6m_ 8,92 kg/m",
+      "weight": 53.52,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 75 x 8ly x 12m_ 8,92 kg/m",
+      "weight": 107.04,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 75 x 9ly x 6m_ 9,96 kg/m",
+      "weight": 59.76,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 75 x 9ly x 12m_ 9,96 kg/m",
+      "weight": 119.52,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 75 x 9ly x 6m_ 10.06 kg/m",
+      "weight": 60.36,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 75 x 9ly x 12m_ 10.06 kg/m",
+      "weight": 120.72,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 75 x 9ly x 12m_10,03kg/m",
+      "weight": 120.36,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 80 x 6ly x 6m_ 7,32 kg/m",
+      "weight": 43.92,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 80 x 6ly x 12m_ 7,32 kg/m",
+      "weight": 87.84,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 80 x 6ly x 6m_ 7,37 kg/m",
+      "weight": 44.22,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 80 x 6ly x 12m_ 7,37 kg/m",
+      "weight": 88.44,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 80 x 7ly x 6m_ 8,49 kg/m",
+      "weight": 50.94,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 80 x 7ly x 12m_ 8,49 kg/m",
+      "weight": 101.88,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 80 x 8ly x 6m_ 8,75 kg/m",
+      "weight": 52.5,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 80 x 8ly x 12m_ 8,75 kg/m",
+      "weight": 105.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 80 x 8ly x 6m_ 9,66 kg/m",
+      "weight": 57.96,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 80 x 8ly x 12m_ 9,66 kg/m",
+      "weight": 115.92,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 90 x 6ly x 6m_ 8,25 kg/m",
+      "weight": 49.5,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 90 x 6ly x 12m_ 8,25 kg/m",
+      "weight": 99.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 90 x 7ly x 6m_ 9,59 kg/m",
+      "weight": 57.54,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 90 x 7ly x 12m_ 9,59 kg/m",
+      "weight": 115.08,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 90 x 8ly x 6m_ 10,94 kg/m",
+      "weight": 65.64,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 90 x 8ly x 12m_ 10,94 kg/m",
+      "weight": 131.28,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 90 x 9ly x 6m_ 12,24 kg/m",
+      "weight": 73.44,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 90 x 9ly x 12m_ 12,24 kg/m",
+      "weight": 146.88,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 90 x 10ly x 6m_ 13,52 kg/m",
+      "weight": 81.12,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 90 x 10ly x 12m_ 13,52 kg/m",
+      "weight": 162.24,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 100 x 7ly x 6m _ 10,83 kg/m",
+      "weight": 64.98,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 100 x 7ly x 12m _ 10,83 kg/m",
+      "weight": 129.96,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 100 x 8ly x 6m _ 11,49 kg/m",
+      "weight": 68.94,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 100 x 8ly x 12m _ 11,49 kg/m",
+      "weight": 137.88,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 100 x 8ly x 6m _ 12.28 kg/m",
+      "weight": 73.68,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 100 x 8ly x 12m _ 12.28 kg/m",
+      "weight": 147.36,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 100 x 8ly x 6m _ 12.21 kg/m",
+      "weight": 73.26,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 100 x 8ly x 12m _ 12.21 kg/m",
+      "weight": 146.52,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 100 x 8ly x 6m _ 12.1 kg/m",
+      "weight": 72.6,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 100 x 8ly x 12m _ 12.1 kg/m",
+      "weight": 145.2,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 100 x 9ly x 6m _ 13.5 kg/m",
+      "weight": 81.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 100 x 9ly x 12m _ 13.5 kg/m",
+      "weight": 162.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 100 x 10ly x 6m _ 15,2 kg/m",
+      "weight": 91.2,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 100 x 10ly x 12m _ 15,2 kg/m",
+      "weight": 182.4,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 100 x 10ly x 6m _ 15,12 kg/m",
+      "weight": 90.72,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 100 x 10ly x 12m _ 15,12 kg/m",
+      "weight": 181.44,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 110 x 7ly x 6m _ 11.93 kg/m",
+      "weight": 71.58,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 110 x 7ly x 12m _ 11.93 kg/m",
+      "weight": 143.16,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 120 x 8ly x 6m_ 14,7 kg/m",
+      "weight": 88.2,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 120 x 8ly x 12m_ 14,7 kg/m",
+      "weight": 176.4,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 120 x 10ly x 6m_ 18,2 kg/m",
+      "weight": 109.2,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 120 x 10ly x 12m_ 18,2 kg/m",
+      "weight": 218.4,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 120 x 12ly x 6m_ 21,66 kg/m",
+      "weight": 129.96,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 120 x 12ly x 12m_ 21,66 kg/m",
+      "weight": 259.92,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 125 x 10ly x 6m_ 19,13 kg/m",
+      "weight": 114.78,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 125 x 10ly x 12m_ 19,13 kg/m",
+      "weight": 229.56,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 125 x 12ly x 6m_ 22,7 kg/m",
+      "weight": 136.2,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 125 x 12ly x 12m_ 22,7 kg/m",
+      "weight": 272.4,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 130 x 10ly x 6m_ 19,8 kg/m",
+      "weight": 118.8,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 130 x 10ly x 12m_ 19,8 kg/m",
+      "weight": 237.6,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 130 x 12ly x 6m_ 23,4 kg/m",
+      "weight": 140.4,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 130 x 12ly x 12m_ 23,4 kg/m",
+      "weight": 280.8,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 130 x 15ly x 6m_ 28,8 kg/m",
+      "weight": 172.8,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 130 x 15ly x 12m_ 28,8 kg/m",
+      "weight": 345.6,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 150 x 12ly x 12m",
+      "weight": 12.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 150 x 12ly x 6m _ 27,3 kg/m",
+      "weight": 163.8,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 150 x 12ly x 12m _ 27,3 kg/m",
+      "weight": 327.6,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 150 x 10ly x 6m _ 22,9 kg/m",
+      "weight": 137.4,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 150 x 10ly x 12m _ 22,9 kg/m",
+      "weight": 274.8,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 150 x 15ly x 6m _ 33,6 kg/m",
+      "weight": 201.6,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 150 x 15ly x 12m _ 33,6 kg/m",
+      "weight": 403.2,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 175 x 12ly x 6m_ 31,8 kg/m",
+      "weight": 190.8,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 175 x 12ly x 12m_ 31,8 kg/m",
+      "weight": 381.6,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 175 x 15ly x 6m_ 39,4 kg/m",
+      "weight": 236.4,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 175 x 15ly x 12m_ 39,4 kg/m",
+      "weight": 472.8,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 200 x 15 x 6m_ 45,6 kg/m",
+      "weight": 273.6,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 200 x 15 x 12m_ 45,6 kg/m",
+      "weight": 547.2,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 200 x 20 x 6m_ 60,06 kg/m",
+      "weight": 363.6,
+      "note": "Có hàng"
+    },
+    {
+      "name": "V 200 x 20 x 12m_ 60,06 kg/m",
+      "weight": 727.2,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U50 x 24 x 2.5 x 6m_2.33 kg/m",
+      "weight": 13.98,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 65 x 30 x 3 x 6M _2,83 kg/m",
+      "weight": 16.98,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 75 x 40 x 3.8 x 6M _5.3 kg/m",
+      "weight": 31.8,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 80 x 38 x 3 x 6M _ 3.58 kg/m",
+      "weight": 21.48,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 80 x 43 x 6 x 6M _ 6 kg/m",
+      "weight": 36.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 80 x 40 x 4.2 x 6M _ 5.08 kg/m",
+      "weight": 30.48,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 80 x 45 x 6 x 6M _ 7 kg/m",
+      "weight": 42.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 100 x 42.5 x 3.3 x 6M_ 5.16 kg/m",
+      "weight": 30.96,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 100 x 42.5 x 3.3 x 6M_ 5.17 kg/m",
+      "weight": 31.02,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 100 x 45 x 3.8 x 6M_ 7,5 kg/m",
+      "weight": 45.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 100 x 45 x 3.8 x 12M_ 7,5 kg/m",
+      "weight": 90.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 100 x 46 x 4,5 x 6M_ 7,5 kg/m",
+      "weight": 45.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 100 x 45 x 3.8 x 6M_ 7,17 kg/m",
+      "weight": 43.02,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 100 x 50 x 5 x 6M_ 9,36 kg/m",
+      "weight": 56.16,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 100 x 50 x 5 x 12M_ 9,36 kg/m",
+      "weight": 112.32,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 100 x 50 x 5 x 6M_ 9,4 kg/m",
+      "weight": 56.4,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 100 x 50 x 5 x 12M_ 9,4 kg/m",
+      "weight": 112.8,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 100 x 50 x 3,8 x 6M_ 7,3 kg/m",
+      "weight": 43.8,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 100 x 50 x 3,8 x 6M_ 7,3 kg/m",
+      "weight": 87.6,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 100 x 45 x 5 x 12M_ 8 kg/m",
+      "weight": 96.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 100 x 45 x 5 x 6M_ 8 kg/m",
+      "weight": 48.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 120 x 41 x 4.7 x 6M_ 6,83 kg/m",
+      "weight": 40.98,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 120 x 50 x 4 x 6M_ 6,92 kg/m",
+      "weight": 41.52,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 120 x 50 x 5 x 6M_ 9,3 kg/m",
+      "weight": 55.8,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 120 x 50 x 5 x 12M_ 9,3 kg/m",
+      "weight": 111.6,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 120 x 50 x 6 x 6M_ 8,8 kg/m",
+      "weight": 52.8,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 120 x 52 x 5.4 x 6M_ 8,5 kg/m",
+      "weight": 51.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 120 x 53 x 5,5 x 6M_ 10 kg/m",
+      "weight": 60.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 120 x 53 x 5,5 x 12M_ 10 kg/m",
+      "weight": 120.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 125 x 65 x 6 x 6M_ 13.4 kg/m",
+      "weight": 80.4,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 125 x 65 x 6 x 12M_ 13.4 kg/m",
+      "weight": 160.8,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 140 x 52 x 4,5 x 6M_ 9 kg/m",
+      "weight": 54.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 140 x 58 x 6 x 6M_ 12 kg/m",
+      "weight": 72.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 140 x 52 x 4,5 x 12M_ 9 kg/m",
+      "weight": 108.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 140 x 58 x 6 x 6M_ 12.43 kg/m",
+      "weight": 74.58,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 140 x 58 x 6 x 12M_ 12.43 kg/m",
+      "weight": 149.16,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 150 x 75 x 6,5 x 6M_ 18,6 kg/m",
+      "weight": 111.6,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 150 x 75 x 6,5 x 12M_ 18,6 kg/m",
+      "weight": 223.2,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 160 x 56 x 5.2 x 6M_ 12.5 kg/m",
+      "weight": 75.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 160 x 56 x 5.2 x 12M_ 12.5 kg/m",
+      "weight": 150.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 160 x 58 x 5.5 x 6M_ 14.2 kg/m",
+      "weight": 85.2,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 160 x 58 x 5.5 x 6M_13.8 kg/m",
+      "weight": 82.8,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 160 x 58 x 5.5 x 12M_ 13.8 kg/m",
+      "weight": 165.6,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 180 x 64 x 6 x 6M_ 15 kg/m",
+      "weight": 90.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 180 x 64 x 6 x 12M_ 15 kg/m",
+      "weight": 180.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 180 x 68 x 7 x 6M_ 17.5 kg/m",
+      "weight": 105.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 180 x 68 x 7 x 12M_ 17.5 kg/m",
+      "weight": 210.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 200 x 69 x 5,4 x 6M_ 17 kg/m",
+      "weight": 102.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 200 x 69 x 5,4 x 12M_ 17 kg/m",
+      "weight": 204.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 200 x 73 x 5,4 x 6M_ 18,4 kg/m",
+      "weight": 110.4,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 200 x 75 x 8,5 x 6M_ 23,5 kg/m",
+      "weight": 141.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 200 x 75 x 8,5 x 12M_ 23,5 kg/m",
+      "weight": 282.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 200 x 75 x 9 x 6M_ 24,6 kg/m TQ",
+      "weight": 147.6,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 200 x 75 x 9 x 12M_ 24,6 kg/m TQ",
+      "weight": 295.2,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 200 x 80 x 7.5 x 11 x 12M_ 24,6 kg/m",
+      "weight": 295.2,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 200 x 80 x 7.5 x 11 x 6M_ 24,6 kg/m",
+      "weight": 147.6,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 200 x 90 x 8 x 12m_30,3kg/m",
+      "weight": 363.6,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 250 x 78 x 6 x 6M_ 22,8 kg/m",
+      "weight": 136.8,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 250 x 78 x 6 x 12M_ 22,8 kg/m",
+      "weight": 273.6,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 250 x 78 x 7 x 6M_ 23,5 kg/m",
+      "weight": 141.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 250 x 78 x 7 x 12M_ 23,5 kg/m",
+      "weight": 282.0,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 250 x 78 x 8 x 6M_ 24,6 kg/m",
+      "weight": 147.6,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 250 x 78 x 8 x 12M_ 24,6 kg/m",
+      "weight": 295.2,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 250 x 90 x 9 x 13 x 6M_ 34,6 kg/m",
+      "weight": 207.6,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 250 x 90 x 9 x 13 x 12M_ 34,6 kg/m",
+      "weight": 415.2,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 280 x 82 x 7,5 x 6M_31,4 kg/m",
+      "weight": 188.4,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 280 x 82 x 7,5 x 12M_31,4 kg/m",
+      "weight": 376.8,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 300 x 82 x 7 x 6M_31,02 kg/m",
+      "weight": 186.12,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 300 x 82 x 7 x 12M_31,02 kg/m",
+      "weight": 372.24,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 300 x 87 x 9,5 x 6M_39,17 kg/m",
+      "weight": 235.02,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 300 x 87 x 9,5 x 12M_39,17 kg/m",
+      "weight": 470.04,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 300 x 90 x 9 x 13 x 6M_38,10 kg/m TQ",
+      "weight": 228.6,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 300 x 90 x 9 x 13 x 12M_38,10 kg/m TQ",
+      "weight": 457.2,
+      "note": "Có hàng"
+    },
+    {
+      "name": "U 300 x 90 x 9 x 13 x 12M_38,10 kg/m HQ",
+      "weight": 457.2,
+      "note": "Check lại"
+    },
+    {
+      "name": "U 300 x 90 x 9 x 13 x 6M_38,10 kg/m HQ",
+      "weight": 228.6,
+      "note": "Check lại"
+    },
+    {
+      "name": "U 380 x 100 x 10,5 x 16 x 6M_54,5kg/m HQ",
+      "weight": 327.0,
+      "note": "Check lại"
+    },
+    {
+      "name": "U 380 x 100 x 10,5 x 16 x 12M_54,5kg/m HQ",
+      "weight": 654.0,
+      "note": "Check lại"
+    },
+    {
+      "name": "U 400 x 100 x 10,5 x 6M_58,93kg/m TQ",
+      "weight": 353.58,
+      "note": "Có hàng"
+    }
+  ],
+  "ong_hop": [
+    {
+      "name": "D 17.3 x 1.9",
+      "weight": 0.722,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 21.2 x 1.6",
+      "weight": 0.773,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 21.2 x 1.9",
+      "weight": 0.905,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 21.2 x 2.1",
+      "weight": 0.988,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 21.2 x 2.3",
+      "weight": 1.072,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 21.3 x 2.77",
+      "weight": 1.27,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 21.4 x 2.6",
+      "weight": 1.205,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 22.2 x 2.0",
+      "weight": 0.997,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 22.2 x 3.0",
+      "weight": 1.42,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 26.62 x 1.6",
+      "weight": 0.988,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 26.62 x 1.9",
+      "weight": 1.16,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 26.62 x 2.0",
+      "weight": 1.215,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 26.62 x 2.1",
+      "weight": 1.272,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 26.62 x 2.3",
+      "weight": 1.382,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 26.7 x 2.87",
+      "weight": 1.69,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 26.9 x 2.6",
+      "weight": 1.558,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 26.9 x 4.0",
+      "weight": 2.258,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 33.4 x 3.38",
+      "weight": 2.5,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 33.5 x 1.6",
+      "weight": 1.258,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 33.5 x 1.8",
+      "weight": 1.407,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 33.5 x 2.0",
+      "weight": 1.553,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 33.5 x 2.1",
+      "weight": 1.627,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 33.5 x 2.3",
+      "weight": 1.77,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 33.5 x 2.6",
+      "weight": 1.982,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 33.5 x 3.0",
+      "weight": 2.257,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 33.8 x 3.2",
+      "weight": 2.415,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 33.8 x 3.6",
+      "weight": 2.682,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 33.8 x 4.0",
+      "weight": 2.94,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 42.2 x 1.6",
+      "weight": 1.602,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 42.2 x 1.8",
+      "weight": 1.793,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 42.2 x 2.0",
+      "weight": 1.983,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 42.2 x 2.1",
+      "weight": 2.077,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 42.2 x 2.3",
+      "weight": 2.263,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 42.2 x 2.6",
+      "weight": 2.538,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 42.2 x 3.56",
+      "weight": 3.39,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 42.5 x 3.0",
+      "weight": 2.922,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 42.5 x 3.2",
+      "weight": 3.102,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 42.5 x 4.0",
+      "weight": 3.798,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 48.1 x 1.6",
+      "weight": 1.835,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 48.1 x 1.9",
+      "weight": 2.165,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 48.1 x 2.0",
+      "weight": 2.273,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 48.1 x 2.1",
+      "weight": 2.382,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 48.1 x 2.3",
+      "weight": 2.598,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 48.1 x 2.5",
+      "weight": 2.812,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 48.1 x 3.0",
+      "weight": 3.337,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 48.3 x 3.68",
+      "weight": 4.05,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 48.4 x 3.2",
+      "weight": 3.567,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 48.4 x 3.6",
+      "weight": 3.977,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 48.4 x 4.0",
+      "weight": 4.38,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 59.9 x 1.8",
+      "weight": 2.578,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 59.9 x 1.9",
+      "weight": 2.718,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 59.9 x 2.0",
+      "weight": 2.855,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 59.9 x 2.1",
+      "weight": 2.993,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 59.9 x 2.3",
+      "weight": 3.267,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 59.9 x 2.5",
+      "weight": 3.538,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 59.9 x 2.6",
+      "weight": 3.673,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 59.9 x 3.0",
+      "weight": 4.21,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 59.9 x 3.2",
+      "weight": 4.475,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 60.3 x 3.6",
+      "weight": 5.033,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 60.3 x 3.91",
+      "weight": 5.44,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 60.3 x 4.0",
+      "weight": 5.553,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 60.3 x 4.5",
+      "weight": 6.192,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 60.3 x 5.0",
+      "weight": 6.818,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 73.0 x 5.16",
+      "weight": 8.63,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 75.6 x 1.9",
+      "weight": 3.453,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 75.6 x 2.3",
+      "weight": 4.157,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 75.6 x 2.6",
+      "weight": 4.68,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 75.6 x 2.9",
+      "weight": 5.198,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 75.6 x 3.2",
+      "weight": 5.713,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 76.0 x 3.6",
+      "weight": 6.427,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 76.0 x 4.0",
+      "weight": 7.102,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 76.0 x 5.0",
+      "weight": 8.755,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 88.3 x 2.1",
+      "weight": 4.463,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 88.3 x 2.3",
+      "weight": 4.878,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 88.3 x 2.6",
+      "weight": 5.495,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 88.3 x 2.9",
+      "weight": 6.107,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 88.3 x 3.2",
+      "weight": 6.715,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 88.3 x 3.6",
+      "weight": 7.52,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 88.8 x 4.0",
+      "weight": 8.365,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 88.8 x 5.0",
+      "weight": 10.333,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 88.9 x 5.49",
+      "weight": 11.29,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 101.6 x 3.2",
+      "weight": 7.765,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 101.6 x 3.7",
+      "weight": 8.933,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 101.6 x 4.7",
+      "weight": 11.232,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 101.6 x 5.7",
+      "weight": 13.48,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 101.6 x 5.74",
+      "weight": 13.57,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 113.5 x 2.0",
+      "weight": 5.5,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 113.5 x 2.6",
+      "weight": 7.11,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 113.5 x 2.9",
+      "weight": 7.91,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 113.5 x 3.2",
+      "weight": 8.703,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 113.5 x 3.6",
+      "weight": 9.757,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 113.5 x 4.0",
+      "weight": 10.802,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 114.1 x 4.5",
+      "weight": 12.162,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 114.1 x 5.0",
+      "weight": 13.452,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 114.1 x 5.4",
+      "weight": 14.475,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 114.3 x 6.02",
+      "weight": 16.07,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 139.7 x 5.0",
+      "weight": 16.608,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 139.7 x 5.4",
+      "weight": 17.883,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 141.3 x 3.96",
+      "weight": 13.41,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 141.3 x 4.78",
+      "weight": 16.09,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 141.3 x 5.16",
+      "weight": 17.32,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 141.3 x 6.55",
+      "weight": 21.77,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 141.3 x 7.11",
+      "weight": 23.53,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 165.1 x 5.0",
+      "weight": 19.74,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 165.1 x 5.4",
+      "weight": 21.267,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 168.3 x 3.96",
+      "weight": 16.05,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 168.3 x 4.78",
+      "weight": 19.27,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 168.3 x 5.16",
+      "weight": 20.76,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 168.3 x 5.56",
+      "weight": 22.31,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 168.3 x 6.35",
+      "weight": 25.36,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 168.3 x 7.11",
+      "weight": 28.26,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 219.1 x 3.96",
+      "weight": 21.01,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 219.1 x 4.78",
+      "weight": 25.26,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 219.1 x 5.16",
+      "weight": 27.22,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 219.1 x 5.56",
+      "weight": 29.28,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 219.1 x 6.35",
+      "weight": 33.31,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 219.1 x 7.11",
+      "weight": 37.17,
+      "note": "Có hàng"
+    },
+    {
+      "name": "D 219.1 x 8.18",
+      "weight": 42.55,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 20 x 20 x 0.7",
+      "weight": 0.422,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 20 x 20 x 0.8",
+      "weight": 0.478,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 20 x 20 x 0.9",
+      "weight": 0.535,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 20 x 20 x 1",
+      "weight": 0.59,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 20 x 20 x 1.1",
+      "weight": 0.645,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 20 x 20 x 1.2",
+      "weight": 0.7,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 20 x 20 x 1.4",
+      "weight": 0.805,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 20 x 20 x 1.5",
+      "weight": 0.857,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 20 x 20 x 1.8",
+      "weight": 1.008,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 20 x 20 x 2",
+      "weight": 1.105,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 25 x 25 x 0.7",
+      "weight": 0.532,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 25 x 25 x 0.8",
+      "weight": 0.603,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 25 x 25 x 0.9",
+      "weight": 0.677,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 25 x 25 x 1",
+      "weight": 0.747,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 25 x 25 x 1.1",
+      "weight": 0.818,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 25 x 25 x 1.2",
+      "weight": 0.888,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 25 x 25 x 1.4",
+      "weight": 1.025,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 25 x 25 x 1.5",
+      "weight": 1.093,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 25 x 25 x 1.8",
+      "weight": 1.292,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 25 x 25 x 2",
+      "weight": 1.42,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 30 x 30 x 0.7",
+      "weight": 0.642,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 30 x 30 x 0.8",
+      "weight": 0.73,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 30 x 30 x 0.9",
+      "weight": 0.817,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 30 x 30 x 1",
+      "weight": 0.905,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 30 x 30 x 1.1",
+      "weight": 0.99,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 30 x 30 x 1.2",
+      "weight": 1.077,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 30 x 30 x 1.4",
+      "weight": 1.245,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 30 x 30 x 1.5",
+      "weight": 1.328,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 30 x 30 x 1.8",
+      "weight": 1.573,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 30 x 30 x 2",
+      "weight": 1.733,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 30 x 30 x 2.3",
+      "weight": 1.967,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 30 x 30 x 2.5",
+      "weight": 2.12,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 40 x 40 x 0.7",
+      "weight": 0.86,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 40 x 40 x 0.8",
+      "weight": 0.98,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 40 x 40 x 0.9",
+      "weight": 1.1,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 40 x 40 x 1",
+      "weight": 1.218,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 40 x 40 x 1.1",
+      "weight": 1.337,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 40 x 40 x 1.2",
+      "weight": 1.453,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 40 x 40 x 1.4",
+      "weight": 1.685,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 40 x 40 x 1.5",
+      "weight": 1.8,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 40 x 40 x 1.8",
+      "weight": 2.138,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 40 x 40 x 2",
+      "weight": 2.362,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 40 x 40 x 2.3",
+      "weight": 2.69,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 40 x 40 x 2.5",
+      "weight": 2.905,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 40 x 40 x 2.8",
+      "weight": 3.222,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 40 x 40 x 3",
+      "weight": 3.428,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 50 x 50 x 1",
+      "weight": 1.532,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 50 x 50 x 1.1",
+      "weight": 1.682,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 50 x 50 x 1.2",
+      "weight": 1.83,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 50 x 50 x 1.4",
+      "weight": 2.123,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 50 x 50 x 1.5",
+      "weight": 2.27,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 50 x 50 x 1.8",
+      "weight": 2.703,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 50 x 50 x 2",
+      "weight": 2.99,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 50 x 50 x 2.3",
+      "weight": 3.412,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 50 x 50 x 2.5",
+      "weight": 3.69,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 50 x 50 x 2.8",
+      "weight": 4.1,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 50 x 50 x 3",
+      "weight": 4.372,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 50 x 50 x 3.2",
+      "weight": 4.638,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 50 x 50 x 3.5",
+      "weight": 5.033,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 60 x 60 x 1.1",
+      "weight": 2.027,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 60 x 60 x 1.2",
+      "weight": 2.207,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 60 x 60 x 1.4",
+      "weight": 2.563,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 60 x 60 x 1.5",
+      "weight": 2.742,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 60 x 60 x 1.8",
+      "weight": 3.268,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 60 x 60 x 2",
+      "weight": 3.617,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 60 x 60 x 2.3",
+      "weight": 4.133,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 60 x 60 x 2.5",
+      "weight": 4.475,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 60 x 60 x 2.8",
+      "weight": 4.98,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 60 x 60 x 3",
+      "weight": 5.313,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 60 x 60 x 3.2",
+      "weight": 5.643,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 60 x 60 x 3.5",
+      "weight": 6.132,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 90 x 90 x 1.5",
+      "weight": 4.155,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 90 x 90 x 1.8",
+      "weight": 4.965,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 90 x 90 x 2",
+      "weight": 5.502,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 90 x 90 x 2.3",
+      "weight": 6.3,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 90 x 90 x 2.5",
+      "weight": 6.83,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 90 x 90 x 2.8",
+      "weight": 7.617,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 90 x 90 x 3",
+      "weight": 8.138,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 90 x 90 x 3.2",
+      "weight": 8.657,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 90 x 90 x 3.5",
+      "weight": 9.43,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 90 x 90 x 3.8",
+      "weight": 10.195,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 90 x 90 x 4",
+      "weight": 10.702,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 13 x 26 x 0.7",
+      "weight": 0.41,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 13 x 26 x 0.8",
+      "weight": 0.465,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 13 x 26 x 0.9",
+      "weight": 0.52,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 13 x 26 x 1",
+      "weight": 0.575,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 13 x 26 x 1.1",
+      "weight": 0.628,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 13 x 26 x 1.2",
+      "weight": 0.68,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 13 x 26 x 1.4",
+      "weight": 0.783,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 13 x 26 x 1.5",
+      "weight": 0.833,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 20 x 40 x 0.7",
+      "weight": 0.642,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 20 x 40 x 0.8",
+      "weight": 0.73,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 20 x 40 x 0.9",
+      "weight": 0.817,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 20 x 40 x 1",
+      "weight": 0.905,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 20 x 40 x 1.1",
+      "weight": 0.99,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 20 x 40 x 1.2",
+      "weight": 1.077,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 20 x 40 x 1.4",
+      "weight": 1.245,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 20 x 40 x 1.5",
+      "weight": 1.328,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 20 x 40 x 1.8",
+      "weight": 1.573,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 20 x 40 x 2",
+      "weight": 1.733,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 20 x 40 x 2.3",
+      "weight": 1.967,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 20 x 40 x 2.5",
+      "weight": 2.12,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 30 x 60 x 0.9",
+      "weight": 1.242,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 30 x 60 x 1",
+      "weight": 1.375,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 30 x 60 x 1.1",
+      "weight": 1.508,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 30 x 60 x 1.2",
+      "weight": 1.642,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 30 x 60 x 1.4",
+      "weight": 1.905,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 30 x 60 x 1.5",
+      "weight": 2.035,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 30 x 60 x 1.8",
+      "weight": 2.422,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 30 x 60 x 2",
+      "weight": 2.675,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 30 x 60 x 2.3",
+      "weight": 3.05,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 30 x 60 x 2.5",
+      "weight": 3.297,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 30 x 60 x 2.8",
+      "weight": 3.662,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 30 x 60 x 3",
+      "weight": 3.9,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 40 x 80 x 1.1",
+      "weight": 2.027,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 40 x 80 x 1.2",
+      "weight": 2.207,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 40 x 80 x 1.4",
+      "weight": 2.563,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 40 x 80 x 1.5",
+      "weight": 2.742,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 40 x 80 x 1.8",
+      "weight": 3.268,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 40 x 80 x 2",
+      "weight": 3.617,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 40 x 80 x 2.3",
+      "weight": 4.133,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 40 x 80 x 2.5",
+      "weight": 4.475,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 40 x 80 x 2.8",
+      "weight": 4.98,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 40 x 80 x 3",
+      "weight": 5.313,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 40 x 80 x 3.2",
+      "weight": 5.643,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 40 x 80 x 3.5",
+      "weight": 6.132,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 50 x 100 x 1.4",
+      "weight": 3.222,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 50 x 100 x 1.5",
+      "weight": 3.447,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 50 x 100 x 1.8",
+      "weight": 4.115,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 50 x 100 x 2",
+      "weight": 4.557,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 50 x 100 x 2.3",
+      "weight": 5.215,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 50 x 100 x 2.5",
+      "weight": 5.648,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 50 x 100 x 2.8",
+      "weight": 6.295,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 50 x 100 x 3",
+      "weight": 6.722,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 50 x 100 x 3.2",
+      "weight": 7.145,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 50 x 100 x 3.5",
+      "weight": 7.775,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 50 x 100 x 3.8",
+      "weight": 8.398,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 50 x 100 x 4",
+      "weight": 8.81,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 60 x 120 x 1.5",
+      "weight": 4.155,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 60 x 120 x 1.8",
+      "weight": 4.965,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 60 x 120 x 2",
+      "weight": 5.502,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 60 x 120 x 2.3",
+      "weight": 6.3,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 60 x 120 x 2.5",
+      "weight": 6.83,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 60 x 120 x 2.8",
+      "weight": 7.617,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 60 x 120 x 3",
+      "weight": 8.138,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 60 x 120 x 3.2",
+      "weight": 8.657,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 60 x 120 x 3.5",
+      "weight": 9.43,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 60 x 120 x 3.8",
+      "weight": 10.195,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 60 x 120 x 4",
+      "weight": 10.702,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 100 x 100 x 2.0",
+      "weight": 6.13,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 100 x 100 x 2.5",
+      "weight": 7.615,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 100 x 100 x 2.8",
+      "weight": 8.497,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 100 x 100 x 3.0",
+      "weight": 9.082,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 100 x 100 x 3.2",
+      "weight": 9.662,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 100 x 100 x 3.5",
+      "weight": 10.528,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 100 x 100 x 3.8",
+      "weight": 11.388,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 100 x 100 x 4.0",
+      "weight": 11.957,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 100 x 100 x 4.5",
+      "weight": 13.367,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 100 x 150 x 2.0",
+      "weight": null,
+      "note": "Check lại"
+    },
+    {
+      "name": "RHS 100 x 150 x 2.5",
+      "weight": 9.593,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 100 x 150 x 2.8",
+      "weight": 10.695,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 100 x 150 x 3.0",
+      "weight": 11.437,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 100 x 150 x 3.2",
+      "weight": 12.173,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 100 x 150 x 3.5",
+      "weight": 13.277,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 100 x 150 x 3.8",
+      "weight": 14.372,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 100 x 150 x 4.0",
+      "weight": 15.097,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 100 x 150 x 4.5",
+      "weight": 16.9,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 100 x 200 x 2.0",
+      "weight": null,
+      "note": "Check lại"
+    },
+    {
+      "name": "RHS 100 x 200 x 2.5",
+      "weight": 11.54,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 100 x 200 x 2.8",
+      "weight": 12.893,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 100 x 200 x 3.0",
+      "weight": 13.792,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 100 x 200 x 3.2",
+      "weight": 14.687,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 100 x 200 x 3.5",
+      "weight": 16.023,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 100 x 200 x 3.8",
+      "weight": 17.353,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 100 x 200 x 4.0",
+      "weight": 18.237,
+      "note": "Có hàng"
+    },
+    {
+      "name": "RHS 100 x 200 x 4.5",
+      "weight": 20.432,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 200 x 200 x 4.0",
+      "weight": 24.517,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 200 x 200 x 4.5",
+      "weight": 27.497,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 200 x 200 x 5.0",
+      "weight": 30.458,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 200 x 200 x 5.5",
+      "weight": 33.4,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 200 x 200 x 6.0",
+      "weight": 36.323,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 200 x 200 x 6.5",
+      "weight": 39.228,
+      "note": "Check lại"
+    },
+    {
+      "name": "SHS 200 x 200 x 7.0",
+      "weight": 42.113,
+      "note": "Check lại"
+    },
+    {
+      "name": "SHS 200 x 200 x 7.5",
+      "weight": 44.98,
+      "note": "Check lại"
+    },
+    {
+      "name": "SHS 200 x 200 x 8.0",
+      "weight": 47.828,
+      "note": "Check lại"
+    },
+    {
+      "name": "SHS 200 x 200 x 8.5",
+      "weight": 50.658,
+      "note": "Check lại"
+    },
+    {
+      "name": "SHS 200 x 200 x 9.0",
+      "weight": 53.468,
+      "note": "Check lại"
+    },
+    {
+      "name": "SHS 200 x 200 x 9.5",
+      "weight": 56.26,
+      "note": "Check lại"
+    },
+    {
+      "name": "SHS 200 x 200 x 10",
+      "weight": 59.032,
+      "note": "Check lại"
+    },
+    {
+      "name": "SHS 250 x 250 x 4.0",
+      "weight": 30.797,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 250 x 250 x 4.5",
+      "weight": 34.562,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 250 x 250 x 5.0",
+      "weight": 38.308,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 250 x 250 x 5.5",
+      "weight": 42.035,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 250 x 250 x 6.0",
+      "weight": 45.743,
+      "note": "Có hàng"
+    },
+    {
+      "name": "SHS 250 x 250 x 6.5",
+      "weight": 49.433,
+      "note": "Check lại"
+    },
+    {
+      "name": "SHS 250 x 250 x 7.0",
+      "weight": 53.103,
+      "note": "Check lại"
+    },
+    {
+      "name": "SHS 250 x 250 x 7.5",
+      "weight": 56.755,
+      "note": "Check lại"
+    },
+    {
+      "name": "SHS 250 x 250 x 8.0",
+      "weight": 60.388,
+      "note": "Check lại"
+    },
+    {
+      "name": "SHS 250 x 250 x 8.5",
+      "weight": 64.003,
+      "note": "Check lại"
+    },
+    {
+      "name": "SHS 250 x 250 x 9.0",
+      "weight": 67.598,
+      "note": "Check lại"
+    },
+    {
+      "name": "SHS 250 x 250 x 9.5",
+      "weight": 71.175,
+      "note": "Check lại"
+    },
+    {
+      "name": "SHS 250 x 250 x 10",
+      "weight": 74.732,
+      "note": "Check lại"
+    }
+  ]
+}
