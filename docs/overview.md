@@ -1,6 +1,6 @@
 # Steel Management & Calculator Pro - Tổng quan
 
-**Phiên bản:** 1.3.2  
+**Phiên bản:** 1.4  
 **Công nghệ:** Python 3.x, PySide6 (Qt), openpyxl  
 **Mục đích:** Công cụ tính toán khối lượng thép lý thuyết và tra cứu profile thép chuẩn từ file Excel
 
@@ -55,33 +55,46 @@ Hỗ trợ 4 thư viện thép:
 
 ---
 
-## Cấu trúc thư mục
+## Cấu trúc thư mục (v1.4)
 
 ```
 APP STEEL LOOKUP/
-├── main.py                    # File chính - Giao diện và logic
-├── main.spec                  # File cấu hình PyInstaller (đóng gói .exe)
-├── alias.xlsx                 # File Excel chứa database thép
-├── steel_db.json              # File JSON cache (tự động tạo bởi tool)
-├── xlsx_to_json.py            # Script convert Excel → JSON
-├── SVG.py                     # Module xử lý SVG (chưa sử dụng)
-├── U.svg                      # File SVG (chưa sử dụng)
-├── build/                     # Thư mục build PyInstaller
-├── STEEL TYPE png/            # Thư mục chứa hình vẽ kỹ thuật
-│   ├── CHS.png
-│   ├── I.png
-│   ├── L.png
-│   ├── PL.png
-│   ├── RHS.png
-│   ├── ROD.png
-│   ├── T.png
-│   └── U.png
-├── docs/                      # Thư mục tài liệu
+├── main.py                    # Entry point (~40 dòng)
+├── alias.xlsx                 # Excel database
+├── steel_db.json              # JSON cache (auto-generated)
+├── core/                      # Business logic thuần
+│   ├── __init__.py
+│   ├── constants.py           # DENSITY_FACTOR, UNIT_CONVERSION, paths, logging
+│   ├── geometry.py            # 8 cặp area_*/check_* functions
+│   └── steel_types.py         # SteelType dataclass + STEEL_TYPES list
+├── data/                      # Data management
+│   ├── __init__.py
+│   └── data_manager.py        # Load/save JSON, load Excel với skip_headers
+├── gui/                       # Tất cả UI components
+│   ├── __init__.py
+│   ├── styles.py              # Stylesheet riêng
+│   ├── dialogs.py             # show_about, show_help
+│   ├── widgets/
+│   │   ├── __init__.py
+│   │   └── image_box.py       # ImageBox widget
+│   └── tabs/
+│       ├── __init__.py
+│       ├── calc_tab.py        # CalculatorTab
+│       └── lookup_tab.py      # LookupTab
+├── docs/                      # Tài liệu
 │   ├── overview.md
 │   ├── known-issues.md
 │   ├── roadmap.md
 │   └── changelog.md
-└── progress.md                # File index cũ (đã tách)
+└── STEEL TYPE png/            # Hình vẽ kỹ thuật
+    ├── CHS.png
+    ├── I.png
+    ├── L.png
+    ├── PL.png
+    ├── RHS.png
+    ├── ROD.png
+    ├── T.png
+    └── U.png
 ```
 
 ---

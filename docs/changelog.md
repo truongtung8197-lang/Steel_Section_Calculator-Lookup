@@ -1,6 +1,6 @@
 # Changelog, Thống kê & Ghi chú phát triển
 
-> Cập nhật lần cuối: Version 1.3.2
+> Cập nhật lần cuối: Version 1.4
 
 ---
 
@@ -10,9 +10,11 @@
 
 | File | Dòng code |
 |------|-----------|
-| main.py | 950+ dòng |
-| xlsx_to_json.py | 258 dòng |
-| **Tổng** | **~1200 dòng** |
+| main.py (entry) | ~40 dòng |
+| core/ (3 files) | ~250 dòng |
+| data/data_manager.py | ~140 dòng |
+| gui/ (5 files) | ~550 dòng |
+| **Tổng** | **~980 dòng** |
 
 ### Số lượng loại thép hỗ trợ
 
@@ -24,67 +26,47 @@
 - Python 3.x
 - PySide6 (Qt for Python)
 - openpyxl
-- PyInstaller (để đóng gói .exe)
 
 ---
 
 ## Lịch sử thay đổi
 
-### Version 1.0 (Initial Release)
+### Version 1.4 (Current)
 
-- ✅ Bộ tính toán thủ công 8 loại thép cơ bản
-- ✅ Tính năng tra cứu 4 thư viện thép từ Excel
-- ✅ Giao diện Qt cơ bản
-- ✅ Hỗ trợ đóng gói thành .exe
-- ✅ Hình vẽ kỹ thuật tham khảo
+- ✅ **Tái cấu trúc toàn bộ codebase**
+  - Tách `main.py` (~1200 dòng) → 12 file module hóa
+  - Tách `progress.md` (456 dòng) → 4 file docs nhỏ
+  - Xóa file rác: SVG.py, U.svg, main.spec, build/, xlsx_to_json.py, app.log
+  - Cấu trúc mới: `core/` (business), `data/` (data), `gui/` (UI), `docs/` (tài liệu)
+  - Cải thiện Excel loading: skip header rows tự động
+  - Tất cả import hoạt động, load được 964 records từ 4 thư viện thép
 
-### Version 1.1 - Updated 2024-07-16
-
-- ✅ Menu Help với About dialog và User Guide chi tiết
-- ✅ Unit conversion system (mm/cm/inch) với auto-convert
-- ✅ Validation chi tiết với error messages thân thiện theo từng loại thép
-- ✅ Logging system ghi ra file app.log
-- ✅ Tooltip và hướng dẫn sử dụng toàn diện
-- ✅ Quantity field để tính tổng khối lượng
-- ✅ Giao diện Qt với stylesheet đẹp mắt, modern design
-
-### Version 1.2 - Updated 2024-07-16
-
-- ✅ **JSON Caching System**: Tự động lưu và đọc data từ steel_db.json
-  - Tăng tốc độ khởi động (không cần đọc Excel mỗi lần)
-  - Giảm phụ thuộc vào Excel file
-  - Fallback mechanism nếu JSON bị lỗi
-- ✅ **Unit Conversion Enhancement**: Thêm đơn vị mét (m)
-  - Hỗ trợ đầy đủ: mm, cm, m, inch
-  - Tự động convert giá trị khi thay đổi đơn vị
-  - Áp dụng cho tất cả các trường nhập liệu
-
-### Version 1.3 (Current) - Updated 2024-07-16
+### Version 1.3
 
 - ✅ **Rounded Corner Calculations (Góc bo)**
   - Thêm trường r1 (Corner Radius) với giá trị mặc định 0
   - Hỗ trợ 5 loại thép: I/H Beam, U Channel, Angle, RHS/SHS, T-Section
-  - Công thức tính toán diện tích mặt cắt có góc bo:
-    - I/H: A = 2BT_f + (H-2T_f)T_w + (π-2)r₁²
-    - U/C: A = 2BT_f + (H-2T_f)T_w + 2(π-2)r₁²
-    - Angle: A = t(a+b-t) + (π/4-1/2)r₁²
-    - RHS/SHS: A = WH - (W-2t)(H-2t) - (4-π)(R_o²-R_i²)
-    - T-Section: A = BT_f + (H-T_f)T_w + 2(π-2)r₁²
-  - Validation r1 theo từng loại thép
-  - Unit conversion cho r1 (mm/cm/inch)
-- ✅ **Silent Data Loading**
-  - Bỏ QMessageBox thông báo load data
-  - Chỉ log ra console/file app.log
-  - Khởi động nhanh hơn, không cần click OK
-- ✅ **Bug Fixes v1.3.1**
-  - Fix lỗi corner radius không cập nhật khối lượng (field name mismatch "Corner Radius" → "r1")
-  - Fix padding input fields: tăng padding từ 8px 12px → 10px 14px để text không bị che mất
-  - Fix window resize: bỏ Qt.WindowMinimizeButtonHint flag (đã mặc định có sẵn)
-  - Fix missing **main** block: thêm entry point để tool có thể chạy được
-- ✅ **Known Issues v1.3.2**
-  - GUI không responsive khi resize: input fields quá nhỏ khi thu nhỏ cửa sổ
-  - Font size không tự động scale theo window size
-  - Cần thêm cơ chế responsive scaling trong medium term
+- ✅ **Silent Data Loading** — Bỏ QMessageBox thông báo load data
+- ✅ **Bug Fixes v1.3.1** — Fix corner radius, padding, window resize, entry point
+
+### Version 1.2
+
+- ✅ **JSON Caching System** — Tự động lưu và đọc data từ steel_db.json
+- ✅ **Unit Conversion Enhancement** — Thêm đơn vị mét (m)
+
+### Version 1.1
+
+- ✅ Menu Help với About dialog và User Guide chi tiết
+- ✅ Unit conversion system (mm/cm/inch) với auto-convert
+- ✅ Validation chi tiết với error messages
+- ✅ Logging system, tooltip, Quantity field
+
+### Version 1.0 (Initial Release)
+
+- ✅ Bộ tính toán thủ công 8 loại thép cơ bản
+- ✅ Tính năng tra cứu 4 thư viện thép từ Excel
+- ✅ Giao diện Qt cơ bản, hỗ trợ đóng gói .exe
+- ✅ Hình vẽ kỹ thuật tham khảo
 
 ---
 
@@ -92,22 +74,12 @@
 
 ### Ngắn hạn (1-2 tuần)
 
-- [x] ~~Sử dụng steel_db.json thay vì đọc Excel trực tiếp~~ → ✅ Hoàn thành v1.2
 - [ ] Thêm unit test cho các công thức tính toán
-- [x] ~~Cải thiện error handling và logging~~ → ✅ Hoàn thành
-- [x] ~~Thêm tooltip và hướng dẫn sử dụng~~ → ✅ Hoàn thành
-- [x] ~~Hỗ trợ đổi đơn vị~~ → ✅ Hoàn thành (bao gồm m)
-- [x] ~~Cải thiện validation~~ → ✅ Hoàn thành
-- [x] ~~Thêm tính năng góc bo (rounded corners)~~ → ✅ Hoàn thành v1.3
 
 ### Trung hạn (1-2 tháng)
 
-- [ ] Thêm unit test cho calculations
+- [ ] Fix GUI responsive resize (font scale, input fields quá nhỏ khi thu nhỏ)
 - [ ] Cải thiện error handling Excel
-- [ ] **Fix GUI responsive resize:**
-  - Cửa sổ thu nhỏ được nhưng input fields quá nhỏ không đọc được
-  - Font size không tự động scale theo window size
-  - Cần thêm cơ chế responsive scaling cho layout
 
 ### Dài hạn (3-6 tháng)
 
@@ -123,22 +95,14 @@
 
 ### Cách chạy tool
 
-**Chạy từ source code:**
-
 ```bash
 python main.py
 ```
 
-**Đóng gói thành .exe:**
+### Đóng gói thành .exe
 
 ```bash
-pyinstaller main.spec
-```
-
-**Convert Excel sang JSON:**
-
-```bash
-python xlsx_to_json.py
+pyinstaller --onefile --windowed --add-data "STEEL TYPE png;STEEL TYPE png" --add-data "alias.xlsx;." main.py
 ```
 
 ### Cấu trúc file JSON (steel_db.json)
