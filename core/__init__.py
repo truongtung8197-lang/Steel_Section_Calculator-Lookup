@@ -1,0 +1,1 @@
+# Core business logic - không phụ thuộc GUI
