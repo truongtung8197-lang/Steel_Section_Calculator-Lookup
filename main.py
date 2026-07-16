@@ -84,51 +84,85 @@ def check_plate(v):
 
 def area_ishape(v):
     h, b, tw, tf = v["H"], v["B"], v["Tw"], v["Tf"]
-    return 2 * b * tf + (h - 2 * tf) * tw
+    r = v.get("r1", 0)
+    base_area = 2 * b * tf + (h - 2 * tf) * tw
+    corner_area = (math.pi - 2) * r ** 2 if r > 0 else 0
+    return base_area + corner_area
 
 
 def check_ishape(v):
+    r = v.get("r1", 0)
     if v["Tw"] >= v["B"] or (2 * v["Tf"]) >= v["H"]:
+        raise ValueError()
+    if r < 0 or r > min(v["Tw"], v["Tf"]) / 2:
         raise ValueError()
 
 
 def area_channel(v):
     h, b, tw, tf = v["H"], v["B"], v["Tw"], v["Tf"]
-    return 2 * b * tf + (h - 2 * tf) * tw
+    r = v.get("r1", 0)
+    base_area = 2 * b * tf + (h - 2 * tf) * tw
+    corner_area = 2 * (math.pi - 2) * r ** 2 if r > 0 else 0
+    return base_area + corner_area
 
 
 def check_channel(v):
+    r = v.get("r1", 0)
     if v["Tw"] >= v["B"] or (2 * v["Tf"]) >= v["H"]:
+        raise ValueError()
+    if r < 0 or r > min(v["Tw"], v["Tf"]) / 2:
         raise ValueError()
 
 
 def area_tsection(v):
     h, b, tw, tf = v["H"], v["B"], v["Tw"], v["Tf"]
-    return b * tf + (h - tf) * tw
+    r = v.get("r1", 0)
+    base_area = b * tf + (h - tf) * tw
+    corner_area = 2 * (math.pi - 2) * r ** 2 if r > 0 else 0
+    return base_area + corner_area
 
 
 def check_tsection(v):
+    r = v.get("r1", 0)
     if v["Tw"] >= v["B"] or v["Tf"] >= v["H"]:
+        raise ValueError()
+    if r < 0 or r > min(v["Tw"], v["Tf"]) / 2:
         raise ValueError()
 
 
 def area_angle(v):
     a, b, t = v["Leg A"], v["Leg B"], v["Thickness"]
-    return t * (a + b - t)
+    r = v.get("r1", 0)
+    base_area = t * (a + b - t)
+    corner_area = (math.pi / 4 - 0.5) * r ** 2 if r > 0 else 0
+    return base_area + corner_area
 
 
 def check_angle(v):
+    r = v.get("r1", 0)
     if v["Thickness"] >= v["Leg A"] or v["Thickness"] >= v["Leg B"]:
+        raise ValueError()
+    if r < 0 or r > v["Thickness"]:
         raise ValueError()
 
 
 def area_rhs_shs(v):
     w, h, t = v["Width"], v["Height"], v["Thickness"]
-    return w * h - (w - 2 * t) * (h - 2 * t)
+    r = v.get("r1", 0)
+    base_area = w * h - (w - 2 * t) * (h - 2 * t)
+    if r > 0:
+        ro = r
+        ri = r - t
+        corner_area = (4 - math.pi) * (ro ** 2 - ri ** 2)
+        return base_area - corner_area
+    return base_area
 
 
 def check_rhs_shs(v):
+    r = v.get("r1", 0)
     if (2 * v["Thickness"]) >= v["Width"] or (2 * v["Thickness"]) >= v["Height"]:
+        raise ValueError()
+    if r < 0 or r > v["Thickness"]:
         raise ValueError()
 
 
@@ -506,6 +540,38 @@ class MainWindow(QMainWindow):
             edit.textChanged.connect(self.calculate)
             self.form_layout.addRow(label_text, container)
 
+        # Corner Radius field (r1) - optional, for selected steel types
+        if steel.key in ["ih", "channel", "angle", "rhs_shs", "tsection"]:
+            radius_container = QWidget()
+            radius_container_layout = QHBoxLayout(radius_container)
+            radius_container_layout.setContentsMargins(0, 0, 0, 0)
+            radius_container_layout.setSpacing(5)
+
+            radius_edit = QLineEdit()
+            radius_edit.setProperty("field_label", "r1")
+            radius_edit.setProperty("original_unit", "mm")
+            radius_edit.setText("0")
+            radius_edit.setValidator(positive_validator)
+            radius_edit.setToolTip("Corner radius (r1). Default 0 for sharp corners, increase for rounded corners")
+            radius_edit.textChanged.connect(self.calculate)
+
+            radius_unit_combo = QComboBox()
+            radius_unit_combo.addItems(["mm", "cm", "inch"])
+            radius_unit_combo.setCurrentText("mm")
+            radius_unit_combo.setMaximumWidth(80)
+            radius_unit_combo.setToolTip("Select unit for r1")
+            radius_unit_combo.currentTextChanged.connect(
+                lambda text, lbl="r1": self.on_unit_changed(lbl, text)
+            )
+
+            radius_container_layout.addWidget(radius_edit)
+            radius_container_layout.addWidget(radius_unit_combo)
+
+            self.inputs.append(radius_edit)
+            self.unit_combos["r1"] = radius_unit_combo
+
+            self.form_layout.addRow("<b>r1 (Corner Radius)</b>", radius_container)
+
         # Quantity field (no unit conversion)
         qty_edit = QLineEdit()
         qty_edit.setProperty("field_label", "Quantity")
@@ -764,11 +830,6 @@ class MainWindow(QMainWindow):
                     logger.info(
                         f"Successfully loaded {total_records} records from JSON"
                     )
-                    QMessageBox.information(
-                        self,
-                        "Data Loaded",
-                        f"Successfully loaded {total_records} steel profiles from cache (JSON).",
-                    )
                     return
             except Exception as e:
                 logger.warning(f"Failed to load JSON: {e}, falling back to Excel")
@@ -900,11 +961,6 @@ class MainWindow(QMainWindow):
             total_records = len(self.excel_data)
             logger.info(
                 f"Excel data loaded successfully: {total_records} total records"
-            )
-            QMessageBox.information(
-                self,
-                "Data Loaded",
-                f"Successfully loaded {total_records} steel profiles from Excel file.",
             )
         except Exception as e:
             error_msg = f"Error loading Excel file: {e}"
@@ -1090,7 +1146,7 @@ class MainWindow(QMainWindow):
                 background: #f8fafc;
                 border: 1px solid #cbd5e1;
                 border-radius: 8px;
-                padding: 8px 12px;
+                padding: 10px 14px;
                 color: #334155;
             }
             QListWidget { padding: 5px; background: #ffffff; }

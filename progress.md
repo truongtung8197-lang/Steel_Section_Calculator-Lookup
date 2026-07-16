@@ -3,7 +3,7 @@
 ## 📋 Tổng quan Tool
 
 **Tên tool:** Steel Management & Calculator Pro  
-**Phiên bản:** 1.2  
+**Phiên bản:** 1.3.2
 **Công nghệ:** Python 3.x, PySide6 (Qt), openpyxl  
 **Mục đích:** Công cụ tính toán khối lượng thép lý thuyết và tra cứu profile thép chuẩn từ file Excel
 
@@ -29,6 +29,7 @@
   - Nút "Clear" để xóa trắng các trường nhập liệu
   - Validation đầu vào với thông báo lỗi chi tiết theo từng loại thép
   - Hỗ trợ đổi đơn vị động (mm/cm/m/inch) với tự động convert giá trị
+  - **Hỗ trợ tính toán với góc bo (r1)** cho I/H, U/C, Angle, RHS/SHS, T-Section
   - Menu Help với About dialog và User Guide chi tiết
   - Logging system ghi lại hoạt động vào file app.log
 
@@ -77,7 +78,7 @@ APP STEEL LOOKUP/
 
 **Mật độ thép:** 7.85e-6 kg/mm³ (7850 kg/m³)
 
-**Công thức diện tích mặt cắt:**
+**Công thức diện tích mặt cắt (không góc bo):**
 
 - **Plate:** A = Length × Width × Thickness
 - **I Beam:** A = 2 × B × Tf + (H - 2 × Tf) × Tw
@@ -87,6 +88,14 @@ APP STEEL LOOKUP/
 - **CHS:** A = π/4 × (OD² - (OD - 2t)²)
 - **Rod:** A = π × D² / 4
 - **T Section:** A = B × Tf + (H - Tf) × Tw
+
+**Công thức diện tích mặt cắt (có góc bo r1):**
+
+- **I Beam:** A = 2BT_f + (H-2T_f)T_w + (π-2)r₁²
+- **U Channel:** A = 2BT_f + (H-2T_f)T_w + 2(π-2)r₁²
+- **Angle:** A = t(a+b-t) + (π/4-1/2)r₁²
+- **RHS/SHS:** A = WH - (W-2t)(H-2t) - (4-π)(R_o²-R_i²)
+- **T Section:** A = BT_f + (H-T_f)T_w + 2(π-2)r₁²
 
 **Khối lượng:** Weight = Area × Length × Density
 
@@ -138,6 +147,19 @@ APP STEEL LOOKUP/
 - **Vị trí:** `main.py` dòng 267-268
 - **Mô tả:** Validator chỉ cho phép số dương từ 0.001 đến 999999.0, có thể gây lỗi nếu người dùng nhập giá trị lớn hơn
 - **Ảnh hưởng:** Không thể tính toán cho kích thước lớn (>999999 mm)
+
+### 6. GUI không responsive khi resize cửa sổ
+
+- **Mô tả:**
+  - Cửa sổ chỉ có thể resize về 1 mức cố định (minimum size 950x650)
+  - Khi thu nhỏ cửa sổ, các ô nhập liệu trở nên rất nhỏ và không thể đọc/nhập được
+  - Font size không tự động scale theo kích thước cửa sổ
+  - Các hình PNG tham khảo có thể gây cản trở layout khi resize
+- **Nguyên nhân:**
+  - Thiếu cơ chế responsive scaling
+  - Minimum size quá lớn so với không gian có sẵn
+  - Font size cố định (11pt) không điều chỉnh theo window size
+- **Ảnh hưởng:** Trải nghiệm người dùng kém khi làm việc với cửa sổ nhỏ hoặc màn hình có độ phân giải thấp
 
 ---
 
@@ -213,37 +235,48 @@ APP STEEL LOOKUP/
   - Hiển thị lỗi theo từng loại thép cụ thể
   - Màu sắc rõ ràng: đỏ cho lỗi, xanh cho kết quả
 
+#### 8. Thêm tính năng góc bo (rounded corners)
+
+- **Lý do:** Tính toán chính xác hơn cho thép có góc bo
+- **Trạng thái:** ✅ Hoàn thành (Version 1.3)
+- **Chi tiết:**
+  - Thêm trường nhập liệu r1 (Corner Radius) với giá trị mặc định 0
+  - Hỗ trợ 5 loại thép: I/H Beam, U Channel, Angle, RHS/SHS, T-Section
+  - Công thức tính toán diện tích mặt cắt có góc bo theo tiêu chuẩn
+  - Validation r1: 0 ≤ r1 ≤ min(Tw, Tf)/2 hoặc r1 ≤ Thickness
+  - Tự động convert đơn vị cho r1 (mm/cm/inch)
+
 ### Ưu tiên Thấp (Low Priority)
 
-#### 8. Thêm tính năng xuất báo cáo
+#### 9. Thêm tính năng xuất báo cáo
 
 - **Lý do:** Tiện lợi cho người dùng cần lưu trữ
 - **Cách thực hiện:**
   - Export kết quả tính toán ra Excel/PDF
   - Export danh sách profile đã tra cứu
 
-#### 9. Thêm tính năng lưu lịch sử tính toán
+#### 10. Thêm tính năng lưu lịch sử tính toán
 
 - **Lý do:** Tiện lợi cho người dùng cần tra cứu lại
 - **Cách thực hiện:**
   - Lưu các phép tính gần đây vào file
   - Hiển thị dropdown chọn lại các phép tính cũ
 
-#### 10. Dark mode support
+#### 11. Dark mode support
 
 - **Lý do:** Giảm mỏi mắt khi sử dụng lâu
 - **Cách thực hiện:**
   - Thêm toggle dark/light mode
   - Tạo stylesheet riêng cho dark mode
 
-#### 11. Multi-language support
+#### 12. Multi-language support
 
 - **Lý do:** Hỗ trợ người dùng quốc tế
 - **Cách thực hiện:**
   - Tách text ra file resource
   - Hỗ trợ tiếng Anh và tiếng Việt
 
-#### 12. Thêm loại thép mới
+#### 13. Thêm loại thép mới
 
 - **Lý do:** Mở rộng tính năng
 - **Có thể thêm:**
@@ -257,13 +290,13 @@ APP STEEL LOOKUP/
 
 ### Số lượng code
 
-- **main.py:** 900+ dòng
+- **main.py:** 950+ dòng
 - **xlsx_to_json.py:** 258 dòng
-- **Tổng:** ~1150 dòng code
+- **Tổng:** ~1200 dòng code
 
 ### Số lượng loại thép hỗ trợ
 
-- **Tính toán:** 8 loại
+- **Tính toán:** 8 loại (5 loại hỗ trợ góc bo)
 - **Tra cứu:** 4 thư viện
 
 ### Dependencies
@@ -295,7 +328,7 @@ APP STEEL LOOKUP/
 - ✅ Quantity field để tính tổng khối lượng
 - ✅ Giao diện Qt với stylesheet đẹp mắt, modern design
 
-### Version 1.2 (Current) - Updated 2024-07-16
+### Version 1.2 - Updated 2024-07-16
 
 - ✅ **JSON Caching System**: Tự động lưu và đọc data từ steel_db.json
   - Tăng tốc độ khởi động (không cần đọc Excel mỗi lần)
@@ -305,6 +338,33 @@ APP STEEL LOOKUP/
   - Hỗ trợ đầy đủ: mm, cm, m, inch
   - Tự động convert giá trị khi thay đổi đơn vị
   - Áp dụng cho tất cả các trường nhập liệu
+
+### Version 1.3 (Current) - Updated 2024-07-16
+
+- ✅ **Rounded Corner Calculations (Góc bo)**
+  - Thêm trường r1 (Corner Radius) với giá trị mặc định 0
+  - Hỗ trợ 5 loại thép: I/H Beam, U Channel, Angle, RHS/SHS, T-Section
+  - Công thức tính toán diện tích mặt cắt có góc bo:
+    - I/H: A = 2BT_f + (H-2T_f)T_w + (π-2)r₁²
+    - U/C: A = 2BT_f + (H-2T_f)T_w + 2(π-2)r₁²
+    - Angle: A = t(a+b-t) + (π/4-1/2)r₁²
+    - RHS/SHS: A = WH - (W-2t)(H-2t) - (4-π)(R_o²-R_i²)
+    - T-Section: A = BT_f + (H-T_f)T_w + 2(π-2)r₁²
+  - Validation r1 theo từng loại thép
+  - Unit conversion cho r1 (mm/cm/inch)
+- ✅ **Silent Data Loading**
+  - Bỏ QMessageBox thông báo load data
+  - Chỉ log ra console/file app.log
+  - Khởi động nhanh hơn, không cần click OK
+- ✅ **Bug Fixes v1.3.1**
+  - Fix lỗi corner radius không cập nhật khối lượng (field name mismatch "Corner Radius" → "r1")
+  - Fix padding input fields: tăng padding từ 8px 12px → 10px 14px để text không bị che mất
+  - Fix window resize: bỏ Qt.WindowMinimizeButtonHint flag (đã mặc định có sẵn)
+  - Fix missing **main** block: thêm entry point để tool có thể chạy được
+- ✅ **Known Issues v1.3.2**
+  - GUI không responsive khi resize: input fields quá nhỏ khi thu nhỏ cửa sổ
+  - Font size không tự động scale theo window size
+  - Cần thêm cơ chế responsive scaling trong medium term
 
 ---
 
@@ -384,12 +444,16 @@ Mỗi record có các trường:
 - [x] ~~Thêm tooltip và hướng dẫn sử dụng~~ → ✅ Hoàn thành
 - [x] ~~Hỗ trợ đổi đơn vị~~ → ✅ Hoàn thành (bao gồm m)
 - [x] ~~Cải thiện validation~~ → ✅ Hoàn thành
+- [x] ~~Thêm tính năng góc bo (rounded corners)~~ → ✅ Hoàn thành v1.3
 
 ### Trung hạn (1-2 tháng)
 
 - [ ] Thêm unit test cho calculations
 - [ ] Cải thiện error handling Excel
-- [ ] Responsive design
+- [ ] **Fix GUI responsive resize:**
+  - Cửa sổ thu nhỏ được nhưng input fields quá nhỏ không đọc được
+  - Font size không tự động scale theo window size
+  - Cần thêm cơ chế responsive scaling cho layout
 
 ### Dài hạn (3-6 tháng)
 
@@ -402,5 +466,5 @@ Mỗi record có các trường:
 ---
 
 **Last Updated:** 2024-07-16  
-**Version:** 1.2  
+**Version:** 1.3.2  
 **Maintained by:** Development Team
