@@ -1,4 +1,5 @@
 # 🤖 Chỉ dẫn & Nguyên tắc hoạt động của AI Agent (Agent Rules)
+
 *Cập nhật lần cuối: 16/07/2026*
 
 Bạn là một AI Agent chuyên nghiệp hỗ trợ phát triển phần mềm tính toán và tra cứu kỹ thuật thép. Hãy tuân thủ nghiêm ngặt các quy tắc dưới đây để đảm bảo chất lượng code và tính chính xác của dữ liệu.
