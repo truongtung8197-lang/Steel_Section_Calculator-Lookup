@@ -16,13 +16,22 @@ from PySide6.QtWidgets import (
     QPushButton,
     QSizePolicy,
     QSplitter,
+    QStackedWidget,
     QVBoxLayout,
     QWidget,
 )
 
 from core.constants import PNG_DIR, UNIT_CONVERSION, logger
 from core.steel_types import STEEL_TYPES
+from gui.widgets.dynamic_shapes.i_shape import DynamicIShape
+from gui.widgets.dynamic_shapes.l_shape import DynamicLShape
 from gui.widgets.image_box import ImageBox
+
+DYNAMIC_SHAPE_MAP = {
+    "angle": DynamicLShape,
+    "ih": DynamicIShape,
+}
+DYNAMIC_SHAPE_KEYS = set(DYNAMIC_SHAPE_MAP.keys())
 
 
 class CalculatorTab(QWidget):
@@ -71,6 +80,15 @@ class CalculatorTab(QWidget):
         self.image_box = ImageBox()
         self.image_box.set_png_dir(PNG_DIR)
 
+        self.image_stack = QStackedWidget()
+        self.image_stack.addWidget(self.image_box)  # 0 = static PNG
+
+        self._dynamic_widgets = {}
+        for key, widget_cls in DYNAMIC_SHAPE_MAP.items():
+            widget = widget_cls()
+            self.image_stack.addWidget(widget)
+            self._dynamic_widgets[key] = widget
+
         input_box = QGroupBox("2. Section Dimensions")
         input_box.setToolTip("Enter the geometric dimensions of the steel section")
         input_vbox = QVBoxLayout(input_box)
@@ -113,7 +131,7 @@ class CalculatorTab(QWidget):
             "Technical drawing showing dimension labels for the selected steel type"
         )
         img_vbox = QVBoxLayout(img_box)
-        img_vbox.addWidget(self.image_box)
+        img_vbox.addWidget(self.image_stack)
         right_layout.addWidget(img_box)
 
         main_splitter.addWidget(left_widget)
@@ -251,9 +269,13 @@ class CalculatorTab(QWidget):
         self.form_layout.addRow("<b>Quantity</b>", qty)
         self.inputs.append(qty)
 
-        # Image
-        img_path = os.path.join(PNG_DIR, steel.image_file)
-        self.image_box.set_image(img_path)
+        # Image / dynamic shape
+        if steel.key in DYNAMIC_SHAPE_KEYS:
+            self.image_stack.setCurrentIndex(list(DYNAMIC_SHAPE_MAP.keys()).index(steel.key) + 1)
+        else:
+            img_path = os.path.join(PNG_DIR, steel.image_file)
+            self.image_box.set_image(img_path)
+            self.image_stack.setCurrentIndex(0)
         self.type_combo.setToolTip(steel.tooltip)
         self._update_input_font(self.width())
         self.calculate()
@@ -296,7 +318,12 @@ class CalculatorTab(QWidget):
                 self.result_label.setText("Invalid Input")
                 self.result_label.setStyleSheet("color: #ef4444;")
                 self.current_raw_weight = None
+                if steel.key in DYNAMIC_SHAPE_KEYS:
+                    self._dynamic_widgets[steel.key].set_dimensions({}, 0)
                 return
+
+            if steel.key in DYNAMIC_SHAPE_KEYS:
+                self._dynamic_widgets[steel.key].set_dimensions(values, values.get("r1", 0))
 
             qty = values.get("Quantity", 1.0)
             base = steel.calc(values)
@@ -315,6 +342,8 @@ class CalculatorTab(QWidget):
             self.result_label.setText("---")
             self.result_label.setStyleSheet("color: #94a3b8;")
             self.current_raw_weight = None
+            if steel.key in DYNAMIC_SHAPE_KEYS:
+                self._dynamic_widgets[steel.key].set_dimensions({}, 0)
 
     def _validation_msg(self, key: str, v: dict) -> str:
         msgs = {

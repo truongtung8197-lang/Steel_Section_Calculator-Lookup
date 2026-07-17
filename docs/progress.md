@@ -1,37 +1,41 @@
-# Tiến độ phát triển & Lộ trình (Progress & Roadmap)
+# Tien do phat trien & Lo trinh (Progress & Roadmap)
 
-*Cập nhật lần cuối: 17/07/2026 (Version 1.6)*
+*Cap nhat lan cuoi: 17/07/2026 (Version 1.8)*
 
 ---
 
-## ✅ Đã hoàn thành (v1.0 → v1.6)
+## Da hoan thanh (v1.0 -> v1.8)
 
-- [x] Kiến trúc module hóa: core/, data/, gui/, docs/
-- [x] 8 loại thép với công thức diện tích mặt cắt (có/và không có góc bo r₁)
-- [x] Tab Manual Calculator — rebuild_inputs động, validation, unit conversion
-- [x] Tab Steel Section Lookup — tra cứu profile từ Excel/JSON
-- [x] ImageBox hiển thị ảnh PNG tĩnh cho từng loại thép
-- [x] Font tự động scale theo resizeEvent (9–13pt)
+- [x] Kien truc module hoa: core/, data/, gui/, docs/
+- [x] 8 loai thep voi cong thuc dien tich mat cat (co/va khong co goc bo r1)
+- [x] Tab Manual Calculator - rebuild_inputs dong, validation, unit conversion
+- [x] Tab Steel Section Lookup - tra cuu profile tu Excel/JSON
+- [x] ImageBox hien thi anh PNG tinh cho tung loai thep
+- [x] Font tu dong scale theo resizeEvent (9-13pt)
 - [x] Menu Help: About + User Guide
-- [x] Fallback IO an toàn (JSON → Excel, try-except)
-- [x] Logging vào app.log
-- [x] Fix lỗi hardcode version (APP_VERSION trong constants.py)
-- [x] Fix lỗi ngày saved_at cố định (dùng datetime.now())
-- [x] Tạo tests/ với test_geometry.py và test_data_manager.py
+- [x] Fallback IO an toan (JSON -> Excel, try-except)
+- [x] Logging vao app.log
+- [x] Fix loi hardcode version (APP_VERSION trong constants.py)
+- [x] Fix loi ngay saved_at co dinh (dung datetime.now())
+- [x] Tao tests/ voi test_geometry.py va test_data_manager.py
+- [x] Dynamic shape v1.7 Buoc 1: Angle/L - DynamicLShape + DynamicShapeWidget base class, QStackedWidget trong calc_tab.py
+- [x] Sua rendering bugs DynamicShapeWidget: fill QPainterPath, text clear background, solid arrow polygon, pixel-based dim margin, extension lines, widget-based font size
+- [x] Sua 2 bugs DynamicIShape: arc sweep direction (90 -> -90) va thieu direction param trong _draw_dimension_line
+- [x] Viet lai DynamicIShape dung manual point calculation (math.cos/sin) thay vi QPainterPath.arcTo() de tranh loi sweep direction
 
 ---
 
-## 🗺️ To do list — Version 1.7
+## To do list - Version 1.7
 
-### Mục tiêu
-Loại bỏ hoàn toàn ảnh PNG tĩnh, thay bằng các widget vẽ động (QPainter) hiển thị mặt cắt ngang của thép theo đúng thông số người dùng nhập.
+### Muc tieu
+Loai bo hoan toan anh PNG tinh, thay bang cac widget ve dong (QPainter) hien thi mat cat ngang cua thep theo dung thong so nguoi dung nhap.
 
-### Kế hoạch triển khai (từng bước)
+### Ke hoach trien khai (tung buoc)
 
-| Bước | Loại thép | File PNG cũ | Class dynamic mới | Ghi chú |
+| Buoc | Loai thep | File PNG cu | Class dynamic moi | Ghi chu |
 |:----:|:-----------|:-------------|:------------------|:--------|
-| 1 | Angle / L | L.PNG | DynamicLShape | Đang làm |
-| 2 | I Beam / H Beam | I.PNG | DynamicIShape | Kế tiếp |
+| 1 | Angle / L | L.PNG | DynamicLShape | Da xong - gui/widgets/dynamic_shapes/l_shape.py, base_shape.py |
+| 2 | I Beam / H Beam | I.PNG | DynamicIShape | Da xong - gui/widgets/dynamic_shapes/i_shape.py, dung manual point calculation |
 | 3 | PFC / U Channel | U.PNG | DynamicUShape | |
 | 4 | RHS / SHS | RHS.PNG | DynamicRHSShape | |
 | 5 | T Section | T.PNG | DynamicTShape | |
@@ -39,13 +43,41 @@ Loại bỏ hoàn toàn ảnh PNG tĩnh, thay bằng các widget vẽ động (Q
 | 7 | Rod / Round Bar | ROD.PNG | DynamicRodShape | |
 | 8 | Plate | PL.PNG | DynamicPlateShape | |
 
-### Yêu cầu kỹ thuật cho mỗi dynamic shape
+### Yeu cau ky thuat cho moi dynamic shape
 
-1. Kế thừa QWidget — vẽ bằng paintEvent() với QPainter
-2. Nhận thông số đầu vào — dict các kích thước (mm), có hoặc không có r₁
-3. Tự động scale — vừa khung hình, giữ tỷ lệ, căn giữa
-4. Hiển thị kích thước — vẽ đường kích thước (dimension lines) và nhãn số
-5. Góc bo (r₁) — nếu r₁ > 0, vẽ cung tròn ở góc bo tương ứng
-6. Cập nhật real-time — gọi update() khi thông số thay đổi
-7. Resize responsive — tự động vẽ lại khi widget thay đổi kích thước
-8. Fallback — nếu thiếu thông số, hiển thị thông báo thay vì crash
+1. Ke thua QWidget - ve bang paintEvent() voi QPainter
+2. Nhan thong so dau vao - dict cac kich thuoc (mm), co hoac khong co r1
+3. Tu dong scale - vua khung hinh, giu ty le, can giua
+4. Hien thi kich thuoc - ve duong kich thuoc (dimension lines) va nhan so
+5. Goc bo (r1) - neu r1 > 0, ve cung tron o goc bo tuong ung (dung math.cos/sin, khong dung arcTo)
+6. Cap nhat real-time - goi update() khi thong so thay doi
+7. Resize responsive - tu dong ve lai khi widget thay doi kich thuoc
+8. Fallback - neu thieu thong so, hien thi thong bao thay vi crash
+
+## history Lich su thay doi (Changelog)
+
+### v1.8 (Ban phat hanh hien tai)
+
+* **Dynamic Shape Rendering fixes:** Sua 4 bug rendering trong DynamicShapeWidget (base_shape.py): fill than thep doi sang QPainterPath + drawPath() de mau #e0f2fe do dac; text dimension co clear background bang fillRect() trang + padding; arrowhead doi sang drawPolygon() tam giac dac; dim margin dung pixel co dinh + extension lines thay vi margin theo model space; font size dimension co dinh theo widget (9-11pt), khong scale theo gia tri mm.
+* **DynamicIShape bugfixes:** Sua 2 bugs trong DynamicIShape (i_shape.py): (1) arc sweep direction tu 90 -> -90 de ve goc bo dung huong tren he toa do Y-flip cua Qt; (2) them tham so direction con thieu trong loi goi _draw_dimension_line() de DIM hien thi tro lai.
+* **DynamicIShape rewrite:** Viet lai hoan toan _i_shape_points() dung manual point calculation (math.cos/math.sin) thay vi QPainterPath.arcTo() de tranh loi sweep direction. Bo paintEvent() override, de base class xu ly.
+* **Tai lieu:** Cap nhat docs/known-issues.md them LL-7 (khong dung arcTo cho arc fillet). Cap nhat docs/plan.md va docs/progress.md.
+
+### v1.7
+
+* **Dynamic Shape Buoc 1 (Angle/L):** Them gui/widgets/dynamic_shapes/ voi DynamicShapeWidget base class va DynamicLShape. Tich hop QStackedWidget vao calc_tab.py de chuyen doi giua ImageBox PNG cu va DynamicLShape khi chon Angle.
+* **Unit Test:** Bo sung tests/test_dynamic_l_shape.py kiem tra ham thuan _l_shape_points() voi cac case r1=0, r1>0, invalid dims.
+
+### v1.6
+
+* **Unit Tests:** Bo sung test suite tu dong (tests/) voi 38 test cases kiem tra 8 cong thuc area_* + 8 ham check_* trong core/geometry.py va cac ham load/save/fallback trong data/data_manager.py. Chay bang pytest.
+* **Sua loi Version:** Thay hardcode v1.0 trong About dialog bang hang so tap trung APP_VERSION o core/constants.py, nam hien thi tu dong lay datetime.now().year.
+* **Sua loi Metadata saved_at:** Thay gia tri co dinh 2024-07-16 bang thoi gian thuc datetime.now().strftime("%Y-%m-%d") khi xuat cache JSON.
+* **Tai lieu:** Cap nhat docs/progress.md, docs/known-issues.md va docs/context.md khop phien ban v1.6.
+
+## Rui ro can luu y khi giao cho agent
+
+- Neu agent khong tach _get_outline_points() ra khoi paintEvent(), code se kho test va kho tai dung cho buoc 2-8 - nhac agent lam dung Phase 1/2 truoc khi dung Phase 3.
+- **Rendering bugs da gap o buoc 1 (ghi nho cho buoc 2-8):** (1) Fill phai dung QPainterPath + drawPath(), khong dung drawLine() loop. (2) Text phai clear background bang fillRect() + QFontMetrics do kich thuoc that. (3) Arrowhead phai dung drawPolygon() dac, khong dung line-based de tranh ke thua DashLine. (4) Dimension margin phai la pixel co dinh SAU khi da sang widget space, khong phai mm model space. (5) Extension lines giup tach biet dim line khoi bien hinh.
+- **KHONG DUNG QPainterPath.arcTo() cho arc fillet.** Dung math.cos/math.sin voi discrete points (giong L-shape) de tranh loi sweep direction tren he toa do Y-flip cua Qt.
+- Toan goc bo (Phase 2b) la phan de sai nhat - yeu cau agent tu verify bang in ra toa do + ve thu voi r1=0 truoc khi them r1>0.
