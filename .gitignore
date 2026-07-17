@@ -39,7 +39,6 @@ app.log
 .pytest_cache/
 .coverage
 htmlcov/
-progress.md
 
 # Temporary files
 *.tmp

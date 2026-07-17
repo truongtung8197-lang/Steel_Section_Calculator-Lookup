@@ -38,6 +38,7 @@ Bạn là một AI Agent chuyên nghiệp hỗ trợ phát triển phần mềm 
    * Khi giải quyết xong một lỗi, hãy cập nhật trạng thái từ `Open` sang `Resolved` trong `docs/known-issues.md` và bổ sung bài học rút ra vào mục `Lessons Learned`.
    * Khi hoàn thành một tính năng trong Roadmap, hãy đánh dấu `[x]` vào file `docs/progress.md`.
 3. **An toàn IO:** Mọi thao tác đọc ghi file (`steel_db.json`, `alias.xlsx`) bắt buộc phải bọc trong khối `try-except` và luôn có dữ liệu fallback rỗng `[]` để ứng dụng không bao giờ bị crash.
+4. Môi trường làm việc là vs code và powershell (không dùng câu lệnh cmd)
 
 ---
 
