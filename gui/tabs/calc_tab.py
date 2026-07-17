@@ -23,13 +23,25 @@ from PySide6.QtWidgets import (
 
 from core.constants import PNG_DIR, UNIT_CONVERSION, logger
 from core.steel_types import STEEL_TYPES
+from gui.widgets.dynamic_shapes.chs_shape import DynamicCHSShape
 from gui.widgets.dynamic_shapes.i_shape import DynamicIShape
 from gui.widgets.dynamic_shapes.l_shape import DynamicLShape
+from gui.widgets.dynamic_shapes.plate_shape import DynamicPlateShape
+from gui.widgets.dynamic_shapes.rhs_shape import DynamicRHSShape
+from gui.widgets.dynamic_shapes.rod_shape import DynamicRodShape
+from gui.widgets.dynamic_shapes.t_shape import DynamicTShape
+from gui.widgets.dynamic_shapes.u_shape import DynamicUShape
 from gui.widgets.image_box import ImageBox
 
 DYNAMIC_SHAPE_MAP = {
     "angle": DynamicLShape,
     "ih": DynamicIShape,
+    "channel": DynamicUShape,
+    "rhs_shs": DynamicRHSShape,
+    "tsection": DynamicTShape,
+    "chs": DynamicCHSShape,
+    "rod": DynamicRodShape,
+    "plate": DynamicPlateShape,
 }
 DYNAMIC_SHAPE_KEYS = set(DYNAMIC_SHAPE_MAP.keys())
 

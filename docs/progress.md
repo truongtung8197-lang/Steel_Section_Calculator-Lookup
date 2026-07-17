@@ -36,12 +36,12 @@ Loai bo hoan toan anh PNG tinh, thay bang cac widget ve dong (QPainter) hien thi
 |:----:|:-----------|:-------------|:------------------|:--------|
 | 1 | Angle / L | L.PNG | DynamicLShape | Da xong - gui/widgets/dynamic_shapes/l_shape.py, base_shape.py |
 | 2 | I Beam / H Beam | I.PNG | DynamicIShape | Da xong - gui/widgets/dynamic_shapes/i_shape.py, dung manual point calculation |
-| 3 | PFC / U Channel | U.PNG | DynamicUShape | |
-| 4 | RHS / SHS | RHS.PNG | DynamicRHSShape | |
-| 5 | T Section | T.PNG | DynamicTShape | |
-| 6 | CHS / Pipe | CHS.PNG | DynamicCHSShape | |
-| 7 | Rod / Round Bar | ROD.PNG | DynamicRodShape | |
-| 8 | Plate | PL.PNG | DynamicPlateShape | |
+| 3 | PFC / U Channel | U.PNG | DynamicUShape | Da xong - gui/widgets/dynamic_shapes/u_shape.py, dung manual point calculation |
+| 4 | RHS / SHS | RHS.PNG | DynamicRHSShape | Da xong - gui/widgets/dynamic_shapes/rhs_shape.py, dung manual point calculation, ve mat cat rong (outer+inner) |
+| 5 | T Section | T.PNG | DynamicTShape | Da xong - gui/widgets/dynamic_shapes/t_shape.py |
+| 6 | CHS / Pipe | CHS.PNG | DynamicCHSShape | Da xong - gui/widgets/dynamic_shapes/chs_shape.py, mat cat rong (outer+inner tron) |
+| 7 | Rod / Round Bar | ROD.PNG | DynamicRodShape | Da xong - gui/widgets/dynamic_shapes/rod_shape.py, hinh tron dac |
+| 8 | Plate | PL.PNG | DynamicPlateShape | Da xong - gui/widgets/dynamic_shapes/plate_shape.py, hinh chu nhat |
 
 ### Yeu cau ky thuat cho moi dynamic shape
 
@@ -60,7 +60,14 @@ Loai bo hoan toan anh PNG tinh, thay bang cac widget ve dong (QPainter) hien thi
 
 * **Dynamic Shape Rendering fixes:** Sua 4 bug rendering trong DynamicShapeWidget (base_shape.py): fill than thep doi sang QPainterPath + drawPath() de mau #e0f2fe do dac; text dimension co clear background bang fillRect() trang + padding; arrowhead doi sang drawPolygon() tam giac dac; dim margin dung pixel co dinh + extension lines thay vi margin theo model space; font size dimension co dinh theo widget (9-11pt), khong scale theo gia tri mm.
 * **DynamicIShape bugfixes:** Sua 2 bugs trong DynamicIShape (i_shape.py): (1) arc sweep direction tu 90 -> -90 de ve goc bo dung huong tren he toa do Y-flip cua Qt; (2) them tham so direction con thieu trong loi goi _draw_dimension_line() de DIM hien thi tro lai.
-* **DynamicIShape rewrite:** Viet lai hoan toan _i_shape_points() dung manual point calculation (math.cos/math.sin) thay vi QPainterPath.arcTo() de tranh loi sweep direction. Bo paintEvent() override, de base class xu ly.
+* **DynamicIShape rewrite:**
+* **DynamicUShape (Buoc 3):**
+* **DynamicRHSShape (Buoc 4):**
+* **Hoan thanh dynamic shape cho 8 loai thep:** Loai bo hoan toan phu thuoc vao anh PNG tinh cho dynamic shapes.
+* **DynamicPlateShape (Buoc 8):** Them gui/widgets/dynamic_shapes/plate_shape.py voi DynamicPlateShape. Tich hop vao calc_tab.py.
+* **DynamicRodShape (Buoc 7):** Them gui/widgets/dynamic_shapes/rod_shape.py voi DynamicRodShape. Tich hop vao calc_tab.py.
+* **DynamicCHSShape (Buoc 6):** Them gui/widgets/dynamic_shapes/chs_shape.py voi DynamicCHSShape. Tich hop vao calc_tab.py.
+* **DynamicTShape (Buoc 5):** Them gui/widgets/dynamic_shapes/t_shape.py voi DynamicTShape. Tich hop vao calc_tab.py. Them gui/widgets/dynamic_shapes/rhs_shape.py voi DynamicRHSShape. Tich hop vao calc_tab.py. Them gui/widgets/dynamic_shapes/u_shape.py voi DynamicUShape. Tich hop vao calc_tab.py. Viet lai hoan toan _i_shape_points() dung manual point calculation (math.cos/math.sin) thay vi QPainterPath.arcTo() de tranh loi sweep direction. Bo paintEvent() override, de base class xu ly.
 * **Tai lieu:** Cap nhat docs/known-issues.md them LL-7 (khong dung arcTo cho arc fillet). Cap nhat docs/plan.md va docs/progress.md.
 
 ### v1.7
