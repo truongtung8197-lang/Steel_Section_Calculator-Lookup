@@ -26,7 +26,7 @@ from core.geometry import (
 
 class TestAreaPlate:
     def test_area_plate_basic(self):
-        assert area_plate({"Width": 100, "Thickness": 5}) == 500
+        assert area_plate({"Width": 100, "Length": 5}) == 500
 
     def test_check_plate_valid(self):
         check_plate({"Length": 1000, "Width": 200, "Thickness": 10})

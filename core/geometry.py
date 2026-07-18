@@ -4,8 +4,8 @@ import math
 
 
 def area_plate(v):
-    # Diện tích mặt cắt ngang của thép tấm = Rộng x Dày
-    return v["Width"] * v["Thickness"]
+    # Diện tích mặt cắt của thép tấm = Rộng x Dài
+    return v["Width"] * v["Length"]
 
 
 def check_plate(v):
