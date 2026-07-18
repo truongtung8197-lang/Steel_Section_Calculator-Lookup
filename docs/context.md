@@ -1,182 +1,74 @@
-# Steel Management & Calculator Pro - Tong quan
+# Steel Management & Calculator Pro - Tổng quan mã nguồn
 
-**Cong nghe:** Python 3.14.x, PySide6 6.11.1 (Qt), openpyxl 3.1.5  
-**Muc dich:** Cong cu tinh toan khoi luong thep ly thuyet va tra cuu profile thep chuan tu file Excel
+## Công nghệ & Thư viện sử dụng
+- **Ngôn ngữ**: Python 3.14.x
+- **Giao diện người dùng**: PySide6 (Qt)
+- **Xử lý dữ liệu Excel**: openpyxl
 
----
+## Kiến trúc tính năng chính
 
-## Chuc nang chinh
+### 1. Bộ tính toán thủ công (Manual Calculator)
+Tính toán khối lượng thép lý thuyết theo thời gian thực cho 8 loại hình dạng mặt cắt:
+- **Thép tấm (Plate)**: Chiều dài × Chiều rộng × Độ dày
+- **Thép hình I/H (I Beam / H Beam)**
+- **Thép hình U (PFC / U Channel)**
+- **Thép góc (Angle / L Section)**
+- **Thép hộp (RHS / SHS)**
+- **Thép ống (CHS / Pipe)**
+- **Thép tròn đặc (Rod / Round Bar)**
+- **Thép chữ T (T Section)**
 
-### 1. Tab "Manual Calculator" (Bo tinh toan thu cong)
+**Đặc điểm vận hành:**
+- **Giao diện động**: Các trường nhập liệu tự động thay đổi (rebuild) phù hợp với hình dạng thép được chọn.
+- **Bản vẽ kỹ thuật động (Dynamic Shapes)**: Tự động vẽ mặt cắt hình học bằng QPainter. Khi thiếu thông số, hệ thống hiển thị hình mẫu kèm ký hiệu (Sample mode); khi nhập đủ, hệ thống chuyển sang chế độ hiển thị thông số thực.
+- **Xử lý bo góc ($r_1$)**: Hỗ trợ tính toán và hiển thị cung bo tròn mịn cho 5 loại mặt cắt: I/H, U/C, Angle, RHS/SHS, T-Section.
+- **Tính năng bổ trợ**: Hỗ trợ đổi đơn vị nhanh (mm/cm/m/inch), nhập số lượng (Quantity) để tính tổng khối lượng, sao chép nhanh kết quả vào bộ nhớ tạm (Clipboard), và tự động co giãn font chữ khi thay đổi kích thước cửa sổ.
 
-Tinh khoi luong thep ly thuyet cho 8 loai hinh cat thep (dinh nghia trong `core/steel_types.py`):
+### 2. Tra cứu biên dạng thép (Steel Section Lookup)
+Hệ thống tra cứu dữ liệu từ file bộ nhớ đệm `steel_db.json` hoặc đọc trực tiếp từ file dữ liệu gốc `alias.xlsx` khi không có bộ nhớ đệm.
 
-- **Plate** (Tam): Dai x Rong x Day
-- **I Beam / H Beam** (Dam I/H)
-- **PFC / U Channel** (Thep hinh U)
-- **Angle / L Section** (Thep goc)
-- **RHS / SHS** (Thep hop)
-- **CHS / Pipe** (Thep ong)
-- **Rod / Round Bar** (Thep tron)
-- **T Section** (Thep chu T)
-
-**Dac diem (thuc te code v1.6):**
-
-- Chon loai thep tu dropdown; form input duoc build dong (`rebuild_inputs` trong `calc_tab.py`)
-- **Hinh ve dong (dynamic shapes)**: Tu dong ve hinh mat cat ky thuat bang QPainter trong `gui/widgets/dynamic_shapes/`
-  - **Sample mode**: Hien thi hinh mau voi kich thuoc mau khi chua nhap du thong so
-  - **Dimension labels**: Hien thi ky hieu (H, B, Tw, Tf...) trong sample mode, gia tri thuc (H = 200 mm...) trong normal mode
-  - **8 loai hinh**: Plate, I/H, U/C, Angle, RHS/SHS, CHS, Rod, T-Section
-- Hinh ve ky thuat tinh toan theo cong thua hinh hoc chinh xac voi 4 goc bo (fillet) cho I/H, RHS/SHS
-- Tinh khoi luong theo kg/m (mac dinh Length=1m) hoac kg (Plate / nhieu quantity)
-- Ho tro nhap Quantity de tinh tong khoi luong
-- Nut "Copy Value" sao chep ket qua vao clipboard
-- Nut "Clear" xoa trang cac truong
-- Validation dau vao voi `_validation_msg()` hien thi loi mau do
-- Ho tro doi don vi dong (mm/cm/m/inch) voi `on_unit_changed()` tu dong convert
-- Ho tro tinh toan goc bo (r1) cho 5 loai: I/H, U/C, Angle, RHS/SHS, T-Section
-- Font input tu dong scale (9-13pt) theo chieu rong cua so qua `resizeEvent`
-- Menu Help (About + User Guide) trong `gui/dialogs.py`
-- Logging vao `app.log`
-
-### 2. Tab "Steel Section Lookup" (Tra cuu profile thep)
-
-Tra cuu thong tin profile thep tu `steel_db.json` (cache) hoac `alias.xlsx` (fallback).
-Ho tro 4 thu vien (dinh nghia trong `data/data_manager.py`):
-
-- **I Beam / H Beam** (Sheet: "I lib"): cot D, E, F, N, O
-- **PFC / U Channel** (Sheet: "U lib"): cot D, E, F, N, O
-- **Shape VN** (Sheet: "HINH_VN"): cot D, B, C
-- **Pipe / Tube** (Sheet: "Ong,Hop"): cot D, B, C
-
-**Dac diem:**
-
-- Tim kiem theo ten profile, ho tro nhieu tu khoa (space-separated)
-- Hien thi chi tiet profile da chon (Original/Substitute section + weight)
-- Nut "Copy" cho tung truong
-- Giao dien 2 panel: danh sach trai, chi tiet phai (QSplitter)
-- Dropdown chon thu vien dong
-- Canh bao ro rang neu Excel chua load duoc
+**Cơ sở dữ liệu hỗ trợ:**
+- **Thép I/H (Sheet "I lib")** & **Thép U (Sheet "U lib")**: Tra cứu tên, khối lượng nguyên bản, biên dạng thay thế tương đương.
+- **Thép Shape VN (Sheet "HINH_VN")** & **Thép ống/hộp định hình (Sheet "Ong,Hop")**: Tra cứu tên, khối lượng chuẩn và ghi chú đi kèm.
 
 ---
 
-## Cau truc thu muc
+## 📐 Công thức hình học chuẩn hóa
 
-```
+- Mật độ khối lượng của thép quy ước: $7.85 \times 10^{-6} \text{ kg/mm}^3$ (Tương đương $7850 \text{ kg/m}^3$).
+- Công thức khối lượng tổng quát: 
+$$\text{Khối lượng (kg)} = \text{Diện tích mặt cắt (mm}^2\text{)} \times \text{Chiều dài (m)} \times 0.00785$$
+
+### 1. Diện tích mặt cắt không có góc bo ($A$)
+- **Thép tấm (Plate)**: $A = \text{Width} \times \text{Thickness}$
+- **Thép I/H**: $A = 2B \cdot T_f + (H - 2T_f)T_w$
+- **Thép U/C**: $A = 2B \cdot T_f + (H - 2T_f)T_w$
+- **Thép góc V/L**: $A = t(a + b - t)$
+- **Thép hộp (RHS/SHS)**: $A = W \cdot H - (W - 2t)(H - 2t)$
+- **Thép ống tròn (CHS)**: $A = \frac{\pi}{4}[OD^2 - (OD - 2t)^2]$
+- **Thép tròn đặc (Rod)**: $A = \frac{\pi \cdot D^2}{4}$
+- **Thép chữ T**: $A = B \cdot T_f + (H - T_f)T_w$
+
+### 2. Diện tích mặt cắt có tính đến góc bo ($A_{fillet}$)
+- **Thép I/H**: $A_{fillet} = A + (4 - \pi)r_1^2$ *(Cộng thêm diện tích 4 góc bo nội)*
+- **Thép U/C**: $A_{fillet} = A + (2 - \frac{\pi}{2})r_1^2$ *(Cộng thêm diện tích 2 góc bo nội)*
+- **Thép góc V/L**: $A_{fillet} = A + (1 - \frac{\pi}{4})r_1^2$ *(Cộng thêm diện tích 1 góc bo nội)*
+- **Thép hộp (RHS/SHS)**: $A_{fillet} = W \cdot H - (W - 2t)(H - 2t) - (4 - \pi)(R_o^2 - R_i^2)$  
+  *(Trong đó bán kính trong $R_i = r_1$, bán kính ngoài $R_o = r_1 + t$)*
+- **Thép chữ T**: $A_{fillet} = A + (2 - \frac{\pi}{2})r_1^2$ *(Cộng thêm diện tích 2 góc bo nội)*
+
+---
+
+## 📂 Cấu trúc thư mục dự án
+```text
 Steel_Section_Calculator-Lookup/
-|-- main.py                    # Entry point (49 dong)
-|-- alias.xlsx                 # Excel database
-|-- steel_db.json              # JSON cache (tu dong tao)
-|-- requirements.txt           # PySide6==6.11.1, openpyxl==3.1.5
-|-- core/                      # Business logic
-|   |-- constants.py           # DENSITY_FACTOR, UNIT_CONVERSION, paths, logging
-|   |-- geometry.py            # 8 cap area_*/check_* functions
-|   |-- steel_types.py         # SteelType dataclass + STEEL_TYPES list (8 loai)
-|-- data/                      # Data management
-|   |-- data_manager.py        # Load/save JSON, load Excel voi skip_headers
-|-- gui/                       # UI components
-|   |-- styles.py              # Stylesheet (light mode)
-|   |-- dialogs.py             # show_about, show_help
+|-- main.py                    # Điểm khởi chạy ứng dụng
+|-- alias.xlsx                 # Cơ sở dữ liệu cấu kiện dạng Excel
+|-- steel_db.json              # Bộ nhớ đệm dữ liệu (Tự động sinh)
+|-- requirements.txt           # Danh sách thư viện phụ thuộc
+|-- core/                      # Logic tính toán và hằng số hệ thống
+|-- data/                      # Quản lý đọc/ghi và chuyển đổi dữ liệu
+|-- gui/                       # Giao diện người dùng và đồ họa cấu kiện
 |   |-- widgets/
-|   |   |-- image_box.py       # ImageBox widget (QLabel + QPixmap)
-|   |   |-- dynamic_shapes/    # Dynamic shape widgets (QPainter)
-|   |       |-- base_shape.py      # Base class DynamicShapeWidget
-|   |       |-- plate_shape.py     # DynamicPlateShape
-|   |       |-- i_shape.py         # DynamicIShape
-|   |       |-- chs_shape.py       # DynamicCHSShape
-|   |       |-- rhs_shape.py       # DynamicRHSShape
-|   |       |-- u_shape.py         # DynamicUShape
-|   |       |-- l_shape.py         # DynamicLShape
-|   |       |-- t_shape.py         # DynamicTShape
-|   |       |-- rod_shape.py       # DynamicRodShape
-|   |-- tabs/
-|   |   |-- calc_tab.py        # CalculatorTab (315 dong)
-|   |   |-- lookup_tab.py      # LookupTab (162 dong)
-|-- docs/                      # Tai lieu
-|   |-- progress.md
-|   |-- context.md
-|   |-- known-issues.md
-|-- STEEL TYPE png/            # Hinh ve ky thuat (8 file PNG)
-```
-
----
-
-## 📐 Công thức tính toán chuẩn hóa
-
-* **Mật độ khối lượng của thép:** $7.85 \times 10^{-6} \text{ kg/mm}^3$ (tương đương $7850 \text{ kg/m}^3$).
-* **Công thức tính khối lượng tổng quát:**
-  $$\text{Weight (kg)} = \text{Area (mm}^2\text{)} \times \text{Length (m)} \times 0.00785$$
-  *(Trong đó: chiều dài nhập vào bằng mét được nhân với 1000 để quy đổi sang mm trước khi tính toán)*
-
----
-
-### 1. Công thức diện tích mặt cắt $A \text{ (mm}^2\text{)}$ - KHÔNG CÓ GÓC BO
-
-| Loại thép | Công thức diện tích mặt cắt ($A$) | Ghi chú biến số |
-| :--- | :--- | :--- |
-| **Plate** (Thép tấm) | $A = \text{Width} \times \text{Thickness}$ | Chiều rộng (Width), Chiều dài (Length) |
-| **I Beam** (Thép I/H) | $A = 2B \cdot T_f + (H - 2T_f)T_w$ | Chiều cao ($H$), Rộng cánh ($B$), Dày bụng ($T_w$), Dày cánh ($T_f$) |
-| **U Channel** (Thép U/C) | $A = 2B \cdot T_f + (H - 2T_f)T_w$ | Chiều cao ($H$), Rộng cánh ($B$), Dày bụng ($T_w$), Dày cánh ($T_f$) |
-| **Angle** (Thép góc V/L) | $A = t(a + b - t)$ | Chiều dài 2 cánh ($a, b$), Độ dày ($t$) |
-| **RHS/SHS** (Thép hộp) | $A = W \cdot H - (W - 2t)(H - 2t)$ | Chiều rộng ($W$), Chiều cao ($H$), Độ dày ($t$) |
-| **CHS** (Thép ống tròn) | $A = \frac{\pi}{4} [OD^2 - (OD - 2t)^2]$ | Đường kính ngoài ($OD$), Độ dày ($t$) |
-| **Rod** (Thép tròn đặc) | $A = \frac{\pi \cdot D^2}{4}$ | Đường kính ($D$) |
-| **T Section** (Thép chữ T) | $A = B \cdot T_f + (H - T_f)T_w$ | Rộng cánh ($B$), Chiều cao ($H$), Dày cánh ($T_f$), Dày bụng ($T_w$) |
-
----
-
-### 2. Công thức diện tích mặt cắt $A \text{ (mm}^2\text{)}$ - CÓ GÓC BO ($r_1$)
-
-| Loại thép | Công thức diện tích mặt cắt ($A$) | Giải thích hiệu chỉnh góc bo |
-| :--- | :--- | :--- |
-| **I Beam** (Thép I/H) | $A = 2B \cdot T_f + (H - 2T_f)T_w + (4 - \pi)r_1^2$ | Cộng thêm diện tích của 4 góc bo nội |
-| **U Channel** (Thép U/C) | $A = 2B \cdot T_f + (H - 2T_f)T_w + (2 - \frac{\pi}{2})r_1^2$ | Cộng thêm diện tích của 2 góc bo nội |
-| **Angle** (Thép góc V/L) | $A = t(a + b - t) + (1 - \frac{\pi}{4})r_1^2$ | Cộng thêm diện tích của 1 góc bo nội |
-| **RHS/SHS** (Thép hộp)* | $A = W \cdot H - (W - 2t)(H - 2t) - (4 - \pi)(R_o^2 - R_i^2)$ | Trừ bớt diện tích hao hụt do bo tròn 4 góc bên ngoài và bên trong. Quy ước: Bán kính trong $R_i = r_1$; Bán kính ngoài $R_o = r_1 + t$. |
-| **T Section** (Thép chữ T) | $A = B \cdot T_f + (H - T_f)T_w + (2 - \frac{\pi}{2})r_1^2$ | Cộng thêm diện tích của 2 góc bo nội |
-
----
-
-## Cau hinh duong dan
-
-- `BASE_DIR`: tu dong phat hien (file .py hoac .exe qua `sys.frozen`)
-- `PNG_DIR`: thu muc hinh ve ky thuat
-- `EXCEL_PATH`: duong dan alias.xlsx
-- `JSON_PATH`: duong dan steel_db.json (cache)
-
----
-
-## Cau truc Excel (alias.xlsx)
-
-**Sheet "I lib" va "U lib":**
-
-- Cot D: Ten profile
-- Cot E: Ten section goc
-- Cot F: Khoi luong kg/m (original)
-- Cot N: Ten section thay the
-- Cot O: Khoi luong kg/m (substitute)
-
-**Sheet "HINH_VN" va "Ong,Hop":**
-
-- Cot A: Ten profile
-- Cot B: Khoi luong kg/m
-- Cot C: Ghi chu
-
----
-
-## Cau truc JSON (steel_db.json)
-
-```json
-{
-  "profiles": [
-    { "type": "ih", "D": "...", "E": "...", "F": "...", "N": "...", "O": "..." },
-    { "type": "hinh_vn", "D": "...", "B": "...", "C": "..." }
-  ],
-  "metadata": { "total_records": 964, "source": "alias.xlsx", "saved_at": "2024-07-16" }
-}
-```
-
-Moi record:
-
-- **Type 1 (ih, channel):** type, D, E, F, N, O
-- **Type 2 (hinh_vn, ong_hop):** type, D, B, C
+|   |   |-- dynamic_shapes/    # Các thành phần vẽ mặt cắt động bằng QPainter
+|-- docs/                      # Tài liệu dự án (progress.md, context.md, known-issues.md)
