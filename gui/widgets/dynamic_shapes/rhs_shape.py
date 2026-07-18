@@ -2,7 +2,7 @@
 
 import math
 
-from PySide6.QtCore import QPointF
+from PySide6.QtCore import QPointF, Qt
 from PySide6.QtGui import QPainter, QPainterPath, QPen, QColor, QBrush
 
 from gui.widgets.dynamic_shapes.base_shape import DynamicShapeWidget
@@ -124,6 +124,10 @@ def _rhs_shape_points(w, h, t, r1):
 
 
 class DynamicRHSShape(DynamicShapeWidget):
+    def _get_sample_dims(self):
+        """Trả về dimensions mẫu cho RHS/SHS."""
+        return {"Width": 100, "Height": 50, "Thickness": 5}
+
     def _get_outline_points(self, dims, r1):
         """Trả về outer boundary để base class tính bounding box."""
         w = float(dims.get("Width", 0))
@@ -135,32 +139,54 @@ class DynamicRHSShape(DynamicShapeWidget):
             QPointF(0.0, h),
         ]
 
-    def _get_dimension_specs(self, dims):
+    def _get_dimension_specs(self, dims, is_sample=False):
         w = float(dims.get("Width", 0))
         h = float(dims.get("Height", 0))
         t = float(dims.get("Thickness", 0))
 
-        return [
-            ((0.0, 0.0), (0.0, h), f"H = {h:.0f} mm", "left"),
-            ((0.0, 0.0), (w, 0.0), f"W = {w:.0f} mm", "bottom"),
-            ((w, 0.0), (w, t), f"t = {t:.0f} mm", "right"),
-        ]
+        if is_sample:
+            return [
+                ((0.0, 0.0), (0.0, h), "H", "left"),
+                ((0.0, 0.0), (w, 0.0), "W", "bottom"),
+                ((w, 0.0), (w, t), "t", "right"),
+            ]
+        else:
+            return [
+                ((0.0, 0.0), (0.0, h), f"H = {h:.0f} mm", "left"),
+                ((0.0, 0.0), (w, 0.0), f"W = {w:.0f} mm", "bottom"),
+                ((w, 0.0), (w, t), f"t = {t:.0f} mm", "right"),
+            ]
 
     def paintEvent(self, event):
         """Override paintEvent để vẽ mặt cắt rỗng (outer + inner path)."""
-        if not self._dims:
-            with QPainter(self) as painter:
-                self._draw_fallback(painter, "Nhập đủ thông số để xem hình")
-            return
+        # Determine if we're in sample mode
+        is_sample = self._is_sample_mode()
+        
+        # Use sample dimensions if in sample mode
+        dims_to_use = self._dims
+        r1_to_use = self._r1
+        
+        if is_sample:
+            sample_dims = self._get_sample_dims()
+            if not sample_dims:
+                with QPainter(self) as painter:
+                    self._draw_fallback(painter, "Nhập đủ thông số để xem hình")
+                return
+            dims_to_use = sample_dims
+            r1_to_use = 0.0  # Always use r1=0 for sample mode
 
-        w = float(self._dims.get("Width", 0))
-        h = float(self._dims.get("Height", 0))
-        t = float(self._dims.get("Thickness", 0))
-        r = float(self._r1)
+        w = float(dims_to_use.get("Width", 0))
+        h = float(dims_to_use.get("Height", 0))
+        t = float(dims_to_use.get("Thickness", 0))
+        r = float(r1_to_use)
 
         if w <= 0 or h <= 0 or t <= 0:
-            with QPainter(self) as painter:
-                self._draw_fallback(painter, "Dữ liệu không hợp lệ")
+            if is_sample:
+                with QPainter(self) as painter:
+                    self._draw_fallback(painter, "Lỗi tính toán hình học")
+            else:
+                with QPainter(self) as painter:
+                    self._draw_fallback(painter, "Dữ liệu không hợp lệ")
             return
 
         try:
@@ -227,7 +253,7 @@ class DynamicRHSShape(DynamicShapeWidget):
             painter.drawPath(path)
 
             # Vẽ DIM
-            for spec in self._get_dimension_specs(self._dims):
+            for spec in self._get_dimension_specs(dims_to_use, is_sample=is_sample):
                 if len(spec) < 4:
                     continue
                 p1, p2, label, direction = spec

@@ -1,6 +1,5 @@
 # Steel Management & Calculator Pro - Tong quan
 
-**Phien ban:** 1.6  
 **Cong nghe:** Python 3.14.x, PySide6 6.11.1 (Qt), openpyxl 3.1.5  
 **Muc dich:** Cong cu tinh toan khoi luong thep ly thuyet va tra cuu profile thep chuan tu file Excel
 
@@ -24,7 +23,11 @@ Tinh khoi luong thep ly thuyet cho 8 loai hinh cat thep (dinh nghia trong `core/
 **Dac diem (thuc te code v1.6):**
 
 - Chon loai thep tu dropdown; form input duoc build dong (`rebuild_inputs` trong `calc_tab.py`)
-- Tu dong hien thi hinh ve ky thuat tu `STEEL TYPE png/` qua `ImageBox` widget
+- **Hinh ve dong (dynamic shapes)**: Tu dong ve hinh mat cat ky thuat bang QPainter trong `gui/widgets/dynamic_shapes/`
+  - **Sample mode**: Hien thi hinh mau voi kich thuoc mau khi chua nhap du thong so
+  - **Dimension labels**: Hien thi ky hieu (H, B, Tw, Tf...) trong sample mode, gia tri thuc (H = 200 mm...) trong normal mode
+  - **8 loai hinh**: Plate, I/H, U/C, Angle, RHS/SHS, CHS, Rod, T-Section
+- Hinh ve ky thuat tinh toan theo cong thua hinh hoc chinh xac voi 4 goc bo (fillet) cho I/H, RHS/SHS
 - Tinh khoi luong theo kg/m (mac dinh Length=1m) hoac kg (Plate / nhieu quantity)
 - Ho tro nhap Quantity de tinh tong khoi luong
 - Nut "Copy Value" sao chep ket qua vao clipboard
@@ -57,7 +60,7 @@ Ho tro 4 thu vien (dinh nghia trong `data/data_manager.py`):
 
 ---
 
-## Cau truc thu muc (v1.6)
+## Cau truc thu muc
 
 ```
 Steel_Section_Calculator-Lookup/
@@ -76,6 +79,16 @@ Steel_Section_Calculator-Lookup/
 |   |-- dialogs.py             # show_about, show_help
 |   |-- widgets/
 |   |   |-- image_box.py       # ImageBox widget (QLabel + QPixmap)
+|   |   |-- dynamic_shapes/    # Dynamic shape widgets (QPainter)
+|   |       |-- base_shape.py      # Base class DynamicShapeWidget
+|   |       |-- plate_shape.py     # DynamicPlateShape
+|   |       |-- i_shape.py         # DynamicIShape
+|   |       |-- chs_shape.py       # DynamicCHSShape
+|   |       |-- rhs_shape.py       # DynamicRHSShape
+|   |       |-- u_shape.py         # DynamicUShape
+|   |       |-- l_shape.py         # DynamicLShape
+|   |       |-- t_shape.py         # DynamicTShape
+|   |       |-- rod_shape.py       # DynamicRodShape
 |   |-- tabs/
 |   |   |-- calc_tab.py        # CalculatorTab (315 dong)
 |   |   |-- lookup_tab.py      # LookupTab (162 dong)
@@ -101,7 +114,7 @@ Steel_Section_Calculator-Lookup/
 
 | Loại thép | Công thức diện tích mặt cắt ($A$) | Ghi chú biến số |
 | :--- | :--- | :--- |
-| **Plate** (Thép tấm) | $A = \text{Width} \times \text{Thickness}$ | Chiều rộng (Width), Độ dày (Thickness) |
+| **Plate** (Thép tấm) | $A = \text{Width} \times \text{Thickness}$ | Chiều rộng (Width), Chiều dài (Length) |
 | **I Beam** (Thép I/H) | $A = 2B \cdot T_f + (H - 2T_f)T_w$ | Chiều cao ($H$), Rộng cánh ($B$), Dày bụng ($T_w$), Dày cánh ($T_f$) |
 | **U Channel** (Thép U/C) | $A = 2B \cdot T_f + (H - 2T_f)T_w$ | Chiều cao ($H$), Rộng cánh ($B$), Dày bụng ($T_w$), Dày cánh ($T_f$) |
 | **Angle** (Thép góc V/L) | $A = t(a + b - t)$ | Chiều dài 2 cánh ($a, b$), Độ dày ($t$) |

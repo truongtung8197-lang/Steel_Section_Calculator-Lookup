@@ -205,7 +205,16 @@ class CalculatorTab(QWidget):
         validator = QDoubleValidator(0.001, 999999.0, 3, self)
         validator.setNotation(QDoubleValidator.StandardNotation)
 
+        # Collect Length field to add it after corner radius
+        length_container = None
+        length_edit = None
+        length_unit_combo = None
+        
         for label, unit in steel.fields:
+            # Skip Length for now, will add it after corner radius
+            if label == "Length":
+                continue
+            
             container = QWidget()
             cl = QHBoxLayout(container)
             cl.setContentsMargins(0, 0, 0, 0)
@@ -232,10 +241,6 @@ class CalculatorTab(QWidget):
             cl.addWidget(unit_combo)
             self.inputs.append(edit)
             self.unit_combos[label] = unit_combo
-
-            if label == "Length" and unit == "m":
-                edit.setText("1")
-                edit.setToolTip("Length in meters (always in m for beams)")
 
             edit.textChanged.connect(self.calculate)
             self.form_layout.addRow(f"<b>{label}</b>", container)
@@ -268,6 +273,43 @@ class CalculatorTab(QWidget):
             self.inputs.append(re)
             self.unit_combos["r1"] = ruc
             self.form_layout.addRow("<b>r1 (Corner Radius)</b>", rc)
+
+        # Add Length field after corner radius
+        for label, unit in steel.fields:
+            if label == "Length":
+                container = QWidget()
+                cl = QHBoxLayout(container)
+                cl.setContentsMargins(0, 0, 0, 0)
+                cl.setSpacing(5)
+
+                edit = QLineEdit()
+                edit.setProperty("field_label", label)
+                edit.setProperty("original_unit", unit)
+                edit.setPlaceholderText("0.00")
+                edit.setValidator(validator)
+                edit.setMinimumWidth(70)
+                edit.setToolTip("Length in meters (always in m for beams)")
+                
+                if unit == "m":
+                    edit.setText("1")
+
+                unit_combo = QComboBox()
+                unit_combo.addItems(["mm", "cm", "m", "inch"])
+                unit_combo.setCurrentText(unit if unit in ["mm", "cm", "m", "inch"] else "mm")
+                unit_combo.setMaximumWidth(70)
+                unit_combo.setToolTip("Select unit of measurement")
+                unit_combo.currentTextChanged.connect(
+                    lambda text, lbl=label: self.on_unit_changed(lbl, text)
+                )
+
+                cl.addWidget(edit, 1)
+                cl.addWidget(unit_combo)
+                self.inputs.append(edit)
+                self.unit_combos[label] = unit_combo
+
+                edit.textChanged.connect(self.calculate)
+                self.form_layout.addRow(f"<b>{label}</b>", container)
+                break
 
         # Quantity
         qty = QLineEdit()

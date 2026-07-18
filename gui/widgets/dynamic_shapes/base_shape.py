@@ -27,10 +27,18 @@ class DynamicShapeWidget(QWidget):
         self._r1 = float(r1)
         self.update()
 
+    def _get_sample_dims(self):
+        """Trả về dimensions mẫu cho chế độ preview (khi chưa nhập đủ thông số)."""
+        return {}
+
+    def _is_sample_mode(self):
+        """Kiểm tra có đang ở chế độ sample mode không."""
+        return not self._dims or not self._dims.get("_valid", True)
+
     def _get_outline_points(self, dims, r1):
         raise NotImplementedError
 
-    def _get_dimension_specs(self, dims):
+    def _get_dimension_specs(self, dims, is_sample=False):
         return []
 
     def resizeEvent(self, event):
@@ -41,14 +49,38 @@ class DynamicShapeWidget(QWidget):
         painter = QPainter(self)
         painter.setRenderHint(QPainter.Antialiasing)
 
-        if not self._dims:
-            self._draw_fallback(painter, "Nhập đủ thông số để xem hình")
-            return
+        # Determine if we're in sample mode
+        is_sample = self._is_sample_mode()
+        
+        # Use sample dimensions if in sample mode
+        dims_to_use = self._dims
+        r1_to_use = self._r1
+        
+        if is_sample:
+            sample_dims = self._get_sample_dims()
+            if not sample_dims:
+                self._draw_fallback(painter, "Nhập đủ thông số để xem hình")
+                return
+            dims_to_use = sample_dims
+            r1_to_use = 0.0  # Always use r1=0 for sample mode
 
         try:
-            points = self._get_outline_points(self._dims, self._r1)
+            points = self._get_outline_points(dims_to_use, r1_to_use)
         except Exception:
-            self._draw_fallback(painter, "Lỗi tính toán hình học")
+            if is_sample:
+                self._draw_fallback(painter, "Lỗi tính toán hình học")
+            else:
+                # In normal mode with invalid data, show sample
+                sample_dims = self._get_sample_dims()
+                if sample_dims:
+                    try:
+                        points = self._get_outline_points(sample_dims, 0.0)
+                        dims_to_use = sample_dims
+                        is_sample = True
+                    except Exception:
+                        self._draw_fallback(painter, "Lỗi tính toán hình học")
+                else:
+                    self._draw_fallback(painter, "Lỗi tính toán hình học")
             return
 
         if not points or len(points) < 3:
@@ -91,11 +123,12 @@ class DynamicShapeWidget(QWidget):
                 path.lineTo(p)
             path.closeSubpath()
 
+        # Use same style for both sample and normal mode
         painter.setPen(QPen(QColor("#0f172a"), 2))
         painter.setBrush(QBrush(QColor("#e0f2fe")))
         painter.drawPath(path)
 
-        for spec in self._get_dimension_specs(self._dims):
+        for spec in self._get_dimension_specs(dims_to_use, is_sample=is_sample):
             if len(spec) < 4:
                 continue
             p1, p2, label, direction = spec

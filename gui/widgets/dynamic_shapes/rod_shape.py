@@ -28,6 +28,10 @@ def _rod_shape_points(d):
 
 
 class DynamicRodShape(DynamicShapeWidget):
+    def _get_sample_dims(self):
+        """Trả về dimensions mẫu cho Rod/Round Bar."""
+        return {"Diameter": 20}
+
     def _get_outline_points(self, dims, r1):
         d = float(dims.get("Diameter", 0))
         return [
@@ -37,29 +41,51 @@ class DynamicRodShape(DynamicShapeWidget):
             QPointF(0.0, d),
         ]
 
-    def _get_dimension_specs(self, dims):
+    def _get_dimension_specs(self, dims, is_sample=False):
         d = float(dims.get("Diameter", 0))
-        return [
-            ((0.0, d / 2), (d, d / 2), f"D = {d:.0f} mm", "bottom"),
-        ]
+        
+        if is_sample:
+            return [
+                ((0.0, d / 2), (d, d / 2), "D", "bottom"),
+            ]
+        else:
+            return [
+                ((0.0, d / 2), (d, d / 2), f"D = {d:.0f} mm", "bottom"),
+            ]
 
     def paintEvent(self, event):
-        if not self._dims:
-            with QPainter(self) as painter:
-                self._draw_fallback(painter, "Nhap du thong so de xem hinh")
-            return
+        """Override paintEvent để vẽ hình tròn."""
+        # Determine if we're in sample mode
+        is_sample = self._is_sample_mode()
+        
+        # Use sample dimensions if in sample mode
+        dims_to_use = self._dims
+        r1_to_use = self._r1
+        
+        if is_sample:
+            sample_dims = self._get_sample_dims()
+            if not sample_dims:
+                with QPainter(self) as painter:
+                    self._draw_fallback(painter, "Nhập đủ thông số để xem hình")
+                return
+            dims_to_use = sample_dims
+            r1_to_use = 0.0  # Always use r1=0 for sample mode
 
-        d = float(self._dims.get("Diameter", 0))
+        d = float(dims_to_use.get("Diameter", 0))
         if d <= 0:
-            with QPainter(self) as painter:
-                self._draw_fallback(painter, "Du lieu khong hop le")
+            if is_sample:
+                with QPainter(self) as painter:
+                    self._draw_fallback(painter, "Lỗi tính toán hình học")
+            else:
+                with QPainter(self) as painter:
+                    self._draw_fallback(painter, "Dữ liệu không hợp lệ")
             return
 
         try:
             pts = _rod_shape_points(d)
         except Exception:
             with QPainter(self) as painter:
-                self._draw_fallback(painter, "Loi tinh toan hinh hoc")
+                self._draw_fallback(painter, "Lỗi tính toán hình học")
             return
 
         w_w, h_w = self.width(), self.height()
@@ -68,7 +94,7 @@ class DynamicRodShape(DynamicShapeWidget):
         avail_h = h_w - margin * 2
         if avail_w <= 0 or avail_h <= 0:
             with QPainter(self) as painter:
-                self._draw_fallback(painter, "Cua so qua nho")
+                self._draw_fallback(painter, "Cửa sổ quá nhỏ")
             return
 
         xs = [p.x() for p in pts]
@@ -103,7 +129,7 @@ class DynamicRodShape(DynamicShapeWidget):
             painter.setBrush(QBrush(QColor("#e0f2fe")))
             painter.drawPath(path)
 
-            for spec in self._get_dimension_specs(self._dims):
+            for spec in self._get_dimension_specs(dims_to_use, is_sample=is_sample):
                 if len(spec) < 4:
                     continue
                 p1, p2, label, direction = spec

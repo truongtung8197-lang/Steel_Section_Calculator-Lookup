@@ -55,18 +55,30 @@ def _l_shape_points(a, b, t, r1):
 
 
 class DynamicLShape(DynamicShapeWidget):
+    def _get_sample_dims(self):
+        """Trả về dimensions mẫu cho Angle/L Section."""
+        return {"Leg A": 100, "Leg B": 50, "Thickness": 5}
+
     def _get_outline_points(self, dims, r1):
         a = dims.get("Leg A", 0)
         b = dims.get("Leg B", 0)
         t = dims.get("Thickness", 0)
         return _l_shape_points(a, b, t, r1)
 
-    def _get_dimension_specs(self, dims):
+    def _get_dimension_specs(self, dims, is_sample=False):
         a = dims.get("Leg A", 0)
         b = dims.get("Leg B", 0)
         t = dims.get("Thickness", 0)
-        return [
-            ((0.0, 0.0), (0.0, b), f"b = {b:.0f} mm", "left"),
-            ((0.0, 0.0), (a, 0.0), f"a = {a:.0f} mm", "bottom"),
-            ((a, 0.0), (a, t), f"t = {t:.0f} mm", "right"),
-        ]
+        
+        if is_sample:
+            return [
+                ((0.0, 0.0), (0.0, b), "Leg B", "left"),
+                ((0.0, 0.0), (a, 0.0), "Leg A", "bottom"),
+                ((a, 0.0), (a, t), "t", "right"),
+            ]
+        else:
+            return [
+                ((0.0, 0.0), (0.0, b), f"b = {b:.0f} mm", "left"),
+                ((0.0, 0.0), (a, 0.0), f"a = {a:.0f} mm", "bottom"),
+                ((a, 0.0), (a, t), f"t = {t:.0f} mm", "right"),
+            ]

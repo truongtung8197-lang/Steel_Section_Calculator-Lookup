@@ -64,18 +64,19 @@ class TestIShapePointsNoCorner:
     def test_basic(self):
         pts = _i_shape_points(200, 100, 6, 10, 0)
         assert len(pts) == 12
-        assert pts[0].x() == 0 and pts[0].y() == 0
-        assert pts[1].x() == 100 and pts[1].y() == 0
-        assert pts[2].x() == 100 and pts[2].y() == 10
-        assert pts[3].x() == 94 and pts[3].y() == 10
-        assert pts[4].x() == 94 and pts[4].y() == 190
-        assert pts[5].x() == 100 and pts[5].y() == 190
-        assert pts[6].x() == 100 and pts[6].y() == 200
-        assert pts[7].x() == 0 and pts[7].y() == 200
-        assert pts[8].x() == 0 and pts[8].y() == 190
-        assert pts[9].x() == 6 and pts[9].y() == 190
-        assert pts[10].x() == 6 and pts[10].y() == 10
-        assert pts[11].x() == 0 and pts[11].y() == 10
+        # I-shape starts at top-left (0, h) and goes clockwise
+        assert pts[0].x() == 0 and pts[0].y() == 200  # top-left
+        assert pts[1].x() == 100 and pts[1].y() == 200  # top-right
+        assert pts[2].x() == 100 and pts[2].y() == 190  # right flange inner
+        assert pts[3].x() == 53 and pts[3].y() == 190  # right web top (x_web_right = (100+6)/2 = 53)
+        assert pts[4].x() == 53 and pts[4].y() == 10  # right web bottom
+        assert pts[5].x() == 100 and pts[5].y() == 10  # right flange bottom inner
+        assert pts[6].x() == 100 and pts[6].y() == 0  # bottom-right
+        assert pts[7].x() == 0 and pts[7].y() == 0  # bottom-left
+        assert pts[8].x() == 0 and pts[8].y() == 10  # left flange bottom inner
+        assert pts[9].x() == 47 and pts[9].y() == 10  # left web bottom (x_web_left = (100-6)/2 = 47)
+        assert pts[10].x() == 47 and pts[10].y() == 190  # left web top
+        assert pts[11].x() == 0 and pts[11].y() == 190  # left flange inner
 
     def test_invalid_dimension(self):
         with pytest.raises(ValueError):
@@ -90,7 +91,8 @@ class TestIShapePointsWithCorner:
     def test_with_corner(self):
         pts = _i_shape_points(200, 100, 6, 10, 5)
         assert len(pts) > 12
-        assert pts[0].x() == 0 and pts[0].y() == 0
+        # I-shape starts at top-left (0, h) and goes clockwise
+        assert pts[0].x() == 0 and pts[0].y() == 200  # top-left
 
     def test_zero_corner(self):
         pts0 = _i_shape_points(200, 100, 6, 10, 0)

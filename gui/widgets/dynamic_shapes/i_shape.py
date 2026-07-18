@@ -124,6 +124,10 @@ def _i_shape_points(h, b, tw, tf, r1):
 
 
 class DynamicIShape(DynamicShapeWidget):
+    def _get_sample_dims(self):
+        """Trả về dimensions mẫu cho I/H Beam."""
+        return {"H": 200, "B": 100, "Tw": 6, "Tf": 10}
+
     def _get_outline_points(self, dims, r1):
         h = dims.get("H", 0)
         b = dims.get("B", 0)
@@ -131,7 +135,7 @@ class DynamicIShape(DynamicShapeWidget):
         tf = dims.get("Tf", 0)
         return _i_shape_points(h, b, tw, tf, r1)
 
-    def _get_dimension_specs(self, dims):
+    def _get_dimension_specs(self, dims, is_sample=False):
         h = float(dims.get("H", 0))
         b = float(dims.get("B", 0))
         tw = float(dims.get("Tw", 0))
@@ -140,9 +144,17 @@ class DynamicIShape(DynamicShapeWidget):
         x_web_left = (b - tw) / 2.0
         x_web_right = (b + tw) / 2.0
 
-        return [
-            ((0.0, 0.0), (0.0, h), f"H = {h:.0f} mm", "left"),
-            ((b, 0.0), (b, tf), f"Tf = {tf:.0f} mm", "right"),
-            ((x_web_left, h / 2), (x_web_right, h / 2), f"Tw = {tw:.0f} mm", "top"),
-            ((0.0, 0.0), (b, 0.0), f"B = {b:.0f} mm", "bottom"),
-        ]
+        if is_sample:
+            return [
+                ((0.0, 0.0), (0.0, h), "H", "left"),
+                ((b, 0.0), (b, tf), "Tf", "right"),
+                ((x_web_left, h / 2), (x_web_right, h / 2), "Tw", "top"),
+                ((0.0, 0.0), (b, 0.0), "B", "bottom"),
+            ]
+        else:
+            return [
+                ((0.0, 0.0), (0.0, h), f"H = {h:.0f} mm", "left"),
+                ((b, 0.0), (b, tf), f"Tf = {tf:.0f} mm", "right"),
+                ((x_web_left, h / 2), (x_web_right, h / 2), f"Tw = {tw:.0f} mm", "top"),
+                ((0.0, 0.0), (b, 0.0), f"B = {b:.0f} mm", "bottom"),
+            ]

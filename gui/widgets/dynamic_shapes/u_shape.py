@@ -104,6 +104,10 @@ def _u_shape_points(h, b, tw, tf, r1):
 
 
 class DynamicUShape(DynamicShapeWidget):
+    def _get_sample_dims(self):
+        """Trả về dimensions mẫu cho U/C Channel."""
+        return {"H": 200, "B": 100, "Tw": 6, "Tf": 10}
+
     def _get_outline_points(self, dims, r1):
         h = dims.get("H", 0)
         b = dims.get("B", 0)
@@ -111,16 +115,25 @@ class DynamicUShape(DynamicShapeWidget):
         tf = dims.get("Tf", 0)
         return _u_shape_points(h, b, tw, tf, r1)
 
-    def _get_dimension_specs(self, dims):
+    def _get_dimension_specs(self, dims, is_sample=False):
         h = float(dims.get("H", 0))
         b = float(dims.get("B", 0))
         tw = float(dims.get("Tw", 0))
         tf = float(dims.get("Tf", 0))
 
-        return [
-            ((0.0, 0.0), (0.0, h), f"H = {h:.0f} mm", "left"),
-            ((b, 0.0), (b, tf), f"Tf = {tf:.0f} mm", "right"),
-            # Tw: đo từ left face (x=0) đến right face của web (x=tw)
-            ((0.0, h / 2), (tw, h / 2), f"Tw = {tw:.0f} mm", "left"),
-            ((0.0, 0.0), (b, 0.0), f"B = {b:.0f} mm", "bottom"),
-        ]
+        if is_sample:
+            return [
+                ((0.0, 0.0), (0.0, h), "H", "left"),
+                ((b, 0.0), (b, tf), "Tf", "right"),
+                # Tw: đo từ left face (x=0) đến right face của web (x=tw)
+                ((0.0, h / 2), (tw, h / 2), "Tw", "left"),
+                ((0.0, 0.0), (b, 0.0), "B", "bottom"),
+            ]
+        else:
+            return [
+                ((0.0, 0.0), (0.0, h), f"H = {h:.0f} mm", "left"),
+                ((b, 0.0), (b, tf), f"Tf = {tf:.0f} mm", "right"),
+                # Tw: đo từ left face (x=0) đến right face của web (x=tw)
+                ((0.0, h / 2), (tw, h / 2), f"Tw = {tw:.0f} mm", "left"),
+                ((0.0, 0.0), (b, 0.0), f"B = {b:.0f} mm", "bottom"),
+            ]
