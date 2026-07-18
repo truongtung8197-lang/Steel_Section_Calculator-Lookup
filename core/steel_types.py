@@ -40,8 +40,8 @@ STEEL_TYPES: List[SteelType] = [
     SteelType(
         "plate",
         "Plate",
-        [("Length", "mm"), ("Width", "mm"), ("Thickness", "mm")],
-        lambda v: area_plate(v) * v["Thickness"] * DENSITY_FACTOR,
+        [("Width", "mm"), ("Length", "mm"), ("Thickness", "mm")],
+        lambda v: area_plate(v) * v["Length"] * 1.0 * DENSITY_FACTOR,
         check_plate,
         "PL.PNG",
         tooltip="Tấm thép phẳng. Tính khối lượng = Dài × Rộng × Dày × Mật độ thép",

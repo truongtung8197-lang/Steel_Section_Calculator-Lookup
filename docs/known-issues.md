@@ -16,33 +16,44 @@
 
 3. **Giao dien co gian (Responsive) chua tot**
    * Mo ta: Font chu va khung nhap lieu bi vo, tran vien hoac qua nho khi thay doi kich thuoc cua so.
-   * Giai phap v1.5: Su dung QSplitter voi ty le gian no setStretchFactor, dat chieu rong toi thieu cho khung nhap lieu left_widget.setMinimumWidth(320). Viet de resizeEvent() de goi _update_input_font() tu dong scale font chu dong tu 9pt den 13pt.
+   * Giai phap v1.5: Su dung QSplitter voi ty le gian no setStretchFactor, dat chieu rong toi thieu cho khung nhap lieu left_widget.setMinimumWidth(320). Viet de resizeEvent() de goi_update_input_font() tu dong scale font chu dong tu 9pt den 13pt.
 
 ---
 
 ## Cac loi chua giai quyet (Open Issues)
 
 ### A. Thieu he thong Unit Test (Uu tien cao)
+
 * Hien trang: Chua co test suite tu dong kiem tra tinh chinh xac cua cac cong thuc hinh hoc (core/geometry.py) va cac ham kiem tra du lieu dau vao.
 * Ke hoach: Tao thu muc tests/ chua test_geometry.py va test_validators.py chay bang pytest.
 
 ### B. Gioi han nhap lieu cua QDoubleValidator (Uu tien trung binh)
+
 * Hien trang: Validator gioi han nhap lieu tu 0.001 den 999999.0 mm, khien ung dung khong xu ly duoc kich thuoc lon hon hoac bang 1000 m.
 * Ke hoach: Mo rong dai kiem tra hoac chuyen sang tu viet ham kiem tra gia tri (custom validation) trong su kien tinh toan thay vi phu thuoc hoan toan vao validator cua Qt.
 
 ### C. Giao dien chi ho tro Light Mode (Uu tien thap)
+
 * Hien trang: File gui/styles.py chi dinh nghia duy nhat mot bang ma mau sang.
 * Ke hoach: Phat trien them giao dien toi (Dark Mode) va co che chuyen doi truc tiep tren menu bar.
 
 ### D. Xung dot chiem dung file Excel (Uu tien thap)
+
 * Hien trang: Neu nguoi dung dang mo file alias.xlsx bang Microsoft Excel, thu vien openpyxl co the bi loi quyen truy cap (Permission Error) khi co doc ghi.
 * Ke hoach: Toi uu hoa co che mo file o che do chi doc (read-only) khi load du lieu tho.
 
 ### E. Giao dien About hien thi sai phien ban (Uu tien cao) - Resolved
+
 * Giai phap v1.6: Dua bien APP_VERSION = "1.6" vao core/constants.py va import vao gui/dialogs.py. Nam cung duoc thay bang datetime.now().year.
 
 ### F. Ngay cap nhat du lieu saved_at bi co dinh (Uu tien cao) - Resolved
+
 * Giai phap v1.6: Su dung thu vien datetime de tu dong ghi nhan thoi gian thuc khi xuat cache JSON: datetime.now().strftime("%Y-%m-%d").
+
+### G. Cong thuc tinh khoi luong thep plate sai (Uu tien cao) - Resolved
+
+* Mo ta: Ham `area_plate()` trong `core/geometry.py` tinh `Width x Length` thay vi `Width x Thickness`, khong xet den thong so Thickness. Ket qua cong thuc trong `steel_types.py` nhan them `Length` lan nua, dan den ket qua sai hoan toan.
+* Giai phap v1.9: Sua `area_plate()` tra ve `Width x Thickness`, dong thoi them he so chuyen doi `1000.0` trong lambda de thong nhat voi cac loai thep khac.
 
 ---
 

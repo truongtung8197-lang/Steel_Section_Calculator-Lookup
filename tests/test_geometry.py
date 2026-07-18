@@ -26,7 +26,17 @@ from core.geometry import (
 
 class TestAreaPlate:
     def test_area_plate_basic(self):
-        assert area_plate({"Width": 100, "Length": 5}) == 500
+        assert area_plate({"Width": 100, "Length": 5, "Thickness": 10}) == 1000
+
+    def test_plate_weight_calculation(self):
+        """Test full weight calculation: Width × Thickness × Length × Density"""
+        from core.constants import DENSITY_FACTOR
+
+        v = {"Width": 1000, "Length": 2000, "Thickness": 10}
+        area = area_plate(v)
+        weight = area * v["Length"] * 1000.0 * DENSITY_FACTOR
+        expected = 1000 * 10 * 2000 * 1000 * 7.85e-6
+        assert math.isclose(weight, expected, rel_tol=1e-9)
 
     def test_check_plate_valid(self):
         check_plate({"Length": 1000, "Width": 200, "Thickness": 10})

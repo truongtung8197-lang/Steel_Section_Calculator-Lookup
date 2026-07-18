@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """Tab 1: Manual Calculator - Bộ tính toán thủ công."""
 
 import os
@@ -205,78 +206,11 @@ class CalculatorTab(QWidget):
         validator = QDoubleValidator(0.001, 999999.0, 3, self)
         validator.setNotation(QDoubleValidator.StandardNotation)
 
-        # Collect Length field to add it after corner radius
-        length_container = None
-        length_edit = None
-        length_unit_combo = None
-        
-        for label, unit in steel.fields:
-            # Skip Length for now, will add it after corner radius
-            if label == "Length":
-                continue
-            
-            container = QWidget()
-            cl = QHBoxLayout(container)
-            cl.setContentsMargins(0, 0, 0, 0)
-            cl.setSpacing(5)
+        # --- LOGIC TẠO TRƯỜNG NHẬP LIỆU ---
 
-            edit = QLineEdit()
-            edit.setProperty("field_label", label)
-            edit.setProperty("original_unit", unit)
-            edit.setPlaceholderText("0.00")
-            edit.setValidator(validator)
-            edit.setMinimumWidth(70)
-            edit.setToolTip(f"Enter {label} value")
-
-            unit_combo = QComboBox()
-            unit_combo.addItems(["mm", "cm", "m", "inch"])
-            unit_combo.setCurrentText(unit if unit in ["mm", "cm", "m", "inch"] else "mm")
-            unit_combo.setMaximumWidth(70)
-            unit_combo.setToolTip("Select unit of measurement")
-            unit_combo.currentTextChanged.connect(
-                lambda text, lbl=label: self.on_unit_changed(lbl, text)
-            )
-
-            cl.addWidget(edit, 1)
-            cl.addWidget(unit_combo)
-            self.inputs.append(edit)
-            self.unit_combos[label] = unit_combo
-
-            edit.textChanged.connect(self.calculate)
-            self.form_layout.addRow(f"<b>{label}</b>", container)
-
-        # Corner radius
-        if steel.key in ["ih", "channel", "angle", "rhs_shs", "tsection"]:
-            rc = QWidget()
-            rcl = QHBoxLayout(rc)
-            rcl.setContentsMargins(0, 0, 0, 0)
-            rcl.setSpacing(5)
-
-            re = QLineEdit()
-            re.setProperty("field_label", "r1")
-            re.setProperty("original_unit", "mm")
-            re.setText("0")
-            re.setValidator(validator)
-            re.setMinimumWidth(70)
-            re.setToolTip("Corner radius (r1). Default 0 for sharp corners")
-            re.textChanged.connect(self.calculate)
-
-            ruc = QComboBox()
-            ruc.addItems(["mm", "cm", "inch"])
-            ruc.setCurrentText("mm")
-            ruc.setMaximumWidth(70)
-            ruc.setToolTip("Select unit for r1")
-            ruc.currentTextChanged.connect(lambda text, lbl="r1": self.on_unit_changed(lbl, text))
-
-            rcl.addWidget(re, 1)
-            rcl.addWidget(ruc)
-            self.inputs.append(re)
-            self.unit_combos["r1"] = ruc
-            self.form_layout.addRow("<b>r1 (Corner Radius)</b>", rc)
-
-        # Add Length field after corner radius
-        for label, unit in steel.fields:
-            if label == "Length":
+        # Nếu là plate, tạo tuần tự đúng theo thứ tự khai báo trong core, không tách Length
+        if steel.key == "plate":
+            for label, unit in steel.fields:
                 container = QWidget()
                 cl = QHBoxLayout(container)
                 cl.setContentsMargins(0, 0, 0, 0)
@@ -288,14 +222,13 @@ class CalculatorTab(QWidget):
                 edit.setPlaceholderText("0.00")
                 edit.setValidator(validator)
                 edit.setMinimumWidth(70)
-                edit.setToolTip("Length in meters (always in m for beams)")
-                
-                if unit == "m":
-                    edit.setText("1")
+                edit.setToolTip(f"Enter {label} value")
 
                 unit_combo = QComboBox()
                 unit_combo.addItems(["mm", "cm", "m", "inch"])
-                unit_combo.setCurrentText(unit if unit in ["mm", "cm", "m", "inch"] else "mm")
+                unit_combo.setCurrentText(
+                    unit if unit in ["mm", "cm", "m", "inch"] else "mm"
+                )
                 unit_combo.setMaximumWidth(70)
                 unit_combo.setToolTip("Select unit of measurement")
                 unit_combo.currentTextChanged.connect(
@@ -309,9 +242,117 @@ class CalculatorTab(QWidget):
 
                 edit.textChanged.connect(self.calculate)
                 self.form_layout.addRow(f"<b>{label}</b>", container)
-                break
 
-        # Quantity
+        else:
+            # GIỮ NGUYÊN LOGIC CŨ CHO CÁC LOẠI THÉP KHÁC
+            # Vòng lặp 1: Tạo các trường bỏ qua Length
+            for label, unit in steel.fields:
+                if label == "Length":
+                    continue
+
+                container = QWidget()
+                cl = QHBoxLayout(container)
+                cl.setContentsMargins(0, 0, 0, 0)
+                cl.setSpacing(5)
+
+                edit = QLineEdit()
+                edit.setProperty("field_label", label)
+                edit.setProperty("original_unit", unit)
+                edit.setPlaceholderText("0.00")
+                edit.setValidator(validator)
+                edit.setMinimumWidth(70)
+                edit.setToolTip(f"Enter {label} value")
+
+                unit_combo = QComboBox()
+                unit_combo.addItems(["mm", "cm", "m", "inch"])
+                unit_combo.setCurrentText(
+                    unit if unit in ["mm", "cm", "m", "inch"] else "mm"
+                )
+                unit_combo.setMaximumWidth(70)
+                unit_combo.setToolTip("Select unit of measurement")
+                unit_combo.currentTextChanged.connect(
+                    lambda text, lbl=label: self.on_unit_changed(lbl, text)
+                )
+
+                cl.addWidget(edit, 1)
+                cl.addWidget(unit_combo)
+                self.inputs.append(edit)
+                self.unit_combos[label] = unit_combo
+
+                edit.textChanged.connect(self.calculate)
+                self.form_layout.addRow(f"<b>{label}</b>", container)
+
+            # Corner radius cho các loại thép hình
+            if steel.key in ["ih", "channel", "angle", "rhs_shs", "tsection"]:
+                rc = QWidget()
+                rcl = QHBoxLayout(rc)
+                rcl.setContentsMargins(0, 0, 0, 0)
+                rcl.setSpacing(5)
+
+                re = QLineEdit()
+                re.setProperty("field_label", "r1")
+                re.setProperty("original_unit", "mm")
+                re.setText("0")
+                re.setValidator(validator)
+                re.setMinimumWidth(70)
+                re.setToolTip("Corner radius (r1). Default 0 for sharp corners")
+                re.textChanged.connect(self.calculate)
+
+                ruc = QComboBox()
+                ruc.addItems(["mm", "cm", "inch"])
+                ruc.setCurrentText("mm")
+                ruc.setMaximumWidth(70)
+                ruc.setToolTip("Select unit for r1")
+                ruc.currentTextChanged.connect(
+                    lambda text, lbl="r1": self.on_unit_changed(lbl, text)
+                )
+
+                rcl.addWidget(re, 1)
+                rcl.addWidget(ruc)
+                self.inputs.append(re)
+                self.unit_combos["r1"] = ruc
+                self.form_layout.addRow("<b>r1 (Corner Radius)</b>", rc)
+
+            # Vòng lặp 2: Đẩy trường Length xuống sau r1
+            for label, unit in steel.fields:
+                if label == "Length":
+                    container = QWidget()
+                    cl = QHBoxLayout(container)
+                    cl.setContentsMargins(0, 0, 0, 0)
+                    cl.setSpacing(5)
+
+                    edit = QLineEdit()
+                    edit.setProperty("field_label", label)
+                    edit.setProperty("original_unit", unit)
+                    edit.setPlaceholderText("0.00")
+                    edit.setValidator(validator)
+                    edit.setMinimumWidth(70)
+                    edit.setToolTip("Length in meters (always in m for beams)")
+
+                    if unit == "m":
+                        edit.setText("1")
+
+                    unit_combo = QComboBox()
+                    unit_combo.addItems(["mm", "cm", "m", "inch"])
+                    unit_combo.setCurrentText(
+                        unit if unit in ["mm", "cm", "m", "inch"] else "mm"
+                    )
+                    unit_combo.setMaximumWidth(70)
+                    unit_combo.setToolTip("Select unit of measurement")
+                    unit_combo.currentTextChanged.connect(
+                        lambda text, lbl=label: self.on_unit_changed(lbl, text)
+                    )
+
+                    cl.addWidget(edit, 1)
+                    cl.addWidget(unit_combo)
+                    self.inputs.append(edit)
+                    self.unit_combos[label] = unit_combo
+
+                    edit.textChanged.connect(self.calculate)
+                    self.form_layout.addRow(f"<b>{label}</b>", container)
+                    break
+
+        # Quantity (Luôn nằm cuối giao diện)
         qty = QLineEdit()
         qty.setProperty("field_label", "Quantity")
         qty.setPlaceholderText("1")
@@ -325,7 +366,9 @@ class CalculatorTab(QWidget):
 
         # Image / dynamic shape
         if steel.key in DYNAMIC_SHAPE_KEYS:
-            self.image_stack.setCurrentIndex(list(DYNAMIC_SHAPE_MAP.keys()).index(steel.key) + 1)
+            self.image_stack.setCurrentIndex(
+                list(DYNAMIC_SHAPE_MAP.keys()).index(steel.key) + 1
+            )
         else:
             img_path = os.path.join(PNG_DIR, steel.image_file)
             self.image_box.set_image(img_path)
@@ -368,8 +411,7 @@ class CalculatorTab(QWidget):
             try:
                 steel.validator(values)
             except ValueError:
-                msg = self._validation_msg(steel.key, values)
-                self.result_label.setText("Invalid Input")
+                self.result_label.setText(self._validation_msg(steel.key, values))
                 self.result_label.setStyleSheet("color: #ef4444;")
                 self.current_raw_weight = None
                 if steel.key in DYNAMIC_SHAPE_KEYS:
@@ -377,7 +419,9 @@ class CalculatorTab(QWidget):
                 return
 
             if steel.key in DYNAMIC_SHAPE_KEYS:
-                self._dynamic_widgets[steel.key].set_dimensions(values, values.get("r1", 0))
+                self._dynamic_widgets[steel.key].set_dimensions(
+                    values, values.get("r1", 0)
+                )
 
             qty = values.get("Quantity", 1.0)
             base = steel.calc(values)
@@ -388,7 +432,9 @@ class CalculatorTab(QWidget):
                 suffix = "kg"
             else:
                 lm = values.get("Length", 1.0)
-                suffix = "kg/m" if (abs(lm - 1.0) < 1e-9 and abs(qty - 1.0) < 1e-9) else "kg"
+                suffix = (
+                    "kg/m" if (abs(lm - 1.0) < 1e-9 and abs(qty - 1.0) < 1e-9) else "kg"
+                )
 
             self.result_label.setText(f"{total:,.2f} {suffix}")
             self.result_label.setStyleSheet("color: #0284c7;")
@@ -419,15 +465,30 @@ class CalculatorTab(QWidget):
                 (v.get("Tf", 0) >= v.get("H", 0), "Tf must be < H"),
             ],
             "angle": [
-                (v.get("Thickness", 0) >= v.get("Leg A", 0), "Thickness must be < Leg A"),
-                (v.get("Thickness", 0) >= v.get("Leg B", 0), "Thickness must be < Leg B"),
+                (
+                    v.get("Thickness", 0) >= v.get("Leg A", 0),
+                    "Thickness must be < Leg A",
+                ),
+                (
+                    v.get("Thickness", 0) >= v.get("Leg B", 0),
+                    "Thickness must be < Leg B",
+                ),
             ],
             "rhs_shs": [
-                ((2 * v.get("Thickness", 0)) >= v.get("Width", 0), "2×Thickness must be < Width"),
-                ((2 * v.get("Thickness", 0)) >= v.get("Height", 0), "2×Thickness must be < Height"),
+                (
+                    (2 * v.get("Thickness", 0)) >= v.get("Width", 0),
+                    "2×Thickness must be < Width",
+                ),
+                (
+                    (2 * v.get("Thickness", 0)) >= v.get("Height", 0),
+                    "2×Thickness must be < Height",
+                ),
             ],
             "chs": [
-                ((2 * v.get("Thickness", 0)) >= v.get("OD", 0), "2×Thickness must be < OD"),
+                (
+                    (2 * v.get("Thickness", 0)) >= v.get("OD", 0),
+                    "2×Thickness must be < OD",
+                ),
             ],
             "rod": [
                 (v.get("Diameter", 0) <= 0, "Diameter must be > 0"),
